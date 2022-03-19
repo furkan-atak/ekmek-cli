@@ -97,7 +97,7 @@
 
             <v-img
               height="250"
-              src="../assets/prog.png"
+              src="../../assets/prog.png"
             ></v-img>
 
             <v-card-title>Programming And Coding</v-card-title>
@@ -173,7 +173,7 @@
 
             <v-img
               height="250"
-              src="../assets/mobile_app.png"
+              src="../../assets/mobile_app.png"
             ></v-img>
 
             <v-card-title>Mobile App</v-card-title>
@@ -249,7 +249,7 @@
 
             <v-img
               height="250"
-              src="../assets/database.png"
+              src="../../assets/database.png"
             ></v-img>
 
             <v-card-title>Database</v-card-title>
@@ -318,14 +318,4 @@
 </template>
 
 
-<script lang="ts">
-  import Vue from 'vue'
-
-  export default Vue.extend({
-    name: 'HelloWorld',
-
-    data: () => ({
-      active: 'guid'
-    })
-  })
-</script>
+<script lang="ts" src="./index.ts"></script>
