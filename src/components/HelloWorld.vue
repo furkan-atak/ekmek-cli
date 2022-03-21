@@ -5,58 +5,58 @@
           <img src="/logo2.png" alt="">
         </template>
         <vs-navbar-group>
-          Programming & Technology
+          Yazılım & Teknoloji
           <template #items>
-            <vs-navbar-item :active="active == 'guide'" id="guide">
-              Programming
+            <vs-navbar-item @click="goTo('prog-tech/programming')" :active="active == 'guide'" id="guide">
+              Programlama
             </vs-navbar-item>
             <vs-navbar-item :active="active == 'docs'" id="docs">
-              Data Science
+              Veri Bilimi
             </vs-navbar-item>
             <vs-navbar-item :active="active == 'components'" id="components">
-              Database
+              Veritabanı
             </vs-navbar-item>
           </template>
         </vs-navbar-group>
 
         <vs-navbar-group>
-          Writing & Translation
+          Çeviri & Yazı
 
           <template #items>
             <vs-navbar-item :active="active == 'content'" id="content">
-              Content Writing
+              İçerik Yazımı
             </vs-navbar-item>
             <vs-navbar-item :active="active == 'Business'" id="Business">
-              Business Writing
+              İş Yazısı
             </vs-navbar-item>
             <vs-navbar-item :active="active == 'Resumes'" id="Resumes">
-              Resumes
+              Özgeçmiş
             </vs-navbar-item>
           </template>
           
         </vs-navbar-group>
         <vs-navbar-group>
-          Design
+         Grafik & Tasarım
 
           <template #items>
             <vs-navbar-item :active="active == 'Animation'" id="Animation">
-              Animation
+              Animasyon
             </vs-navbar-item>
             <vs-navbar-item :active="active == '3D'" id="3D">
-              3D Design
+              3D Tasarım
             </vs-navbar-item>
             <vs-navbar-item :active="active == 'Cartoon'" id="Cartoon">
-              Cartoon
+              Karikatür
             </vs-navbar-item>
           </template>
           
         </vs-navbar-group>
         <vs-navbar-group>
-          Analytics
+          İş & Yönetim
 
           <template #items>
             <vs-navbar-item :active="active == 'Commerce'" id="Commerce">
-              E-Commerce Marketing
+              E-Ticaret Pazarlama
             </vs-navbar-item>
             <vs-navbar-item :active="active == 'Influencer'" id="Influencer">
               Influencer Marketing
@@ -69,7 +69,7 @@
         </vs-navbar-group>
 
         <vs-navbar-item :active="active == 'License'" id="License">
-          License
+          Hakkımızda
         </vs-navbar-item>
 
         <template #right>
@@ -318,14 +318,4 @@
 </template>
 
 
-<script lang="ts">
-  import Vue from 'vue'
-
-  export default Vue.extend({
-    name: 'HelloWorld',
-
-    data: () => ({
-      active: 'guid'
-    })
-  })
-</script>
+<script lang="ts" src="./hello.ts"></script>
