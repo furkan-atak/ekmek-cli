@@ -1,21 +1,36 @@
 <template>
     <div class="center examplex">
-      <vs-navbar center-collapsed v-model="active">
-        <template #left>
-          <img src="/logo2.png" alt="">
-        </template>
+       <vs-navbar center-collapsed v-model="active">
         <vs-navbar-group>
           Yazılım & Teknoloji
           <template #items>
-            <vs-navbar-item :active="active == 'guide'" id="guide">
-              Programlama
+            <vs-navbar-item @click="goTo('prog-tech/programming')" :active="active == 'web'" id="web">
+              Web Programlama
             </vs-navbar-item>
-            <vs-navbar-item :active="active == 'docs'" id="docs">
+            <vs-navbar-item @click="goTo('prog-tech/programming')" :active="active == 'mobil'" id="mobil">
+              Mobil Yazılım
+            </vs-navbar-item>
+            <vs-navbar-item @click="goTo('prog-tech/programming')" :active="active == 'oyungelis'" id="oyungelis">
+              Oyun Geliştirme
+            </vs-navbar-item>
+            <vs-navbar-item @click="goTo('prog-tech/programming')" :active="active == 'masaustu'" id="masaustu">
+              Masaüstü Uygulamaları
+            </vs-navbar-item>
+            <vs-navbar-item @click="goTo('prog-tech/programming')" :active="active == 'devops'" id="devops">
+              Geliştirici Operasyonları (DevOps)
+            </vs-navbar-item>
+            <vs-navbar-item @click="goTo('prog-tech/programming')" :active="active == 'veribilimi'" id="veribilimi">
               Veri Bilimi
             </vs-navbar-item>
-            <vs-navbar-item :active="active == 'components'" id="components">
-              Veritabanı
+            <vs-navbar-item @click="goTo('prog-tech/programming')" :active="active == 'donanim'" id="donanim">
+              Donanım Destek
             </vs-navbar-item>
+            <vs-navbar-item @click="goTo('prog-tech/programming')" :active="active == 'veritabani'" id="veritabani">
+              Veri Tabanı
+            </vs-navbar-item>
+            <vs-navbar-item @click="goTo('prog-tech/programming')" :active="active == 'digeryazilim'" id="digeryazilim">
+              Diğer Yazılım Teknolojileri
+            </vs-navbar-item>            
           </template>
         </vs-navbar-group>
 
@@ -23,14 +38,26 @@
           Çeviri & Yazı
 
           <template #items>
-            <vs-navbar-item :active="active == 'content'" id="content">
-              İçerik Yazımı
+            <vs-navbar-item @click="goTo('prog-tech/programming')" :active="active == 'ceviri'" id="ceviri">
+              Çeviri
             </vs-navbar-item>
-            <vs-navbar-item :active="active == 'Business'" id="Business">
-              İş Yazısı
+            <vs-navbar-item @click="goTo('prog-tech/programming')" :active="active == 'metinyazar'" id="metinyazar">
+              Metin Yazarlığı
             </vs-navbar-item>
-            <vs-navbar-item :active="active == 'Resumes'" id="Resumes">
+            <vs-navbar-item @click="goTo('prog-tech/programming')" :active="active == 'ozgecmis'" id="ozgecmis">
               Özgeçmiş
+            </vs-navbar-item>
+            <vs-navbar-item @click="goTo('prog-tech/programming')" :active="active == 'websiteicerik'" id="websiteicerik">
+              Web Sitesi İçeriği
+            </vs-navbar-item>
+            <vs-navbar-item @click="goTo('prog-tech/programming')" :active="active == 'senaryo'" id="senaryo">
+              Senaryo
+            </vs-navbar-item>
+            <vs-navbar-item @click="goTo('prog-tech/programming')" :active="active == 'metinduzen'" id="metinduzen">
+              Metin Düzenleme
+            </vs-navbar-item>
+            <vs-navbar-item @click="goTo('prog-tech/programming')" :active="active == 'digerceviri'" id="digerceviri">
+              Diğer Çeviri Yazı
             </vs-navbar-item>
           </template>
           
@@ -39,14 +66,26 @@
          Grafik & Tasarım
 
           <template #items>
-            <vs-navbar-item :active="active == 'Animation'" id="Animation">
-              Animasyon
+           <vs-navbar-item @click="goTo('prog-tech/programming')" :active="active == 'logo'" id="logo">
+              Logo Tasarım
             </vs-navbar-item>
-            <vs-navbar-item :active="active == '3D'" id="3D">
+            <vs-navbar-item @click="goTo('prog-tech/programming')" :active="active == '3d'" id="3d">
               3D Tasarım
             </vs-navbar-item>
-            <vs-navbar-item :active="active == 'Cartoon'" id="Cartoon">
+            <vs-navbar-item @click="goTo('prog-tech/programming')" :active="active == 'brosur'" id="brosur">
+              Broşür Katalog Tasarımı
+            </vs-navbar-item>
+            <vs-navbar-item @click="goTo('prog-tech/programming')" :active="active == 'animasyon'" id="animasyon">
+              Animasyon
+            </vs-navbar-item>
+            <vs-navbar-item @click="goTo('prog-tech/programming')" :active="active == 'karikatur'" id="karikatur">
               Karikatür
+            </vs-navbar-item>
+            <vs-navbar-item @click="goTo('prog-tech/programming')" :active="active == 'oyuntasarim'" id="oyuntasarim">
+              Oyun Tasarımı
+            </vs-navbar-item>
+            <vs-navbar-item @click="goTo('prog-tech/programming')" :active="active == 'digergrafik'" id="digergrafik">
+              Diğer Grafik Tasarım
             </vs-navbar-item>
           </template>
           
@@ -55,272 +94,205 @@
           İş & Yönetim
 
           <template #items>
-            <vs-navbar-item :active="active == 'Commerce'" id="Commerce">
-              E-Ticaret Pazarlama
+            <vs-navbar-item @click="goTo('prog-tech/programming')" :active="active == 'eticaret'" id="eticaret">
+              E-Ticaret Yönetimi
             </vs-navbar-item>
-            <vs-navbar-item :active="active == 'Influencer'" id="Influencer">
-              Influencer Marketing
+            <vs-navbar-item @click="goTo('prog-tech/programming')" :active="active == 'danismanlik'" id="danismanlik">
+              Danışmanlıklar
             </vs-navbar-item>
-            <vs-navbar-item :active="active == 'SEO'" id="SEO">
-              SEO
+            <vs-navbar-item @click="goTo('prog-tech/programming')" :active="active == 'reklam'" id="reklam">
+              Reklam Yönetimi
+            </vs-navbar-item>
+            <vs-navbar-item @click="goTo('prog-tech/programming')" :active="active == 'sosyalmedya'" id="sosyalmedya">
+              Sosyal Medya Yönetimi
+            </vs-navbar-item>
+            <vs-navbar-item @click="goTo('prog-tech/programming')" :active="active == 'seo'" id="seo">
+              Arama Motoru Optimizasyonu (SEO)
+            </vs-navbar-item>
+            <vs-navbar-item @click="goTo('prog-tech/programming')" :active="active == 'digeris'" id="digeris">
+              Diğer İş Yönetim
             </vs-navbar-item>
           </template>
           
         </vs-navbar-group>
 
-        <vs-navbar-item :active="active == 'License'" id="License">
-          Hakkımızda
-        </vs-navbar-item>
+        <vs-navbar-group>
+          Ses & Müzik
 
-        <template #right>
-          <vs-button flat >Login</vs-button>
-          <vs-button>Get Started</vs-button>
-        </template>
+          <template #items>
+            <vs-navbar-item @click="goTo('prog-tech/programming')" :active="active == 'seslendirme'" id="seslendirme">
+              Seslendirme
+            </vs-navbar-item>
+            <vs-navbar-item @click="goTo('prog-tech/programming')" :active="active == 'mix'" id="mix">
+              Mix Mastering
+            </vs-navbar-item>
+            <vs-navbar-item @click="goTo('prog-tech/programming')" :active="active == 'beste'" id="beste">
+              Beste Yazarlığı
+            </vs-navbar-item>
+            <vs-navbar-item @click="goTo('prog-tech/programming')" :active="active == 'vokal'" id="vokal">
+              Vokal Koçluğu
+            </vs-navbar-item>
+            <vs-navbar-item @click="goTo('prog-tech/programming')" :active="active == 'muzik'" id="muzik">
+              Müzik Yapma
+            </vs-navbar-item>
+            <vs-navbar-item @click="goTo('prog-tech/programming')" :active="active == 'digerses'" id="digerses">
+              Diğer Ses Müzik
+            </vs-navbar-item>
+          </template>
+          
+        </vs-navbar-group>
       </vs-navbar>
+      <br><br>
       <br><br>
       <v-row>
         <v-col cols="3"></v-col>
         <v-col>
-          <v-row >
-            <v-card
-            @click="logAt('/')"
-            :loading="loading"
-            class="mx-auto my-12"
-            max-width="374"
-            >
-            <template slot="progress">
-              <v-progress-linear
-                color="deep-purple"
-                height="10"
-                indeterminate
-              ></v-progress-linear>
+          <v-row >            
+          <vs-card style="margin:10px;">
+            <template #title>
+              <h3>Web Programlama</h3>
             </template>
-
-            <v-img
-              height="250"
-              src="../../../assets/web.png"
-            ></v-img>
-
-            <v-card-title class="font-weight-bold">Web Programlama</v-card-title>
-            
-            <v-card-text>
-              <v-row
-                align="center"
-                class="mx-0"
-              >                
-              </v-row>
-
-              <div v-text="data + ' İlan'" class="my-4 text-subtitle-1">
-               
-              </div>
-            </v-card-text>
-
-            <v-divider class="mx-2"></v-divider>
-
-            <v-card-text>
-            <div>Programming is the general process of creating a program that follows certain standards and performs a certain task.</div>
-            </v-card-text>
-          </v-card>
-          <v-card
-            @click="logAt('/')"
-            :loading="loading"
-            class="mx-auto my-12"
-            max-width="374"
-            >
-            <template slot="progress">
-              <v-progress-linear
-                color="deep-purple"
-                height="10"
-                indeterminate
-              ></v-progress-linear>
+            <template #img>
+              <img src="../../../assets/web.png" alt="">
             </template>
-
-            <v-img
-              height="250"
-              src="../../../assets/mobile.png"
-            ></v-img>
-
-            <v-card-title class="font-weight-bold">Mobil Yazılım</v-card-title>
-            
-            <v-card-text>
-              <v-row
-                align="center"
-                class="mx-0"
-              >
-                
-              </v-row>
-
-              <div v-text="data + ' İlan'" class="my-4 text-subtitle-1">
-               
-              </div>
-            </v-card-text>
-
-            <v-divider class="mx-4"></v-divider>
-
-            <v-card-text>
-            <div>Programming is the general process of creating a program that follows certain standards and performs a certain task.</div>
-            </v-card-text>
-          </v-card>
-          <v-card
-            @click="logAt('/')"
-            :loading="loading"
-            class="mx-auto my-12"
-            max-width="374"
-            >
-            <template slot="progress">
-              <v-progress-linear
-                color="deep-purple"
-                height="10"
-                indeterminate
-              ></v-progress-linear>
+            <template #text>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              </p>
             </template>
-
-            <v-img
-              height="250"
-              src="../../../assets/game.png"
-            ></v-img>
-
-            <v-card-title class="font-weight-bold">Oyun Geliştirme</v-card-title>
-            
-            <v-card-text>
-              <v-row
-                align="center"
-                class="mx-0"
-              >
-                
-              </v-row>
-
-              <div v-text="data + ' İlan'" class="my-4 text-subtitle-1">
-               
-              </div>
-            </v-card-text>
-
-            <v-divider class="mx-4"></v-divider>
-
-            <v-card-text>
-            <div>Programming is the general process of creating a program that follows certain standards and performs a certain task.</div>
-            </v-card-text>
-          </v-card>
-          <v-card
-            @click="logAt('/')"
-            :loading="loading"
-            class="mx-auto my-12"
-            max-width="374"
-            >
-            <template slot="progress">
-              <v-progress-linear
-                color="deep-purple"
-                height="10"
-                indeterminate
-              ></v-progress-linear>
+            <template #interactions>
+              <vs-button danger icon>
+                <i class='bx bx-heart'></i>
+              </vs-button>
+              <vs-button class="btn-chat" shadow primary>
+                <i class='bx bx-chat' ></i>
+                <span class="span">
+                  54
+                </span>
+              </vs-button>
             </template>
-
-            <v-img
-              height="250"
-              src="../../../assets/masaustu.png"
-            ></v-img>
-
-            <v-card-title class="font-weight-bold">Masaüstü Uygulamalar</v-card-title>
-            
-            <v-card-text>
-              <v-row
-                align="center"
-                class="mx-0"
-              >
-                
-              </v-row>
-
-              <div v-text="data + ' İlan'" class="my-4 text-subtitle-1">
-               
-              </div>
-            </v-card-text>
-
-            <v-divider class="mx-4"></v-divider>
-
-            <v-card-text>
-            <div>Programming is the general process of creating a program that follows certain standards and performs a certain task.</div>
-            </v-card-text>
-          </v-card>
-          <v-card
-            @click="logAt('/')"
-            :loading="loading"
-            class="mx-auto my-12"
-            max-width="374"
-            >
-            <template slot="progress">
-              <v-progress-linear
-                color="deep-purple"
-                height="10"
-                indeterminate
-              ></v-progress-linear>
+          </vs-card>
+          <vs-card style="margin:10px;">
+            <template #title>
+              <h3>Mobil Yazılım</h3>
             </template>
-
-            <v-img
-              height="250"
-              src="../../../assets/devops.png"
-            ></v-img>
-
-            <v-card-title class="font-weight-bold">Geliştirici Operasyonları Devops</v-card-title>
-            
-            <v-card-text>
-              <v-row
-                align="center"
-                class="mx-0"
-              >
-                
-              </v-row>
-
-              <div v-text="data + ' İlan'" class="my-4 text-subtitle-1">
-               
-              </div>
-            </v-card-text>
-
-            <v-divider class="mx-4"></v-divider>
-
-            <v-card-text>
-            <div>Programming is the general process of creating a program that follows certain standards and performs a certain task.</div>
-            </v-card-text>
-          </v-card>
-          <v-card
-            @click="logAt('/')"
-            :loading="loading"
-            class="mx-auto my-12"
-            max-width="374"
-            >
-            <template slot="progress">
-              <v-progress-linear
-                color="deep-purple"
-                height="10"
-                indeterminate
-              ></v-progress-linear>
+            <template #img>
+              <img src="../../../assets/mobile.png" alt="">
             </template>
+            <template #text>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              </p>
+            </template>
+            <template #interactions>
+              <vs-button danger icon>
+                <i class='bx bx-heart'></i>
+              </vs-button>
+              <vs-button class="btn-chat" shadow primary>
+                <i class='bx bx-chat' ></i>
+                <span class="span">
+                  54
+                </span>
+              </vs-button>
+            </template>
+          </vs-card>
+          <vs-card style="margin:10px;">
+            <template #title>
+              <h3>Oyun Geliştirme</h3>
+            </template>
+            <template #img>
+              <img src="../../../assets/game.png" alt="">
+            </template>
+            <template #text>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              </p>
+            </template>
+            <template #interactions>
+              <vs-button danger icon>
+                <i class='bx bx-heart'></i>
+              </vs-button>
+              <vs-button class="btn-chat" shadow primary>
+                <i class='bx bx-chat' ></i>
+                <span class="span">
+                  54
+                </span>
+              </vs-button>
+            </template>
+          </vs-card>
+          <vs-card style="margin:10px;">
+            <template #title>
+              <h3>Masaüstü Uygulamalar</h3>
+            </template>
+            <template #img>
+              <img src="../../../assets/masaustu.png" alt="">
+            </template>
+            <template #text>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              </p>
+            </template>
+            <template #interactions>
+              <vs-button danger icon>
+                <i class='bx bx-heart'></i>
+              </vs-button>
+              <vs-button class="btn-chat" shadow primary>
+                <i class='bx bx-chat' ></i>
+                <span class="span">
+                  54
+                </span>
+              </vs-button>
+            </template>
+          </vs-card>
+          <vs-card style="margin:10px;">
+            <template #title>
+              <h3>Geliştirici Operasyonları (DevOps)</h3>
+            </template>
+            <template #img>
+              <img src="../../../assets/devops.png" alt="">
+            </template>
+            <template #text>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              </p>
+            </template>
+            <template #interactions>
+              <vs-button danger icon>
+                <i class='bx bx-heart'></i>
+              </vs-button>
+              <vs-button class="btn-chat" shadow primary>
+                <i class='bx bx-chat' ></i>
+                <span class="span">
+                  54
+                </span>
+              </vs-button>
+            </template>
+          </vs-card>
+          <vs-card style="margin:10px;">
+            <template #title>
+              <h3>Diğer Yazılım Teknolojileri</h3>
+            </template>
+            <template #img>
+              <img src="../../../assets/diger.png" alt="">
+            </template>
+            <template #text>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              </p>
+            </template>
+            <template #interactions>
+              <vs-button danger icon>
+                <i class='bx bx-heart'></i>
+              </vs-button>
+              <vs-button class="btn-chat" shadow primary>
+                <i class='bx bx-chat' ></i>
+                <span class="span">
+                  54
+                </span>
+              </vs-button>
+            </template>
+          </vs-card>
 
-            <v-img
-              height="250"
-              src="../../../assets/diger.png"
-            ></v-img>
-
-            <v-card-title class="font-weight-bold">Diğer Yazılım Teknolojileri</v-card-title>
-            
-            <v-card-text>
-              <v-row
-                align="center"
-                class="mx-0"
-              >
-                
-              </v-row>
-
-              <div v-text="data + ' İlan'" class="my-4 text-subtitle-1">
-               
-              </div>
-            </v-card-text>
-
-            <v-divider class="mx-4"></v-divider>
-
-            <v-card-text>
-            <div>Programming is the general process of creating a program that follows certain standards and performs a certain task.</div>
-            </v-card-text>
-          </v-card>
 
         </v-row>
         </v-col>

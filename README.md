@@ -1,4 +1,4 @@
-# ekmek
+# Ekmek
 
 ## Project setup
 ```
