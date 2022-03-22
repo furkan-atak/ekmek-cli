@@ -27,11 +27,11 @@
       <v-spacer></v-spacer>
      
       <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
+        href="https://github.com/furkan-atak"
         target="_blank"
         text
       >
-        <span class="mr-2" style="color: orange">Latest Release</span>
+        <span class="mr-2" style="color: orange">Hakkımızda</span>
         <v-icon style="color: orange;">mdi-open-in-new</v-icon>
       </v-btn>
        <vs-button flat >Login</vs-button>
