@@ -34,7 +34,7 @@
         <span class="mr-2" style="color: orange">Hakkımızda</span>
         <v-icon style="color: orange;">mdi-open-in-new</v-icon>
       </v-btn>
-       <vs-button flat >Login</vs-button>
+       <vs-button @click="goTo" flat >Login</vs-button>
       <vs-button>Get Started</vs-button>
       
     </v-app-bar>
@@ -53,5 +53,10 @@ export default Vue.extend({
   data: () => ({
     //
   }),
+  methods: {
+    goTo() {
+      console.log("sth");
+    }
+  }
 });
 </script>
