@@ -46,7 +46,7 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
+import { Vue } from "vue-property-decorator";
 
 export default Vue.extend({
   name: 'App',
@@ -54,9 +54,10 @@ export default Vue.extend({
     //
   }),
   methods: {
-    goTo() {
-      console.log("sth");
-    }
+    goTo(path: string, query?: any) {
+    const url = path.startsWith("/", 0) ? path : "/".concat(path);
+    this.$router.push({path: url, query: query});
+  }
   }
 });
 </script>

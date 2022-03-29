@@ -4,7 +4,7 @@
         <vs-navbar-group>
           Yazılım & Teknoloji
           <template #items>
-            <vs-navbar-item @click="goTo('prog-tech/web')" :active="active == 'web'" id="web">
+            <vs-navbar-item @click="goTo('prog-tech/programming')" :active="active == 'web'" id="web">
               Web Programlama
             </vs-navbar-item>
             <vs-navbar-item @click="goTo('prog-tech/mobile')" :active="active == 'mobil'" id="mobil">
@@ -38,25 +38,25 @@
           Çeviri & Yazı
 
           <template #items>
-            <vs-navbar-item @click="goTo('translate-writing/translate')" :active="active == 'ceviri'" id="ceviri">
+            <vs-navbar-item @click="goTo('prog-tech/programming')" :active="active == 'ceviri'" id="ceviri">
               Çeviri
             </vs-navbar-item>
-            <vs-navbar-item @click="goTo('translate-writing/copywriting')" :active="active == 'metinyazar'" id="metinyazar">
+            <vs-navbar-item @click="goTo('prog-tech/programming')" :active="active == 'metinyazar'" id="metinyazar">
               Metin Yazarlığı
             </vs-navbar-item>
-            <vs-navbar-item @click="goTo('translate-writing/cv')" :active="active == 'ozgecmis'" id="ozgecmis">
+            <vs-navbar-item @click="goTo('prog-tech/programming')" :active="active == 'ozgecmis'" id="ozgecmis">
               Özgeçmiş
             </vs-navbar-item>
-            <vs-navbar-item @click="goTo('translate-writing/website-content')" :active="active == 'websiteicerik'" id="websiteicerik">
+            <vs-navbar-item @click="goTo('prog-tech/programming')" :active="active == 'websiteicerik'" id="websiteicerik">
               Web Sitesi İçeriği
             </vs-navbar-item>
-            <vs-navbar-item @click="goTo('translate-writing/scenario')" :active="active == 'senaryo'" id="senaryo">
+            <vs-navbar-item @click="goTo('prog-tech/programming')" :active="active == 'senaryo'" id="senaryo">
               Senaryo
             </vs-navbar-item>
-            <vs-navbar-item @click="goTo('translate-writing/text-editing')" :active="active == 'metinduzen'" id="metinduzen">
+            <vs-navbar-item @click="goTo('prog-tech/programming')" :active="active == 'metinduzen'" id="metinduzen">
               Metin Düzenleme
             </vs-navbar-item>
-            <vs-navbar-item @click="goTo('translate-writing/other-translatewriting')" :active="active == 'digerceviri'" id="digerceviri">
+            <vs-navbar-item @click="goTo('prog-tech/programming')" :active="active == 'digerceviri'" id="digerceviri">
               Diğer Çeviri Yazı
             </vs-navbar-item>
           </template>
@@ -153,11 +153,11 @@
               <h3>Web Programlama</h3>
             </template>
             <template #img>
-              <img src="../assets/web.png" alt="">
+              <img src="../../../assets/web.png" alt="">
             </template>
             <template #text>
               <p>
-                Web Programlamayla alakalı html, php, javascript vb. tüm yazılım dillerindeki iş ilanlarını içermektedir.
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
               </p>
             </template>
             <template #interactions>
@@ -167,7 +167,7 @@
               <vs-button class="btn-chat" shadow primary>
                 <i class='bx bx-chat' ></i>
                 <span class="span">
-                  17 İş İlanı
+                  54
                 </span>
               </vs-button>
             </template>
@@ -177,11 +177,11 @@
               <h3>Mobil Yazılım</h3>
             </template>
             <template #img>
-              <img src="../assets/mobile.png" alt="">
+              <img src="../../../assets/mobile.png" alt="">
             </template>
             <template #text>
               <p>
-                Mobil Yazılım, Swift, AndroidStudio vb. işlerini barındırmaktadır.
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
               </p>
             </template>
             <template #interactions>
@@ -191,7 +191,7 @@
               <vs-button class="btn-chat" shadow primary>
                 <i class='bx bx-chat' ></i>
                 <span class="span">
-                  23 İş İlanı
+                  54
                 </span>
               </vs-button>
             </template>
@@ -201,11 +201,11 @@
               <h3>Oyun Geliştirme</h3>
             </template>
             <template #img>
-              <img src="../assets/game.png" alt="">
+              <img src="../../../assets/game.png" alt="">
             </template>
             <template #text>
               <p>
-                Oyun geliştirmesinde Unreal Engine, Unity vb. diğer tüm yazılım dillerini içermektedir.
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
               </p>
             </template>
             <template #interactions>
@@ -215,7 +215,7 @@
               <vs-button class="btn-chat" shadow primary>
                 <i class='bx bx-chat' ></i>
                 <span class="span">
-                  9 İş İlanı
+                  54
                 </span>
               </vs-button>
             </template>
@@ -225,11 +225,11 @@
               <h3>Masaüstü Uygulamalar</h3>
             </template>
             <template #img>
-              <img src="../assets/masaustu.png" alt="">
+              <img src="../../../assets/masaustu.png" alt="">
             </template>
             <template #text>
               <p>
-                Masaüstü uygulamlarında C++, C# , Java gibi platformlarda yazılan uygulamarı barındırır.
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
               </p>
             </template>
             <template #interactions>
@@ -239,7 +239,7 @@
               <vs-button class="btn-chat" shadow primary>
                 <i class='bx bx-chat' ></i>
                 <span class="span">
-                  35 İş İlanı
+                  54
                 </span>
               </vs-button>
             </template>
@@ -249,11 +249,11 @@
               <h3>Geliştirici Operasyonları (DevOps)</h3>
             </template>
             <template #img>
-              <img src="../assets/devops.png" alt="">
+              <img src="../../../assets/devops.png" alt="">
             </template>
             <template #text>
               <p>
-                Yazılım geliştiriken gerekli tüm aşamaları istişare etmek için DevOps.
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
               </p>
             </template>
             <template #interactions>
@@ -263,79 +263,7 @@
               <vs-button class="btn-chat" shadow primary>
                 <i class='bx bx-chat' ></i>
                 <span class="span">
-                  86 İş İlanı
-                </span>
-              </vs-button>
-            </template>
-          </vs-card>
-          <vs-card style="margin:10px;">
-            <template #title>
-              <h3>Veri Bilimi</h3>
-            </template>
-            <template #img>
-              <img src="../assets/veribilimi.png" alt="">
-            </template>
-            <template #text>
-              <p>
-                Bilimsel yöntemleri, süreçleri, algoritmaları ve sistemleri kullanarak problemleri çöz.
-              </p>
-            </template>
-            <template #interactions>
-              <vs-button danger icon>
-                <i class='bx bx-heart'></i>
-              </vs-button>
-              <vs-button class="btn-chat" shadow primary>
-                <i class='bx bx-chat' ></i>
-                <span class="span">
-                  42 İş İlanı
-                </span>
-              </vs-button>
-            </template>
-          </vs-card>
-          <vs-card style="margin:10px;">
-            <template #title>
-              <h3>Donanım Destek</h3>
-            </template>
-            <template #img>
-              <img src="../assets/donanim.jpg" alt="">
-            </template>
-            <template #text>
-              <p>
-                Her türlü donanım sorunlarınızın çözümünü içeren alan.
-              </p>
-            </template>
-            <template #interactions>
-              <vs-button danger icon>
-                <i class='bx bx-heart'></i>
-              </vs-button>
-              <vs-button class="btn-chat" shadow primary>
-                <i class='bx bx-chat' ></i>
-                <span class="span">
-                  75 İş İlanı
-                </span>
-              </vs-button>
-            </template>
-          </vs-card>
-          <vs-card style="margin:10px;">
-            <template #title>
-              <h3>Veri Tabanı</h3>
-            </template>
-            <template #img>
-              <img src="../assets/veritabani.jpg" alt="">
-            </template>
-            <template #text>
-              <p>
-                Bilgisayarda bilgi depolama ve bilgiye erişim konularında yeni yöntemleri barındırır.
-              </p>
-            </template>
-            <template #interactions>
-              <vs-button danger icon>
-                <i class='bx bx-heart'></i>
-              </vs-button>
-              <vs-button class="btn-chat" shadow primary>
-                <i class='bx bx-chat' ></i>
-                <span class="span">
-                  29 İş İlanı
+                  54
                 </span>
               </vs-button>
             </template>
@@ -345,11 +273,11 @@
               <h3>Diğer Yazılım Teknolojileri</h3>
             </template>
             <template #img>
-              <img src="../assets/diger.png" alt="">
+              <img src="../../../assets/diger.png" alt="">
             </template>
             <template #text>
               <p>
-                Belirtilen alanlar dışında iş ilanlarını barındırır.
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
               </p>
             </template>
             <template #interactions>
@@ -359,7 +287,7 @@
               <vs-button class="btn-chat" shadow primary>
                 <i class='bx bx-chat' ></i>
                 <span class="span">
-                  103 İş İlanı
+                  54
                 </span>
               </vs-button>
             </template>
@@ -373,4 +301,4 @@
     </div>
 </template>
 
-<script lang="ts" src="./hello.ts"></script>
+<script lang="ts" src="./index.ts"></script>
