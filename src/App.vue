@@ -20,9 +20,8 @@ export default Vue.extend({
     CoreAppBar: () => import("@/components/core/AppBar.vue")
   },  
   methods: {
-    goTo(path: string, query?: any) {
-    const url = path.startsWith("/", 0) ? path : "/".concat(path);
-    this.$router.push({path: url, query: query});
+    goTo() {
+      // sth
   }
   }
 });
