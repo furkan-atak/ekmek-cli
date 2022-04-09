@@ -44,7 +44,7 @@ export default class Login extends Vue{
       })
       .catch(error => {
         // Handle error.
-        alert('Login Failed :/ \n' + error.response.toString());
+        alert('Login Failed :/ \n' + error.response);
         //console.log('An error occurred:', error.response);
       });
 
