@@ -2,7 +2,7 @@
     <div>
       <vs-navbar style="background-color: lightgray; margin-top: 1.5cm;" fixed center-collapsed v-model="active">
         <vs-navbar-group>
-          Yazılım & Teknoloji
+          <p @click="goTo('prog-tech/web')" style="height: 10px; margin-top: 2px;">Yazılım & Teknoloji</p>
           <template #items>
             <vs-navbar-item @click="goTo('prog-tech/web')" :active="active == 'web'" id="web">
               Web Programlama
@@ -35,8 +35,7 @@
         </vs-navbar-group>
 
         <vs-navbar-group>
-          Çeviri & Yazı
-
+          <p style="height: 10px; margin-top: 2px;">Çeviri & Yazı</p>
           <template #items>
             <vs-navbar-item @click="goTo('translate-writing/translate')" :active="active == 'ceviri'" id="ceviri">
               Çeviri
@@ -63,7 +62,7 @@
           
         </vs-navbar-group>
         <vs-navbar-group>
-         Grafik & Tasarım
+         <p style="height: 10px; margin-top: 2px;">Grafik & Tasarım</p>
 
           <template #items>
            <vs-navbar-item @click="goTo('prog-tech/programming')" :active="active == 'logo'" id="logo">
@@ -91,7 +90,7 @@
           
         </vs-navbar-group>
         <vs-navbar-group>
-          İş & Yönetim
+          <p style="height: 10px; margin-top: 2px;">İş & Yönetim</p>
 
           <template #items>
             <vs-navbar-item @click="goTo('prog-tech/programming')" :active="active == 'eticaret'" id="eticaret">
@@ -117,7 +116,7 @@
         </vs-navbar-group>
 
         <vs-navbar-group>
-          Ses & Müzik
+          <p style="height: 10px; margin-top: 2px;">Ses & Müzik</p>
 
           <template #items>
             <vs-navbar-item @click="goTo('prog-tech/programming')" :active="active == 'seslendirme'" id="seslendirme">
