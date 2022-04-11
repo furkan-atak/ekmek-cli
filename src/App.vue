@@ -1,7 +1,7 @@
 <template>
   <v-app>
-    
-    <core-app-bar></core-app-bar>
+    <core-app-bar/>
+    <core-nav-bar/>
     <v-main>
       <router-view/>
     </v-main>
@@ -17,7 +17,8 @@ export default Vue.extend({
     //
   }),
   components: {
-    CoreAppBar: () => import("@/components/core/AppBar.vue")
+    CoreAppBar: () => import("@/components/core/AppBar.vue"),
+    CoreNavBar: () => import("@/components/core/NavBar.vue")
   },  
   methods: {
     goTo() {
