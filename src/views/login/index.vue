@@ -9,7 +9,7 @@
         <br><br>
         <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LOGIN </h1>
         <br><br>
-        <vs-input class="large" primary v-model="userName" label-placeholder="Kullanıcı Adı">
+        <vs-input class="" primary v-model="userName" label-placeholder="Kullanıcı Adı">
           <template #icon>
             <i class='bx bx-user'></i>
           </template>
@@ -56,4 +56,11 @@
 
 
 <script lang="ts" src="./index.ts"></script>
+
+<style scoped>
+.vs-input {
+  width: 150px;
+}
+
+</style>>
 
