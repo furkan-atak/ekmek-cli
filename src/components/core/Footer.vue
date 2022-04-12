@@ -1,14 +1,16 @@
 <template>
- <div style="margin: 150px;">
   <v-footer
-    dark
     padless
     absolute
+    inset
+    app
+    height="200"
+    footer-transition-property color="primary"  
   >
     <v-card
       flat
       tile
-      class="indigo lighten-1 white--text text-center"
+      class="primary -1 white--text text-center"
     >
       <v-card-text>
         <v-btn
@@ -34,7 +36,6 @@
       </v-card-text>
     </v-card>
   </v-footer>
-  </div>
 </template>
 
 <script lang="ts">
