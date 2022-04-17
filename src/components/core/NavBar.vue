@@ -47,7 +47,7 @@
               Özgeçmiş
             </vs-navbar-item>
             <vs-navbar-item @click="goTo('translate-writing/website-content')" :active="active == 'websiteicerik'" id="websiteicerik">
-              Web Sitesi İçeriği
+              İçerik Yazarlığı
             </vs-navbar-item>
             <vs-navbar-item @click="goTo('translate-writing/scenario')" :active="active == 'senaryo'" id="senaryo">
               Senaryo

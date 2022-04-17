@@ -32,6 +32,7 @@
                 >
                   <v-hover v-slot="{ hover }">
                     <v-card
+                      @click="goTo(item.path)"
                       style="width: 85%; cursor: pointer; padding-left: 0cm; padding-right: 0cm;"
                       :elevation="hover ? 24 : 2"
                       :class="{ 'on-hover': hover }"
