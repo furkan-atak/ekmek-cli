@@ -1,14 +1,12 @@
   <template>
-    
-    <div>
-     <div style="margin-top: 10%;"></div>
-      <div style="margin-left: 5cm; height: 10cm; width: 80%; background-color: grey; border-width: 0.01cm; border-color: black; border-style: solid;">
+    <div style="margin-top: 3%;">
+      <div style="margin-left: 4cm; height: 10cm; width: 82%; background-color: white; border-width: 0.01cm; border-color: black; border-style: solid;">
       <v-row>
         <v-col class="col-5"></v-col>
         <v-col>
-        <br><br>
-        <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LOGIN </h1>
-        <br><br>
+        <br>
+        <h1 style="padding-left: 11%;"> LOGIN </h1>
+        <br>
         <vs-input class="" primary v-model="userName" label-placeholder="Kullanıcı Adı">
           <template #icon>
             <i class='bx bx-user'></i>
@@ -33,7 +31,7 @@
             </template>
           </vs-input>
           <br>
-          <vs-input  class="large" primary v-model="mail" label-placeholder="Mail Adresi">
+          <vs-input primary v-model="mail" label-placeholder="Mail Adresi">
             <template #icon>
               <i class='bx bx-envelope'></i>
             </template>
@@ -42,7 +40,7 @@
             gradient
             :active="activee == 1"
             @click="login"
-            style="margin-left: 1.8cm; margin-top: 0.4cm;"
+            style="margin-left: 5%; margin-top: 10%; width: 30%; height: 50px; font-size: large;"
           >
             Login
           </vs-button>
@@ -50,17 +48,18 @@
       </v-col>
       </v-row>
       </div>
-      
-  </div>
+    </div>
 </template>
 
 
 <script lang="ts" src="./index.ts"></script>
 
-<style scoped>
+<style>
 .vs-input {
-  width: 150px;
+  width: 40%;
+  height: 60px;
+  padding-bottom: 2%;
 }
+</style>
 
-</style>>
 

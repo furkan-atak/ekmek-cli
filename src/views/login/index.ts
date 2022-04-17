@@ -15,13 +15,13 @@ export default class Login extends Vue{
   hasVisiblePassword = false;
   getProgress = 0;
   created() {
-      console.log("falan filan");
+    // st
   }
   mounted() { 
     //sth
   }
 
-  login(){
+  login() {
     // Request API.
     axios
       .post('http://localhost:1337/auth/local', {
@@ -47,10 +47,6 @@ export default class Login extends Vue{
         alert('Login Failed :/ \n' + error.response);
         //console.log('An error occurred:', error.response);
       });
-
   }
-
-
-
  
 }

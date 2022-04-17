@@ -68,5 +68,6 @@ items = [
     /* eslint-disable */
     goTo(path: string, query?: any) {
       this.navigate(path, query);
-  }
+    }
+    
 }

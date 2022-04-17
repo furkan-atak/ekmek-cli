@@ -1,5 +1,5 @@
 <template>
-  <div style="margin-top: 1.5cm;">
+  <div style="margin-top: 0.8cm;">
     <v-carousel>   
       <v-carousel-item
         v-for="(item,i) in itemk"
@@ -39,7 +39,7 @@
                     >
                       <v-img
                         :src="item.img"
-                        height="300px"
+                        height="350px"
                       >
                         <v-card-title class="text-h6 white--text">
                           <v-row
