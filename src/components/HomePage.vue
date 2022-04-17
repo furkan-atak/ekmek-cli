@@ -1,8 +1,8 @@
 <template>
   <div style="margin-top: 1.5cm;">
-    <v-carousel height="%90">   
+    <v-carousel>   
       <v-carousel-item
-        v-for="(item,i) in items"
+        v-for="(item,i) in itemk"
         :key="i"
         :src="item.src"
         reverse-transition="fade-transition"
@@ -15,158 +15,83 @@
   <v-row>
         <v-col cols="3"></v-col>
         <v-col>
-          <v-row >            
-          <vs-card style="margin:10px;">
-            <template #title>
-              <h3>Web Programlama</h3>
-            </template>
-            <template #img>
-              <img src="../assets/web.png" alt="">
-            </template>
-            <template #text>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              </p>
-            </template>
-            <template #interactions>
-              <vs-button danger icon>
-                <i class='bx bx-heart'></i>
-              </vs-button>
-              <vs-button class="btn-chat" shadow primary>
-                <i class='bx bx-chat' ></i>
-                <span class="span">
-                  54
-                </span>
-              </vs-button>
-            </template>
-          </vs-card>
-          <vs-card style="margin:10px;">
-            <template #title>
-              <h3>Mobil Yazılım</h3>
-            </template>
-            <template #img>
-              <img src="../assets/mobile.png" alt="">
-            </template>
-            <template #text>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              </p>
-            </template>
-            <template #interactions>
-              <vs-button danger icon>
-                <i class='bx bx-heart'></i>
-              </vs-button>
-              <vs-button class="btn-chat" shadow primary>
-                <i class='bx bx-chat' ></i>
-                <span class="span">
-                  54
-                </span>
-              </vs-button>
-            </template>
-          </vs-card>
-          <vs-card style="margin:10px;">
-            <template #title>
-              <h3>Oyun Geliştirme</h3>
-            </template>
-            <template #img>
-              <img src="../assets/game.png" alt="">
-            </template>
-            <template #text>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              </p>
-            </template>
-            <template #interactions>
-              <vs-button danger icon>
-                <i class='bx bx-heart'></i>
-              </vs-button>
-              <vs-button class="btn-chat" shadow primary>
-                <i class='bx bx-chat' ></i>
-                <span class="span">
-                  54
-                </span>
-              </vs-button>
-            </template>
-          </vs-card>
-          <vs-card style="margin:10px;">
-            <template #title>
-              <h3>Masaüstü Uygulamalar</h3>
-            </template>
-            <template #img>
-              <img src="../assets/masaustu.png" alt="">
-            </template>
-            <template #text>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              </p>
-            </template>
-            <template #interactions>
-              <vs-button danger icon>
-                <i class='bx bx-heart'></i>
-              </vs-button>
-              <vs-button class="btn-chat" shadow primary>
-                <i class='bx bx-chat' ></i>
-                <span class="span">
-                  54
-                </span>
-              </vs-button>
-            </template>
-          </vs-card>
-          <vs-card style="margin:10px;">
-            <template #title>
-              <h3>Geliştirici Operasyonları (DevOps)</h3>
-            </template>
-            <template #img>
-              <img src="../assets/devops.png" alt="">
-            </template>
-            <template #text>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              </p>
-            </template>
-            <template #interactions>
-              <vs-button danger icon>
-                <i class='bx bx-heart'></i>
-              </vs-button>
-              <vs-button class="btn-chat" shadow primary>
-                <i class='bx bx-chat' ></i>
-                <span class="span">
-                  54
-                </span>
-              </vs-button>
-            </template>
-          </vs-card>
-          <vs-card style="margin:10px;">
-            <template #title>
-              <h3>Diğer Yazılım Teknolojileri</h3>
-            </template>
-            <template #img>
-              <img src="../assets/diger.png" alt="">
-            </template>
-            <template #text>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              </p>
-            </template>
-            <template #interactions>
-              <vs-button danger icon>
-                <i class='bx bx-heart'></i>
-              </vs-button>
-              <vs-button class="btn-chat" shadow primary>
-                <i class='bx bx-chat' ></i>
-                <span class="span">
-                  54
-                </span>
-              </vs-button>
-            </template>
-          </vs-card>
-
-
+          <v-row >   
+          <h1 style="padding-left: 5%;"> En Popüler Kategoriler </h1>         
+          <v-container class="pa-12 text-center">
+            <v-row
+              class="fill-height"
+              align="center"
+              justify="center"
+            >
+              <template v-for="(item, i) in items">
+                <v-col
+                  style="padding-left: 0cm;"
+                  :key="i"
+                  cols="12"
+                  md="2"
+                >
+                  <v-hover v-slot="{ hover }">
+                    <v-card
+                      style="width: 85%; cursor: pointer; padding-left: 0cm; padding-right: 0cm;"
+                      :elevation="hover ? 24 : 2"
+                      :class="{ 'on-hover': hover }"
+                    >
+                      <v-img
+                        :src="item.img"
+                        height="300px"
+                      >
+                        <v-card-title class="text-h6 white--text">
+                          <v-row
+                            :elevation="hover ? 24 : 2"
+                            class="fill-height flex-column"
+                            justify="space-between"
+                          >
+                            <p :style="hover ? 'text-decoration: underline;' : 'text-decoration:none;'" class="mt-4 subheading text-left">
+                              {{ item.title }}
+                            </p>
+                            <div>
+                              <p class="ma-0 text-body-1 font-weight-bold font-italic text-left">
+                                {{ item.text }}
+                              </p>
+                              <p class="text-caption font-weight-medium font-italic text-left">
+                                {{ item.subtext }}
+                              </p>
+                            </div>
+                            <div class="align-self-center">
+                              <v-btn
+                                v-for="(icon, index) in icons"
+                                :key="index"
+                                :class="{ 'show-btns': hover }"
+                                icon
+                              >
+                              </v-btn>
+                            </div>
+                          </v-row>
+                        </v-card-title>
+                      </v-img>
+                    </v-card>
+                  </v-hover>
+                </v-col>
+              </template>
+            </v-row>
+          </v-container>
         </v-row>
-        </v-col>
-        
+        </v-col>      
         </v-row>
   </div>
 </template>
 
 <script lang="ts" src="./homepage.ts"></script>
+
+<style>
+.container {
+  position: relative;
+  color: black;
+}
+
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+</style>
