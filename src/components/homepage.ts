@@ -27,45 +27,39 @@ export default class HomePage extends BaseView{
 icons = ['mdi-rewind', 'mdi-play', 'mdi-fast-forward'];
 items = [
       {
-        title: 'New Releases',
-        text: `It's New Release Friday`,
-        subtext: 'Newly released songs. Updated daily.',
-        img: 'https://images.unsplash.com/photo-1429514513361-8fa32282fd5f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3264&q=80',
+        title: 'Web Programlama',
+        text: `Site tasarla ve kodla`,
+        img: 'https://github.com/furkan-atak/ekmek-cli/blob/main/src/assets/web.png?raw=true',
         path: 'prog-tech/web'
       },
       {
-        title: 'Rock',
-        text: 'Greatest Rock Hits',
-        subtext: 'Lose yourself in rock tunes.',
-        img: 'https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80',
+        title: 'Metin Yazarlığı',
+        text: `İhtiyaca göre metin yaz`,
+        img: 'https://www.datocms-assets.com/26717/1602927452-seo-uzmani-seo-metin-yazarligi.jpg',
         path: 'translate-writing/copywriting'
       },
       {
-        title: 'Mellow Moods',
-        text: 'Ambient Bass',
-        subtext: 'Chill beats to mellow you out.',
-        img: 'https://images.unsplash.com/photo-1542320868-f4d80389e1c4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3750&q=80',
+        title: 'Mobil Yazılım',
+        text: 'Uygulamanı çıkar',
+        img: 'https://github.com/furkan-atak/ekmek-cli/blob/main/src/assets/mobile.png?raw=true',
         path: 'prog-tech/mobile'
       },
       {
-        title: 'Mellow Moods',
-        text: 'Ambient Bass',
-        subtext: 'Chill beats to mellow you out.',
-        img: 'https://images.unsplash.com/photo-1542320868-f4d80389e1c4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3750&q=80',
+        title: 'Senaryo',
+        text: 'Özgün senaryolar oluştur',
+        img: 'https://dckozmos.com/wp-content/uploads/2019/09/Senaryo-Yazarl%C4%B1g%CC%86%C4%B1-.png',
         path: 'translate-writing/scenario'
       },
       {
-        title: 'Mellow Moods',
-        text: 'Ambient Bass',
-        subtext: 'Chill beats to mellow you out.',
-        img: 'https://images.unsplash.com/photo-1542320868-f4d80389e1c4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3750&q=80',
+        title: 'Veri Bilimi',
+        text: 'Verileri anlamlandır',
+        img: 'https://github.com/furkan-atak/ekmek-cli/blob/main/src/assets/veribilimi.png?raw=true',
         path: 'prog-tech/datascience'
       },
       {
-        title: 'Mellow Moods',
-        text: 'Ambient Bass',
-        subtext: 'Chill beats to mellow you out.',
-        img: 'https://images.unsplash.com/photo-1542320868-f4d80389e1c4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3750&q=80',
+        title: 'İçerik Yazıcılığı',
+        text: 'Site içeriğini doldur',
+        img: 'https://w7.pngwing.com/pngs/51/923/png-transparent-website-content-writer-content-writing-services-business-search-engine-optimization-content-marketing-text.png',
         path: 'translate-writing/website-content'
       },
     ];
