@@ -1,6 +1,6 @@
 # Ekmek
 
-  Frontend side of a project to find and hire freelancers. Using Vue.js Typescript
+  Frontend side of a project to find and hire freelancers. Using with Vue.js Typescript
 
 ## Project setup
 ```
