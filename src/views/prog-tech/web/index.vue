@@ -5,158 +5,105 @@
       <v-row>
         <v-col cols="3"></v-col>
         <v-col>
-          <v-row >            
-          <vs-card style="margin:10px;">
-            <template #title>
-              <h3>Web Programlama</h3>
+          <v-row>
+           <v-container class="pa-12 text-center">
+            <v-row
+              class="fill-height"
+              align="center"
+              justify="center"
+            >
+              <template v-for="(item, i) in items">
+                <v-col
+                  style="padding-left: 0%; padding-right: 0.5%;"
+                  :key="i"
+                  cols="12"
+                  md="4"
+                >            
+          <v-card
+            :loading="loading"
+            class="mx-auto my-12"
+            max-width="374"
+          >
+            <template slot="progress">
+              <v-progress-linear
+                color="deep-purple"
+                height="10"
+                indeterminate
+              ></v-progress-linear>
             </template>
-            <template #img>
-              <img src="../../../assets/web.png" alt="">
-            </template>
-            <template #text>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              </p>
-            </template>
-            <template #interactions>
-              <vs-button danger icon>
-                <i class='bx bx-heart'></i>
-              </vs-button>
-              <vs-button class="btn-chat" shadow primary>
-                <i class='bx bx-chat' ></i>
-                <span class="span">
-                  54
-                </span>
-              </vs-button>
-            </template>
-          </vs-card>
-          <vs-card style="margin:10px;">
-            <template #title>
-              <h3>Mobil Yazılım</h3>
-            </template>
-            <template #img>
-              <img src="../../../assets/mobile.png" alt="">
-            </template>
-            <template #text>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              </p>
-            </template>
-            <template #interactions>
-              <vs-button danger icon>
-                <i class='bx bx-heart'></i>
-              </vs-button>
-              <vs-button class="btn-chat" shadow primary>
-                <i class='bx bx-chat' ></i>
-                <span class="span">
-                  54
-                </span>
-              </vs-button>
-            </template>
-          </vs-card>
-          <vs-card style="margin:10px;">
-            <template #title>
-              <h3>Oyun Geliştirme</h3>
-            </template>
-            <template #img>
-              <img src="../../../assets/game.png" alt="">
-            </template>
-            <template #text>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              </p>
-            </template>
-            <template #interactions>
-              <vs-button danger icon>
-                <i class='bx bx-heart'></i>
-              </vs-button>
-              <vs-button class="btn-chat" shadow primary>
-                <i class='bx bx-chat' ></i>
-                <span class="span">
-                  54
-                </span>
-              </vs-button>
-            </template>
-          </vs-card>
-          <vs-card style="margin:10px;">
-            <template #title>
-              <h3>Masaüstü Uygulamalar</h3>
-            </template>
-            <template #img>
-              <img src="../../../assets/masaustu.png" alt="">
-            </template>
-            <template #text>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              </p>
-            </template>
-            <template #interactions>
-              <vs-button danger icon>
-                <i class='bx bx-heart'></i>
-              </vs-button>
-              <vs-button class="btn-chat" shadow primary>
-                <i class='bx bx-chat' ></i>
-                <span class="span">
-                  54
-                </span>
-              </vs-button>
-            </template>
-          </vs-card>
-          <vs-card style="margin:10px;">
-            <template #title>
-              <h3>Geliştirici Operasyonları (DevOps)</h3>
-            </template>
-            <template #img>
-              <img src="../../../assets/devops.png" alt="">
-            </template>
-            <template #text>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              </p>
-            </template>
-            <template #interactions>
-              <vs-button danger icon>
-                <i class='bx bx-heart'></i>
-              </vs-button>
-              <vs-button class="btn-chat" shadow primary>
-                <i class='bx bx-chat' ></i>
-                <span class="span">
-                  54
-                </span>
-              </vs-button>
-            </template>
-          </vs-card>
-          <vs-card style="margin:10px;">
-            <template #title>
-              <h3>Diğer Yazılım Teknolojileri</h3>
-            </template>
-            <template #img>
-              <img src="../../../assets/diger.png" alt="">
-            </template>
-            <template #text>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              </p>
-            </template>
-            <template #interactions>
-              <vs-button danger icon>
-                <i class='bx bx-heart'></i>
-              </vs-button>
-              <vs-button class="btn-chat" shadow primary>
-                <i class='bx bx-chat' ></i>
-                <span class="span">
-                  54
-                </span>
-              </vs-button>
-            </template>
-          </vs-card>
 
+            <v-img
+              height="250"
+              src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
+            ></v-img>
 
-        </v-row>
+            <v-card-title>Cafe Badilico</v-card-title>
+
+            <v-card-text>
+              <v-row
+                align="center"
+                class="mx-0"
+              >
+                <v-rating
+                  :value="4.5"
+                  color="amber"
+                  dense
+                  half-increments
+                  readonly
+                  size="14"
+                ></v-rating>
+
+                <div class="grey--text ms-4">
+                  4.5 (413)
+                </div>
+              </v-row>
+
+              <div class="my-4 text-subtitle-1">
+                $ • Italian, Cafe
+              </div>
+
+              <div>Small plates, salads & sandwiches - an intimate setting with 12 indoor seats plus patio seating.</div>
+            </v-card-text>
+
+            <v-divider class="mx-4"></v-divider>
+
+            <v-card-title>Tonight's availability</v-card-title>
+
+            <v-card-text>
+              <v-chip-group
+                v-model="selection"
+                active-class="deep-purple accent-4 white--text"
+                column
+              >
+                <v-chip>5:30PM</v-chip>
+
+                <v-chip>7:30PM</v-chip>
+
+                <v-chip>8:00PM</v-chip>
+
+                <v-chip>9:00PM</v-chip>
+              </v-chip-group>
+            </v-card-text>
+
+            <v-card-actions>
+              <v-btn
+                color="deep-purple lighten-2"
+                text
+                @click="reserve"
+              >
+                Reserve
+              </v-btn>
+            </v-card-actions>
+          </v-card>
+
         </v-col>
-        
-        </v-row>
-    </div>
+        </template>
+      </v-row>
+    </v-container>
+    </v-row>
+  </v-col>       
+</v-row>
+</div>
 </template>
 
 <script lang="ts" src="./index.ts"></script>

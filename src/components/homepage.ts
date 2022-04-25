@@ -63,7 +63,6 @@ items = [
         path: 'translate-writing/website-content'
       },
     ];
-    transparent = 'rgba(255, 255, 255, 0)';
 
     /* eslint-disable */
     goTo(path: string, query?: any) {
