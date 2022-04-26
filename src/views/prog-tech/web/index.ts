@@ -22,7 +22,7 @@ export default class Programming extends Vue{
 
   
   icons = ['mdi-rewind', 'mdi-play', 'mdi-fast-forward'];
-  items = [];
+  items:any = [];
 
   active = "";
   data = 12;

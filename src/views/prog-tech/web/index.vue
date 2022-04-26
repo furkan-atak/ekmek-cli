@@ -34,18 +34,19 @@
 
             <v-img
               height="250"
-              src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
+              :src="item.image_url"
             ></v-img>
 
-            <v-card-title>Cafe Badilico</v-card-title>
+            <v-card-title> {{ item.name }} {{ item.surname }}</v-card-title>
 
             <v-card-text>
+              <div> {{ item.explanation }} </div><br>
               <v-row
                 align="center"
                 class="mx-0"
               >
                 <v-rating
-                  :value="4.5"
+                  :value=" item.starPoint "
                   color="amber"
                   dense
                   half-increments
@@ -54,20 +55,18 @@
                 ></v-rating>
 
                 <div class="grey--text ms-4">
-                  4.5 (413)
+                  {{ item.starPoint }} (413)
                 </div>
               </v-row>
 
-              <div class="my-4 text-subtitle-1">
-                $ • Italian, Cafe
+              <div class="my-3 text-subtitle-1">
+                Price: {{ item.fee }}$
               </div>
-
-              <div>Small plates, salads & sandwiches - an intimate setting with 12 indoor seats plus patio seating.</div>
             </v-card-text>
 
             <v-divider class="mx-4"></v-divider>
 
-            <v-card-title>Tonight's availability</v-card-title>
+            <v-card-title>Skills</v-card-title>
 
             <v-card-text>
               <v-chip-group
@@ -75,13 +74,13 @@
                 active-class="deep-purple accent-4 white--text"
                 column
               >
-                <v-chip>5:30PM</v-chip>
+                <v-chip>C++</v-chip>
 
-                <v-chip>7:30PM</v-chip>
+                <v-chip>JAVA</v-chip>
 
-                <v-chip>8:00PM</v-chip>
+                <v-chip>Pthon</v-chip>
 
-                <v-chip>9:00PM</v-chip>
+                <v-chip>SQL</v-chip>
               </v-chip-group>
             </v-card-text>
 
