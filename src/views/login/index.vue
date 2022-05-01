@@ -1,5 +1,5 @@
   <template>
-    <div style="margin-top: 3%;">
+    <div style="margin: 6%;">
       <div style="margin-left: 4cm; height: 10cm; width: 82%; background-color: white; border-width: 0.01cm; border-color: black; border-style: solid;">
       <v-row>
         <v-col class="col-5"></v-col>
@@ -60,6 +60,8 @@
   height: 60px;
   padding-bottom: 2%;
 }
+
+
 </style>
 
 

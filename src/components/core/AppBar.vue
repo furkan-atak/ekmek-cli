@@ -38,6 +38,7 @@
             <v-icon style="color: orange;">mdi-open-in-new</v-icon>
         </v-btn>
         <vs-button @click="goTo('/login')" flat >Login</vs-button>
+        <vs-button @click="goTo('/register')" flat >SIGN UP</vs-button>
         <vs-button>Get Started</vs-button>
     </v-app-bar>
 </template>    
