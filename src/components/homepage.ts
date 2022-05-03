@@ -7,6 +7,7 @@ export default class HomePage extends BaseView{
   constructor() {
       super();
   }
+  a = false;
   active = 0;
   itemk = [
     {

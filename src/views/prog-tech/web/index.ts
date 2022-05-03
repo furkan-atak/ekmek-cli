@@ -1,9 +1,10 @@
+import BaseView from '@/views/baseView';
 import axios from 'axios';
 import { Component, Vue } from 'vue-property-decorator';
 
 
 @Component
-export default class Programming extends Vue{
+export default class Programming extends BaseView{
   
   itemk = [
     {
@@ -41,14 +42,18 @@ export default class Programming extends Vue{
   }
 
   async loadData() {
-    axios.get('http://localhost:1337/freelancers').then(response => {
+    this.showLoading(true);
+    setTimeout(() => {
+      axios.get('http://localhost:1337/freelancers').then(response => {
       this.items = response.data;
       console.log(this.items);
     }).catch(error => {
       // Handle error.
       alert('Please make sure that server is running! \n' + error.response);
       //console.log('An error occurred:', error.response);
-    });
+    }).finally(() => this.showLoading(false));
+    }, 1500);
+    
   }
   
   

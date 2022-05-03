@@ -3,7 +3,7 @@
     <core-app-bar/>
     <core-nav-bar/>
     <core-footer/>
-
+    <loading-spinner/>
     <v-main>
       <router-view/>
     </v-main>
@@ -19,10 +19,12 @@ export default Vue.extend({
     //
   }),
   components: {
+
     CoreAppBar: () => import("@/components/core/AppBar.vue"),
     CoreNavBar: () => import("@/components/core/NavBar.vue"),
-    CoreFooter: () => import("@/components/core/Footer.vue")
-  },  
+    CoreFooter: () => import("@/components/core/Footer.vue"),
+    LoadingSpinner: () => import("@/components/core/Spinner.vue")
+  },
   methods: {
     goTo() {
       // sth
