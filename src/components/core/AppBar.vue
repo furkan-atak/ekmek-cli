@@ -29,6 +29,15 @@
         
         <v-spacer></v-spacer>
         
+        
+       <v-btn @click="goTo('/intro')"
+            target="_blank"
+            text
+        >
+            <span class="mr-2" style="color: grey"><b>Keşfet</b></span>
+        </v-btn>
+        <vs-button @click="goTo('/login')" flat > &nbsp;Giriş&nbsp;</vs-button>       
+        <vs-button @click="goTo('/register')"  >&nbsp;&nbsp;&nbsp;Kaydol&nbsp;&nbsp;</vs-button>
         <v-btn
             href="https://github.com/furkan-atak/ekmek-cli"
             target="_blank"
@@ -37,9 +46,6 @@
             <span class="mr-2" style="color: orange">Hakkımızda</span>
             <v-icon style="color: orange;">mdi-open-in-new</v-icon>
         </v-btn>
-        <vs-button @click="goTo('/login')" flat >Login</vs-button>
-        <vs-button @click="goTo('/register')" flat >SIGN UP</vs-button>
-        <vs-button>Get Started</vs-button>
     </v-app-bar>
 </template>    
 
