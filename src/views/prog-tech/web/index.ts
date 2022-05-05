@@ -5,7 +5,7 @@ import { Component, Vue } from 'vue-property-decorator';
 
 @Component
 export default class Programming extends BaseView{
-  
+
   itemk = [
     {
       src: 'https://i.pinimg.com/originals/26/ea/1a/26ea1ae84baf2c11d38b96ef2b420422.gif'
@@ -21,20 +21,20 @@ export default class Programming extends BaseView{
     }
   ];
 
-  
+
   icons = ['mdi-rewind', 'mdi-play', 'mdi-fast-forward'];
   items:any = [];
 
   active = "";
   data = 12;
   loading = false;
-  selection = ""; 
+  selection = "";
   reserve = "";
   created() {
       this.loadData();
       console.log("falan filan");
   }
-  mounted() { 
+  mounted() {
     //sth
   }
   logAt(sth:string) {
@@ -43,8 +43,10 @@ export default class Programming extends BaseView{
 
   async loadData() {
     this.showLoading(true);
-    setTimeout(() => {
-      axios.get('http://localhost:1337/freelancers').then(response => {
+    // setTimeout(() => {
+
+    // }, 1500);
+    axios.get('http://localhost:1337/freelancers').then(response => {
       this.items = response.data;
       console.log(this.items);
     }).catch(error => {
@@ -52,11 +54,9 @@ export default class Programming extends BaseView{
       alert('Please make sure that server is running! \n' + error.response);
       //console.log('An error occurred:', error.response);
     }).finally(() => this.showLoading(false));
-    }, 1500);
-    
   }
-  
-  
 
- 
+
+
+
 }

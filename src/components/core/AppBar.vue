@@ -33,16 +33,38 @@
        <v-btn @click="goTo('/intro')"
             target="_blank"
             text
-        >
-            <span class="mr-2" style="color: grey"><b>Keşfet</b></span>
+        > 
+        <span class="mr-2" style="color: rgb(52, 168, 202); font-weight: 600; margin:1%">Keşfet</span>
         </v-btn>
-        <vs-button @click="goTo('/login')" flat > &nbsp;Giriş&nbsp;</vs-button>       
-        <vs-button @click="goTo('/register')"  >&nbsp;&nbsp;&nbsp;Kaydol&nbsp;&nbsp;</vs-button>
+        <v-divider
+        vertical
+        color="lightgray"
+        ></v-divider>
+        <v-btn @click="goTo('/login')"
+            target="_blank"
+            text
+        >  
+        <span class="mr-2" style="color: orange; margin: 1%; font-weight: 600;">&nbsp;Gİrİş&nbsp;</span>
+        </v-btn>
+        <v-divider
+        vertical
+        color="lightgray"
+        ></v-divider>
+        <v-btn @click="goTo('/register')"
+            target="_blank"
+            text
+        >        
+        <span style="margin: 1%; color: rgb(52, 168, 202); font-weight: 600;">&nbsp;Kaydol&nbsp;&nbsp;</span>
+        </v-btn>
+        <v-divider
+        vertical
+        color="lightgray"
+        ></v-divider> 
         <v-btn
             href="https://github.com/furkan-atak/ekmek-cli"
             target="_blank"
             text
-        >
+        > 
             <span class="mr-2" style="color: orange">Hakkımızda</span>
             <v-icon style="color: orange;">mdi-open-in-new</v-icon>
         </v-btn>
