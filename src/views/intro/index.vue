@@ -142,6 +142,7 @@
         style="margin: 2%; margin-left: 28%;"  
         depressed
         color="warning"
+        @click="goTo('/post')"
         >
         Post A Project
         </v-btn>

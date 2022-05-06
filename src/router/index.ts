@@ -31,6 +31,11 @@ const routes: Array<RouteConfig> = [
     component: () => import(/* webpackChunkName: "about" */ '../views/intro/index.vue')
   },
   {
+    path: '/post',
+    name: 'post',
+    component: () => import(/* webpackChunkName: "about" */ '../views/post-project/index.vue')
+  },
+  {
     path: '/prog-tech/datascience',
     name: 'login',
     component: () => import(/* webpackChunkName: "about" */ '../views/prog-tech/data-science/index.vue')
