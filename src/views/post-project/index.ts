@@ -8,10 +8,10 @@ export default class PostProject extends BaseView{
     value = '';
     projectName = '';
     categories:any = [];
-    category = 0;
+    category = null;
     active = false;
     subCategories = [];
-    subCategory = 0;
+    subCategory = null;
     bugdetTypes = [{val: 1, text: 'Sabit Ücret'}, {val:2, text: 'Saatlik Ücret'}];
     theBudgetType = 0;
     currencies = [{val: 1, text: '₺ TL'}, {val: 2, text: '$ USD'}, {val: 3, text: '€ EUR'}];
@@ -22,17 +22,27 @@ export default class PostProject extends BaseView{
         (projectName: string) => !!projectName || 'Required.',
         (projectName: string) => (projectName && projectName.length >= 3) || 'Min 3 characters',
       ];
+    valid= [
+        (category: any) => !!category || 'Required.',
+        (subCategory: any) => !!subCategory || 'Required.',
+      ];
     created() {
+        
         this.showLoading(true);
         axios
             .get('http://localhost:1337/groups').then(response => {
             this.categories = response.data;
-            console.log(this.categories);
         }).finally(() => this.showLoading(false));
     }
 
     setSubCategory() {
-        this.subCategories = this.categories.find((t: any) => t.id === this.category).categories; 
+        const sub = this.categories.find((t: any) => t.id === this.category);
+        sub !== undefined ? this.subCategories = sub.categories:false;
     }
 
+    showRest() {
+        if(!(this.category !== null && this.subCategory !== null)) return;
+        this.showDetail = true;
+        
+    }
 }

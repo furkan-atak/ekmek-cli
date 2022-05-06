@@ -11,6 +11,7 @@
                     @change="setSubCategory"
                     item-text="name"
                     item-value="id"
+                    :rules ="valid"
                     outlined
                     dense
                     label="Seç"
@@ -25,6 +26,7 @@
                     :items="subCategories"
                     item-text="name"
                     item-value="id"
+                    :rules ="valid"
                     outlined
                     dense
                     label="Seç"
@@ -33,7 +35,7 @@
         </v-row>
         <vs-button v-if="!showDetail" style="margin: 10%; width: 30%; height: 50px; margin-left: 35%; font-size: large;" 
         square
-        @click="showDetail = true"
+        @click="showRest"
         >
         Devam Et
       </vs-button>
