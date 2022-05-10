@@ -51,18 +51,7 @@ items = [
         img: 'https://dckozmos.com/wp-content/uploads/2019/09/Senaryo-Yazarl%C4%B1g%CC%86%C4%B1-.png',
         path: 'translate-writing/scenario'
       },
-      {
-        title: 'Veri Bilimi',
-        text: 'Verileri anlamlandır',
-        img: 'https://github.com/furkan-atak/ekmek-cli/blob/main/src/assets/veribilimi.png?raw=true',
-        path: 'prog-tech/datascience'
-      },
-      {
-        title: 'İçerik Yazıcılığı',
-        text: 'Site içeriğini doldur',
-        img: 'https://w7.pngwing.com/pngs/51/923/png-transparent-website-content-writer-content-writing-services-business-search-engine-optimization-content-marketing-text.png',
-        path: 'translate-writing/website-content'
-      },
+      
     ];
 
     /* eslint-disable */

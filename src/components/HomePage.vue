@@ -28,7 +28,7 @@
                   style="padding-left: 0cm;"
                   :key="i"
                   cols="12"
-                  md="2"
+                  md="3"
                 >
                   <v-hover v-slot="{ hover }">
                     <v-card

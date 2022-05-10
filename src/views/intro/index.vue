@@ -32,20 +32,21 @@
         </v-row>
         </v-img>
         <v-card-title class="black--text pl-9 pt-1">
-          <div class="text-h4 pl-12 pt-12">
-            Buy Offer
+          <div class="text-h4 pl-6 pt-12">
+            Teklifleri Gör
           </div>
         </v-card-title>
-        <v-p style="margin: 3%;">
-            Search from thousands of skilled freelancers and request proposals
+        <v-p style="margin: 0%; text-align:center;">
+            Sabit fiyat tekliflerimizle projenizi 1 saat gibi 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kısa bir sürede tamamlayın!
         </v-p>
         <br>
         <v-btn
-        style="margin: 2%; margin-left: 32%;"  
+        style="margin: 2%; margin-left: 22%;"  
         depressed
         color="warning"
         >
-        BUY OFFER
+        TEKLİFLERİ GÖR
         </v-btn>
     </v-card>
    </v-col>
@@ -80,21 +81,24 @@
             </v-card-title>
         </v-row>
         </v-img>
-        <v-card-title class="black--text pl-0 pt-1">
+        <v-card-title class="black--text pl-2 pt-1">
           <div class="text-h4 pl-12 pt-12">
-            Find A Freelancer
+            Freelancer Bul
           </div>
         </v-card-title>
-        <v-p style="margin: 3%;">
-            Search from thousands of skilled freelancers and request proposals
+        <v-p style="margin: 1%;">
+            Binlerce freelancer arasından arama yapın ve 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            teklif isteyin!
         </v-p>
         <br>
         <v-btn
-        style="margin: 2%; margin-left: 25%;"  
+        style="margin: 2%; margin-left: 23%;"  
         depressed
         color="warning"
         >
-        Find Freelancer
+        FREELANCER BUL
         </v-btn>
     </v-card>
    </v-col>
@@ -131,11 +135,12 @@
         </v-img>
         <v-card-title class="black--text pl-6 pt-1">
           <div class="text-h4 pl-12 pt-12">
-            Post A Project
+            Proje Yayınla
           </div>
         </v-card-title>
         <v-p style="margin: 3%;">
-            Search from thousands of skilled freelancers and request proposals
+            Yapmak istediğin projeyi sun, anında ilgili &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;freelancer'larımız teklif versin!
         </v-p>
         <br>
         <v-btn
@@ -144,7 +149,7 @@
         color="warning"
         @click="goTo('/post')"
         >
-        Post A Project
+        PROJE YAYINLA
         </v-btn>
     </v-card>
    </v-col>
@@ -181,19 +186,19 @@
         </v-img>
         <v-card-title class="black--text pl-4 pt-1">
           <div class="text-h4 pl-12 pt-12">
-            Be A Freelancer
+            Freelancer Ol
           </div>
         </v-card-title>
-        <v-p style="margin: 3%;">
-            Search from thousands of skilled freelancers and request proposals
+        <v-p style="margin: 6%;">
+            Freelancer topluluğumuza katıl, iş yayınla &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;yeneteneklerini sergile ve para kazan!
         </v-p>
         <br>
         <v-btn
-        style="margin: 2%; margin-left: 35%;"  
+        style="margin: 2%; margin-left: 27%;"  
         depressed
         color="warning"
         >
-        Be A Freelancer
+        FREELANCER OL
         </v-btn>
     </v-card>
    </v-col>
