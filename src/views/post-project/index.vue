@@ -43,7 +43,7 @@
         <v-row>
             <v-col>
                 <span>Proje Başlığı</span>
-                <v-text-field outlined style="max-width: 83%;" label="Yazınız" v-model="projectName" :rules="rules"></v-text-field>
+                <v-text-field outlined style="max-width: 83%;" label="Yazınız" v-model="projectHeader" :rules="rules"></v-text-field>
             </v-col>
         </v-row>
         <v-row>
@@ -94,7 +94,7 @@
     position: relative;
     right: 10%;
     top: 20%;
-    height: 65%;
+    height: 70%;
     width: 60%;
     margin-left: 15%;
     margin-bottom: 15%;

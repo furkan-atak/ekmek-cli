@@ -7,6 +7,7 @@ export default class PostProject extends BaseView{
 
     value = '';
     projectName = '';
+    projectHeader = '';
     categories:any = [];
     category = null;
     active = false;

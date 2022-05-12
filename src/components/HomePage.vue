@@ -13,27 +13,25 @@
   <br>
   <br>
   <v-row>
-        <v-col cols="3"></v-col>
+        
         <v-col>
           <v-row >   
           <h1 style="padding-left: 5%;"> En Popüler Kategoriler </h1>         
-          <v-container class="pa-12 text-center">
+          <v-container style="margin-left: 9%" class="pa-12 text-center">
             <v-row
-              class="fill-height"
-              align="center"
-              justify="center"
+              class="fill-height justify-center"
             >
               <template v-for="(item, i) in items">
                 <v-col
-                  style="padding-left: 0cm;"
+                  style="margin-left: 3%;"
                   :key="i"
                   cols="12"
-                  md="3"
+                  md="2"
                 >
                   <v-hover v-slot="{ hover }">
                     <v-card
                       @click="goTo(item.path)"
-                      style="width: 85%; cursor: pointer; padding-left: 0cm; padding-right: 0cm;"
+                      style="width: 200px; max-width: 400px; cursor: pointer; margin-left: 4%; margin: 5%;"
                       :elevation="hover ? 24 : 2"
                       :class="{ 'on-hover': hover }"
                     >

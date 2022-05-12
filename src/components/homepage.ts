@@ -51,6 +51,12 @@ items = [
         img: 'https://dckozmos.com/wp-content/uploads/2019/09/Senaryo-Yazarl%C4%B1g%CC%86%C4%B1-.png',
         path: 'translate-writing/scenario'
       },
+      {
+        title: 'Veri Bilimi',
+        text: 'Verileri anlamlandır',
+        img: 'https://github.com/furkan-atak/ekmek-cli/blob/main/src/assets/veribilimi.png?raw=true',
+        path: 'prog-tech/datascience'
+      }
       
     ];
 
