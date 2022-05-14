@@ -194,7 +194,8 @@
         </v-p>
         <br>
         <v-btn
-        style="margin: 2%; margin-left: 27%;"  
+        style="margin: 2%; margin-left: 27%;"
+        @click="goTo('/freelancer/create')"  
         depressed
         color="warning"
         >
