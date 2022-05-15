@@ -87,7 +87,7 @@ export default class PostProject extends BaseView{
       }).then(r => {
           alert(r.data);
       }).catch(error => {
-        alert('post error');
+        alert('post error' + error);
       });
 
     }

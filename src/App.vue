@@ -28,7 +28,8 @@ export default Vue.extend({
   methods: {
     goTo() {
       // sth
+    }
   }
-  }
+  
 });
 </script>

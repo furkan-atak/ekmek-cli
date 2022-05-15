@@ -6,10 +6,19 @@ export default abstract class BaseView extends Vue{
     constructor() {
         super();
     }
+
+    getUser() {
+        const user = localStorage.getItem('user');
+        if(user) {
+            return JSON.parse(user);
+        }
+        return null;
+    }
+
     /* eslint-disable */
     navigate(path: string, query?: any) {
         const url = path.startsWith("/", 0) ? path : "/".concat(path);
-        this.$router.push({path: url, query: query});
+        this.$route.path !== url ? this.$router.push({path: url, query: query}) : false;
     }
 
     showLoading(bool: boolean) {

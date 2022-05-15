@@ -27,6 +27,12 @@
             />
         </div>
         
+        <v-btn @click="logout"
+            target="_blank"
+            text
+        > 
+        <span  class="mr-2" style="color: rgb(52, 168, 202); font-weight: 600; margin:1%">LOG OUT</span>
+        </v-btn>
         <v-spacer></v-spacer>
         
         
@@ -72,6 +78,7 @@
 </template>    
 
 <script lang="ts">
+    import axios from 'axios';
     import { Component } from 'vue-property-decorator';
     import BaseView from '../../views/baseView';
     @Component
@@ -79,7 +86,14 @@
     constructor() {
         super();
     }
-    
+  
+    logout() {
+        localStorage.removeItem('token');
+        localStorage.removeItem('user');
+        this.navigate('/');
+        location.reload();
+        this.goTo('/');
+    }
 
     /* eslint-disable */
     goTo(path: string, query?: any) {

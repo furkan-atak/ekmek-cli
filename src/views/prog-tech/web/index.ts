@@ -1,6 +1,6 @@
 import BaseView from '@/views/baseView';
 import axios from 'axios';
-import { Component, Vue } from 'vue-property-decorator';
+import { Component } from 'vue-property-decorator';
 
 
 @Component
@@ -44,8 +44,9 @@ export default class Programming extends BaseView{
   async loadData() {
     this.showLoading(true);
     // setTimeout(() => {
-
+    
     // }, 1500);
+    console.log(localStorage.getItem('token'));
     axios.get('http://localhost:1337/freelancers').then(response => {
       this.items = response.data;
       console.log(this.items);
