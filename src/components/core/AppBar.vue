@@ -28,6 +28,7 @@
         </div>
         
         <v-btn @click="logout"
+            v-if="loggedIn"
             target="_blank"
             text
         > 
@@ -86,7 +87,20 @@
     constructor() {
         super();
     }
-  
+
+    loggedIn = false;
+
+    mounted() {
+        if(localStorage.getItem('token') != null) {
+            this.loggedIn = true;
+        }else {
+            window.addEventListener('loggedIn', (event:any) => {
+                this.loggedIn = event.detail.storage;
+            });
+        }
+    }
+
+
     logout() {
         localStorage.removeItem('token');
         localStorage.removeItem('user');
