@@ -87,7 +87,6 @@
 </template>    
 
 <script lang="ts">
-    import axios from 'axios';
     import { Component } from 'vue-property-decorator';
     import BaseView from '../../views/baseView';
     @Component

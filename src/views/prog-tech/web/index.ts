@@ -52,7 +52,7 @@ export default class Programming extends BaseView{
       console.log(this.items);
     }).catch(error => {
       // Handle error.
-      alert('Please make sure that server is running! \n' + error.response);
+      alert("Server'ın çalıştığından veya giriş yaptığınızdan emin olun! \n");
       //console.log('An error occurred:', error.response);
     }).finally(() => this.showLoading(false));
   }
