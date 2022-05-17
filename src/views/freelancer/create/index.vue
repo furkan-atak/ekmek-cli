@@ -110,7 +110,7 @@
             <v-autocomplete
                     style="max-width: 100%; margin-bottom: 10%; "
                     v-model="location"
-                    :items="categories"
+                    :items="locations"
                     item-text="name"
                     item-value="id"
                     outlined
@@ -138,12 +138,24 @@
                     <v-divider vertical color="black" style="min-height: none; min-width: none; height: 48px;">
                     </v-divider>
                     <v-col  style="padding: 0%; height: 15px;">
-                         <v-text-field style="padding-top: 0px; padding-left: 3px;" label="" v-model="professionHeader" none></v-text-field>
+                         <v-text-field type="number" min="0" style="padding-top: 0px; padding-left: 3px;" label="" v-model="hourlyFee" none></v-text-field>
                     </v-col>
                 </v-row>
             </v-container>
         </v-col>
     </v-row>
+    <v-row>
+        <v-col cols="12" md="6">  
+            <vs-button style="background-color: rebeccapurple; margin: 5%; width: 60%; height: 60px; margin-bottom: 5%; left: 70%; font-size: large;" 
+                @click="beFreelancer"
+                square
+                bold
+                >
+                <v-icon style="margin: 1%; right: %;">mdi-account-circle</v-icon>
+                Freelancer Ol
+            </vs-button>
+        </v-col>  
+        </v-row>
     </div>
   </v-container>
     
@@ -152,13 +164,13 @@
 <script lang="ts" src="./index.ts"></script>
 
 
-<style>
+<style scoped>
 .containerHalf {
     position: relative;
     right: 50%;
     left: 7%;
     top: 5%;
-    height: 80%;
+    height: 85%;
     width: 60%;
     margin-left: 15%;
     margin-bottom: 15%;
@@ -166,3 +178,4 @@
     
 }
 </style>
+

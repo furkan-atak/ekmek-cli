@@ -27,3 +27,17 @@ export default abstract class BaseView extends Vue{
     }
 
 }
+
+export class User {
+    email = '';
+    favourites:any = [];
+    id = '';
+    job_requests:any = [];
+    messages:any = [];
+    purchases: any = [];
+    category:any;
+    role:any;
+    createdAt = '';
+    updatedAt = '';
+    username = '';
+}

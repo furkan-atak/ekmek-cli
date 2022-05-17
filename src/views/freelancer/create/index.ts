@@ -5,15 +5,16 @@ import { Component } from 'vue-property-decorator';
 
 @Component
 export default class CreateFreelancer extends BaseView {
-    userName = 'Furkan';
+    user = this.getUser();
     professionHeader = '';
-    categories = '';
+    categories:any = [];
     category = null;
     show = true;
     amenities= [1, 4];
     neighborhoods= [1];
     about = '';
     location = '';
+    locations = ['Turkey', 'Others'];
     hourlyFee = 0;
 
     currencies = [{val: 1, text: '₺ TL', symbol:'₺'}, {val: 2, text: '$ USD', symbol: '$'}, {val: 3, text: '€ EUR', symbol: '€'}];
@@ -43,5 +44,23 @@ export default class CreateFreelancer extends BaseView {
             this.categories = response.data;
         }).finally(() => this.showLoading(false)); 
        
+    }
+
+    beFreelancer() {
+        axios
+        .post('http://localhost:1337/freelancers', {
+        name: this.user.username,
+        surname: '',
+        explanation: this.about,
+        starPoint: 0,
+        fee: this.hourlyFee,
+        country: this.location,
+        image_url: '',
+        category: this.category
+        }).then(r => {
+            alert('you are a freelancer now ! ' + r.data);
+        }).catch(error => {
+          alert('post error' + error);
+        });
     }
 }
