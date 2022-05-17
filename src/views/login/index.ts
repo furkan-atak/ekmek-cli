@@ -42,10 +42,11 @@ export default class Login extends BaseView{
         this.activee = 1;
         alert('Login Success !!! \n' + 'User Profile: ' + response.data.user + '\n User Token: ' + response.data.jwt);
         localStorage.setItem('token', response.data.jwt);
-        localStorage.setItem('setUser', response.data.user);
+        localStorage.setItem('user', JSON.stringify(response.data.user));
         window.dispatchEvent(new CustomEvent('loggedIn', {
           detail: {
-            storage: localStorage.getItem('token')
+            storage: localStorage.getItem('token'),
+            info: localStorage.getItem('user')
           }
         }));
         
@@ -58,7 +59,7 @@ export default class Login extends BaseView{
         // console.log('User profile', response.data.user);
         // console.log('User token', response.data.jwt);
 
-      }).then(() => {this.showLoading(false);}).finally(() =>  { this.navigate('/'); })
+      }).then(() => {this.showLoading(false);}).then(() =>  { this.navigate('/'); })
       .catch(error => {
         // Handle error.
         alert('Login Failed :/ \n' + error.response);

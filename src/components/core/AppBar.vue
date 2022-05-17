@@ -26,7 +26,15 @@
             width="150"
             />
         </div>
+
         
+        <span v-if="loggedIn" class="mr-2" style="color: orange; margin: 1%; font-weight: 600;">&nbsp; {{ user.username }} &nbsp;</span>
+
+        <v-divider
+        vertical
+        color="lightgray"
+        ></v-divider>
+
         <v-btn @click="logout"
             v-if="loggedIn"
             target="_blank"
@@ -89,13 +97,18 @@
     }
 
     loggedIn = false;
+    user:any = null;
+    
 
     mounted() {
+        console.log(this.user);
         if(localStorage.getItem('token') != null) {
             this.loggedIn = true;
+            this.user = this.getUser();
         }else {
             window.addEventListener('loggedIn', (event:any) => {
                 this.loggedIn = event.detail.storage;
+                this.user = JSON.parse(event.detail.info);
             });
         }
     }
