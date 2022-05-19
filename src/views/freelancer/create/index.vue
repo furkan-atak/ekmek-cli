@@ -109,10 +109,12 @@
             <span>Konum</span>
             <v-autocomplete
                     style="max-width: 100%; margin-bottom: 10%; "
-                    v-model="location"
-                    :items="locations"
+                    v-model="theLocation"
+                    :items="filteredLocations"
+                    :search-input.sync="searchInput"
+                    @keypress="search"
                     item-text="name"
-                    item-value="id"
+                    item-value="code"
                     outlined
                     dense
                     label="Seç"
@@ -151,7 +153,7 @@
                 square
                 bold
                 >
-                <v-icon style="margin: 1%; right: %;">mdi-account-circle</v-icon>
+                <v-icon style="margin: 1%;">mdi-account-circle</v-icon>
                 Freelancer Ol
             </vs-button>
         </v-col>  
@@ -177,5 +179,6 @@
     background-color: #F5F7FAFA;
     
 }
+
 </style>
 

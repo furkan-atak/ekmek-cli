@@ -48,8 +48,7 @@ export default class Programming extends BaseView{
     // }, 1500);
     console.log(localStorage.getItem('token'));
     axios.get('http://localhost:1337/freelancers').then(response => {
-      this.items = response.data;
-      console.log(this.items);
+      this.items = response.data.filter((t:any) => t.category.name === 'Mobil Yazılım');
     }).catch(error => {
       // Handle error.
       alert("Server'ın çalıştığından veya giriş yaptığınızdan emin olun! \n");

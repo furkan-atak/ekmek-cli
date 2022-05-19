@@ -15,7 +15,18 @@ export default abstract class BaseView extends Vue{
         }
         return null;
     }
-
+    estimatedDurations = [
+        {val: 0, text: 'Seç'},
+        {val: 1, text: '1 gün veya daha az'},
+        {val: 2, text: '1 haftadan az'},
+        {val: 3, text: '1-2 hafta'},
+        {val: 4, text: '3-4 hafta'},
+        {val: 5, text: '1-6 ay'},
+        {val: 6, text: '6 aydan fazla'},
+        {val: 7, text: 'Devam eden'},
+        {val: 8, text: 'Emin Değilim'},
+        {val: 9, text: 'Diğer'}
+    ];
     /* eslint-disable */
     navigate(path: string, query?: any) {
         const url = path.startsWith("/", 0) ? path : "/".concat(path);

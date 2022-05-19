@@ -85,12 +85,12 @@
             Freelancer Bul
           </div>
         </v-card-title>
-        <v-p style="margin: 1%;">
+        <p style="margin: 1%;">
             Binlerce freelancer arasından arama yapın ve 
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             teklif isteyin!
-        </v-p>
+        </p>
         <br>
         <v-btn
         style="margin: 2%; margin-left: 23%;"  
@@ -137,16 +137,16 @@
             Proje Yayınla
           </div>
         </v-card-title>
-        <v-p style="margin: 3%;">
+        <p style="margin: 3%;">
             Yapmak istediğin projeyi sun, anında ilgili &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;freelancer'larımız teklif versin!
-        </v-p>
+        </p>
         <br>
         <v-btn
         style="margin: 2%; margin-left: 28%;"  
         depressed
         color="warning"
-        @click="goTo('/post')"
+        @click="goTo('/post-project')"
         >
         PROJE YAYINLA
         </v-btn>
@@ -192,7 +192,7 @@
         <br>
         <v-btn
         style="margin: 2%; margin-left: 27%;"
-        @click="goTo('/freelancer/create')"  
+        @click="goTo('null')"  
         depressed
         color="warning"
         >

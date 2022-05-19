@@ -13,10 +13,11 @@ export default class CreateFreelancer extends BaseView {
     amenities= [1, 4];
     neighborhoods= [1];
     about = '';
-    location = '';
+    theLocation = '';
+    filteredLocations = [];
     locations = ['Turkey', 'Others'];
     hourlyFee = 0;
-
+    searchInput = '';
     currencies = [{val: 1, text: '₺ TL', symbol:'₺'}, {val: 2, text: '$ USD', symbol: '$'}, {val: 3, text: '€ EUR', symbol: '€'}];
     theCurrency = 1;
 
@@ -50,25 +51,30 @@ export default class CreateFreelancer extends BaseView {
             const data:[] = <[]>Object.values(r.data)[0];
             this.freelancerId = data ? (<any>data.find((t:any) => t.name == "Freelancer")).id : '';
         });
+
         this.showLoading(false);
     }
 
+    search(){
+       // this.filteredLocations = <never[]>this.locations.filter((t:any) => t.name.contains(this.searchInput));
+    }
+
     beFreelancer() {
-        // axios
-        // .post('http://localhost:1337/freelancers', {
-        // name: this.user.username,
-        // surname: '',
-        // explanation: this.about,
-        // starPoint: 0,
-        // fee: this.hourlyFee,
-        // country: this.location,
-        // image_url: '',
-        // category: this.category
-        // }).then(r => {
-        //     alert('you are a freelancer now ! ' + r.data);
-        // }).catch(error => {
-        //   alert('post error' + error);
-        // });
+        axios
+        .post('http://localhost:1337/freelancers', {
+        name: this.user.username,
+        surname: '',
+        explanation: this.about,
+        starPoint: 0,
+        fee: this.hourlyFee,
+        country: this.theLocation,
+        image_url: '',
+        category: this.category
+        }).then(r => {
+            alert('you are a freelancer now ! ' + r.data);
+        }).catch(error => {
+          alert('post error' + error);
+        });
         axios
         .put(`http://localhost:1337/users/${this.user.id}`, {
             role: this.freelancerId

@@ -3,16 +3,17 @@ import { Component } from 'vue-property-decorator';
 import BaseView from '../baseView';
 
 @Component
-export default class PostProject extends BaseView{ 
+export default class PostOffer extends BaseView{ 
 
-    projectHeader = '';
-    projectDescription = '';
+    offerHeader = '';
+    offerDescription = '';
     budget = 0;
 
     categories:any = [];
-    category = null;
+    category = -1;
 
     active = false;
+    isClicked = false;
 
     subCategories = [];
     subCategory = null;
@@ -21,13 +22,10 @@ export default class PostProject extends BaseView{
     theBudgetType = 0;
 
     currencies = [{val: 1, text: '₺ TL', symbol:'₺'}, {val: 2, text: '$ USD', symbol: '$'}, {val: 3, text: '€ EUR', symbol: '€'}];
-    theCurrency = 1;
+    theCurrency = {val: 1, text: '₺ TL', symbol:'₺'};
 
-    
     theEstimatedDuration = 0;
 
-
-    showDetail = false;
 
     rules= [
         (projectHeader: string) => !!projectHeader || 'Required.',
@@ -51,33 +49,33 @@ export default class PostProject extends BaseView{
         sub !== undefined ? this.subCategories = sub.categories:false;
     }
 
-    showRest() {
-        if(!(this.category !== null && this.subCategory !== null)) return;
-        this.showDetail = true;
-        
+    setCurrency(c:any) {
+        this.isClicked = true;
+        this.theCurrency = c;
+        console.log(this.theCurrency);
     }
 
-    postProject() {
-        axios
-      .post('http://localhost:1337/projects', {
-        header: this.projectHeader,
-        description: this.projectDescription,
-        category: this.subCategory,
-        group: this.category,
-        BudgetType: this.bugdetTypes.find(t => t.val === this.theBudgetType)?.text,
-        Currency: this.currencies.find(t => t.val === this.theCurrency)?.text,
-        Budget: this.budget,
-        EstimatedDuration: this.estimatedDurations.find(t => t.val === this.theEstimatedDuration)?.text,
-        user: null,
-        freelancer: null,
-        published_at: new Date(),
-        created_by: null,
-        updated_by: null
-      }).then(r => {
-          alert(r.data);
-      }).catch(error => {
-        alert('post error' + error);
-      });
+    postOffer() {
+    //     axios
+    //   .post('http://localhost:1337/projects', {
+    //     header: this.projectHeader,
+    //     description: this.projectDescription,
+    //     category: this.subCategory,
+    //     group: this.category,
+    //     BudgetType: this.bugdetTypes.find(t => t.val === this.theBudgetType)?.text,
+    //     Currency: this.currencies.find(t => t.val === this.theCurrency)?.text,
+    //     Budget: this.budget,
+    //     EstimatedDuration: this.estimatedDurations.find(t => t.val === this.theEstimatedDuration)?.text,
+    //     user: null,
+    //     freelancer: null,
+    //     published_at: new Date(),
+    //     created_by: null,
+    //     updated_by: null
+    //   }).then(r => {
+    //       alert(r.data);
+    //   }).catch(error => {
+    //     alert('post error' + error);
+    //   });
 
     }
 

@@ -42,7 +42,6 @@
                   <v-card-text>
                     <div> {{ item.explanation }} </div><br>
                     <v-row
-                      align="center"
                       class="mx-0"
                     >
                       <v-rating

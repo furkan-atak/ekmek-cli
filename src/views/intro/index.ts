@@ -11,14 +11,22 @@ export default class Intro extends BaseView{
     subHeader = 'Freelancer topluluğumuza katıl, iş yayınla yeneteneklerini sergile ve para kazan!';
     
     created() {
-        if(this.user) {
+        if(this.user && this.user.role.name === 'Freelancer') {
             this.header = 'Teklif Oluştur';
             this.subHeader = 'Alıcılara sabit bir fiyat karşılığında neler sunabileceğinizi bildirin!';
         }
     }
 
-    goTo(path:string) {
-        this.navigate(path);
+    goTo(path?:any) {
+        if(path !== 'null'){
+            this.navigate(path);
+        }
+        else if(this.user && this.user.role.name === 'Freelancer'){
+            this.navigate('/post-offer');
+        }else {
+            this.navigate('/freelancer/create');
+        }
+        
     }
     
 }

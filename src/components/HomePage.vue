@@ -38,7 +38,6 @@
                       <v-img
                         :src="item.img"
                         height="350px"
-                        
                       >
                         <v-card-title class="text-h6 white--text">
                           <v-row
