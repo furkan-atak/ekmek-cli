@@ -8,7 +8,7 @@ export default abstract class BaseView extends Vue{
     }
 
     getUser() {
-        console.log(localStorage.getItem('user'));
+
         const user = localStorage.getItem('user');
         if(user) {
             return JSON.parse(user);

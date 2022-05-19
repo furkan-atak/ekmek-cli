@@ -36,10 +36,9 @@
             Teklifleri Gör
           </div>
         </v-card-title>
-        <v-p style="margin: 0%; text-align:center;">
             Sabit fiyat tekliflerimizle projenizi 1 saat gibi 
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kısa bir sürede tamamlayın!
-        </v-p>
+
         <br>
         <v-btn
         style="margin: 2%; margin-left: 22%;"  
@@ -186,12 +185,10 @@
         </v-img>
         <v-card-title class="black--text pl-4 pt-1">
           <div class="text-h4 pl-12 pt-12">
-            Freelancer Ol
+            {{ header }}
           </div>
         </v-card-title>
-        <v-p style="margin: 6%;">
-            Freelancer topluluğumuza katıl, iş yayınla &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;yeneteneklerini sergile ve para kazan!
-        </v-p>
+           {{ subHeader }}
         <br>
         <v-btn
         style="margin: 2%; margin-left: 27%;"
@@ -199,7 +196,7 @@
         depressed
         color="warning"
         >
-        FREELANCER OL
+         {{ header.toLocaleUpperCase('tr') }}
         </v-btn>
     </v-card>
    </v-col>

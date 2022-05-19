@@ -38,6 +38,7 @@
                       <v-img
                         :src="item.img"
                         height="350px"
+                        
                       >
                         <v-card-title class="text-h6 white--text">
                           <v-row
@@ -51,9 +52,6 @@
                             <div>
                               <p class="ma-0 text-body-1 font-weight-bold font-italic text-left">
                                 {{ item.text }}
-                              </p>
-                              <p class="text-caption font-weight-medium font-italic text-left">
-                                {{ item.subtext }}
                               </p>
                             </div>
                             <div class="align-self-center">

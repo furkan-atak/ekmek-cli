@@ -9,17 +9,6 @@ export default class DataScience extends Vue{
   loading = false;
   selection = ""; 
   reserve = "";
-  created() {
-      console.log("falan filan");
-  }
-  mounted() { 
-    //sth
-  }
-  logAt(sth:string) {
-      console.log(sth);
-  }
-
-  
 
  
 }

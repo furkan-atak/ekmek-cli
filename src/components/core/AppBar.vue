@@ -100,7 +100,7 @@
     
 
     mounted() {
-        console.log(this.user);
+
         if(localStorage.getItem('token') != null) {
             this.loggedIn = true;
             this.user = this.getUser();

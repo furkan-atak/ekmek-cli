@@ -1,7 +1,7 @@
 <template>
   <v-container class="containerHalf">
    <div style="margin-left: 6%; margin-right: 6%;">
-   <h2 style="font-family: 'Courier New', Courier, monospace; font-size: 40px; color: #2a2a2a;" >Hoşgeldin {{ userName }}</h2>
+   <h2 style="font-family: 'Courier New', Courier, monospace; font-size: 40px; color: #2a2a2a;" >Hoşgeldin {{ user.username }}</h2>
    <p style="color: #515151;">Küresel serbest çalışan topluluğumuza katılmak için profilinizi tamamlayın ve hizmetlerinizi büyüyen işletme ağımıza satmaya başlayın. </p>
     <v-file-input
         style="width: 50%;"
