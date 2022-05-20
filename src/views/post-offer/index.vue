@@ -10,7 +10,7 @@
             <v-text-field outlined style="max-width: 100%;" label="örn. Sizin için web sitesi tasarlayabilirim ücreti ise sadece" v-model="offerHeader" :rules="rules"></v-text-field>
         </v-col>
         <v-col>
-            <v-text-field outlined style="margin-top: 20%;" type="number" min="0" label="ücret">  </v-text-field>
+            <v-text-field outlined v-model="fee" style="margin-top: 20%;" type="number" min="0" label="ücret">  </v-text-field>
         </v-col>
         
         <v-col cols="12" md="3">  

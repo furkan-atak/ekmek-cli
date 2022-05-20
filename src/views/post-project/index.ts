@@ -19,10 +19,8 @@ export default class PostProject extends BaseView{
 
     bugdetTypes = [{val: 1, text: 'Sabit Ücret'}, {val:2, text: 'Saatlik Ücret'}];
     theBudgetType = 0;
-
-    currencies = [{val: 1, text: '₺ TL', symbol:'₺'}, {val: 2, text: '$ USD', symbol: '$'}, {val: 3, text: '€ EUR', symbol: '€'}];
+    
     theCurrency = 1;
-
     
     theEstimatedDuration = 0;
 

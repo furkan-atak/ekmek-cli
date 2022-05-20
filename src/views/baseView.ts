@@ -15,6 +15,7 @@ export default abstract class BaseView extends Vue{
         }
         return null;
     }
+    
     estimatedDurations = [
         {val: 0, text: 'Seç'},
         {val: 1, text: '1 gün veya daha az'},
@@ -26,6 +27,12 @@ export default abstract class BaseView extends Vue{
         {val: 7, text: 'Devam eden'},
         {val: 8, text: 'Emin Değilim'},
         {val: 9, text: 'Diğer'}
+    ];
+
+    currencies = [
+        {val: 1, text: '₺ TL',  symbol:'₺'},
+        {val: 2, text: '$ USD', symbol: '$'},
+        {val: 3, text: '€ EUR', symbol: '€'}
     ];
     /* eslint-disable */
     navigate(path: string, query?: any) {

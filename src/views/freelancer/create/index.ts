@@ -8,7 +8,7 @@ export default class CreateFreelancer extends BaseView {
     user:User = this.getUser();
     professionHeader = '';
     categories:any = [];
-    category = null;
+    category = '';
     show = true;
     amenities= [1, 4];
     neighborhoods= [1];
@@ -18,7 +18,6 @@ export default class CreateFreelancer extends BaseView {
     locations = ['Turkey', 'Others'];
     hourlyFee = 0;
     searchInput = '';
-    currencies = [{val: 1, text: '₺ TL', symbol:'₺'}, {val: 2, text: '$ USD', symbol: '$'}, {val: 3, text: '€ EUR', symbol: '€'}];
     theCurrency = 1;
 
     rules = [
@@ -69,7 +68,8 @@ export default class CreateFreelancer extends BaseView {
         fee: this.hourlyFee,
         country: this.theLocation,
         image_url: '',
-        category: this.category
+        category: this.category,
+        userId: this.user.id,
         }).then(r => {
             alert('you are a freelancer now ! ' + r.data);
         }).catch(error => {

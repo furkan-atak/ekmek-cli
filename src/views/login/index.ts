@@ -62,6 +62,7 @@ export default class Login extends BaseView{
       }).then(() => {this.showLoading(false);}).then(() =>  { this.navigate('/'); })
       .catch(error => {
         // Handle error.
+        this.showLoading(false)
         alert('Login Failed :/ \n' + error.response);
       });
   }

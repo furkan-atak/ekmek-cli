@@ -1,8 +1,9 @@
 import { Component, Vue } from 'vue-property-decorator';
 import axios from 'axios';
 import 'boxicons'
+import BaseView from '../baseView';
 @Component
-export default class SignUp extends Vue{
+export default class SignUp extends BaseView{
  
   
   active = "";
@@ -23,8 +24,10 @@ export default class SignUp extends Vue{
     //sth
   }
 
-  login() {
+  signUp() {
     // Request API.
+    this.showLoading(true);
+    delete axios.defaults.headers.common["Authorization"];
     axios
       .post('http://localhost:1337/auth/local/register', {
         username: this.userName,
@@ -44,9 +47,10 @@ export default class SignUp extends Vue{
         // console.log('Well done!');
         // console.log('User profile', response.data.user);
         // console.log('User token', response.data.jwt);
-      })
+      }).then(() => {this.showLoading(false);}).then(() =>  { this.navigate('/'); })
       .catch(error => {
         // Handle error.
+        this.showLoading(false);
         alert('Login Failed :/ \n' + error.response);
         //console.log('An error occurred:', error.response);
       });

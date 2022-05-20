@@ -110,7 +110,7 @@
             <v-autocomplete
                     style="max-width: 100%; margin-bottom: 10%; "
                     v-model="theLocation"
-                    :items="filteredLocations"
+                    :items="locations"
                     :search-input.sync="searchInput"
                     @keypress="search"
                     item-text="name"

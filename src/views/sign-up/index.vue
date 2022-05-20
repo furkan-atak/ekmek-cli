@@ -40,7 +40,7 @@
           <vs-button
             gradient
             :active="activee == 1"
-            @click="login"
+            @click="signUp"
             style="margin-left: 4%; margin-top: 10%; width: 30%; height: 50px; font-size: large;"
           >
             Login
