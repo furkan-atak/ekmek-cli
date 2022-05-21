@@ -3,7 +3,11 @@ import axios from 'axios';
 import { Component } from 'vue-property-decorator';
 
 
-@Component
+@Component({
+    components: {
+        FileField: () => import("@/components/FileField.vue")
+    }
+})
 export default class CreateFreelancer extends BaseView {
     user:User = this.getUser();
     professionHeader = '';
