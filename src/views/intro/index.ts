@@ -11,8 +11,9 @@ export default class Intro extends BaseView{
     subHeader = 'Freelancer topluluğumuza katıl, iş yayınla yeneteneklerini sergile ve para kazan!';
     
     created() {
-        console.log(this.user)
-        console.log(this.getUser());
+        this.user = this.getUser();
+        console.log('user: ', this.user);
+        console.log(this.user);
         if(this.user && this.user.role.name === 'Freelancer') {
             this.header = 'Teklif Oluştur';
             this.subHeader = 'Alıcılara sabit bir fiyat karşılığında neler sunabileceğinizi bildirin!';

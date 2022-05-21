@@ -51,8 +51,8 @@ export default class CreateFreelancer extends BaseView {
             alert(error);
         });
         axios.get('http://localhost:1337/users-permissions/roles').then(r => {
-            const data:[] = <[]>Object.values(r.data)[0];
-            this.freelancerId = data ? (<any>data.find((t:any) => t.name == "Freelancer")).id : '';
+            const data:[] = r.data.roles;
+            this.freelancerId = data ? (<any>data.find((t:any) => t.name === 'Freelancer')).id : '';
         });
 
         this.showLoading(false);
@@ -63,30 +63,52 @@ export default class CreateFreelancer extends BaseView {
     }
 
     beFreelancer() {
-        axios
-        .post('http://localhost:1337/freelancers', {
-        name: this.user.username,
-        surname: '',
-        explanation: this.about,
-        starPoint: 0,
-        fee: this.hourlyFee,
-        country: this.theLocation,
-        image_url: '',
-        category: this.category,
-        userId: this.user.id,
-        }).then(r => {
-            alert('you are a freelancer now ! ' + r.data);
-        }).catch(error => {
-          alert('post error' + error);
-        });
-        axios
-        .put(`http://localhost:1337/users/${this.user.id}`, {
-            role: this.freelancerId
-        }).then(r => {
-            console.log('success', r);
-        }).catch(error => {
-            console.log('role error', error);
-        });
+       Promise.all([this.createFreelancer().then(() => {
+        this.changeUserRole().then(() => {
+            this.getUpdatedUser();
+        })})]);
         
+        
+    }
+
+    createFreelancer() {
+        return axios
+                .post('http://localhost:1337/freelancers', {
+                name: this.user.username,
+                surname: '',
+                explanation: this.about,
+                starPoint: 0,
+                fee: this.hourlyFee,
+                country: this.theLocation,
+                image_url: '',
+                category: this.category,
+                userId: this.user.id,
+                }).then(r => {
+                    alert('you are a freelancer now ! ' + r.data);
+                }).catch(error => {
+                alert('post error' + error);
+                });
+    }
+
+    changeUserRole() {
+        return axios
+                .put(`http://localhost:1337/users/${this.user.id}`, {
+                    role: this.freelancerId
+                }).then(r => { 
+                    console.log('success', r);
+                }).catch(error => {
+                    console.log('role error', error);
+                });
+    }
+
+    getUpdatedUser(){
+        return axios
+            .get(`http://localhost:1337/users/${this.user.id}`)
+            .then(resp => { 
+                localStorage.removeItem('user');
+                localStorage.setItem('user', JSON.stringify(resp.data));
+            }).catch(error => {
+                console.log('role error', error);
+            });
     }
 }

@@ -28,53 +28,64 @@
         </div>
 
         
-        <span v-if="loggedIn" class="mr-2" style="color: orange; margin: 1%; font-weight: 600;">&nbsp; {{ user.username }} &nbsp;</span>
-
-        <v-divider
-        vertical
-        color="lightgray"
-        ></v-divider>
-
-        <v-btn @click="logout"
-            v-if="loggedIn"
-            target="_blank"
-            text
-        > 
-        <span  class="mr-2" style="color: rgb(52, 168, 202); font-weight: 600; margin:1%">LOG OUT</span>
-        </v-btn>
         <v-spacer></v-spacer>
         
-        
-       <v-btn @click="goTo('/intro')"
-            target="_blank"
-            text
-        > 
-        <span class="mr-2" style="color: rgb(52, 168, 202); font-weight: 600; margin:1%">Keşfet</span>
-        </v-btn>
+        <vs-button style="background-color: #004b55; margin: 2%;font-size: large; width: 7%;" 
+            @click="goTo('/intro')"
+            gradient
+            warn
+            square
+            bold
+            icon-after
+            >
+            
+            Keşfet <v-icon style="margin: 1%;">mdi-magnify</v-icon>
+        </vs-button>
         <v-divider
         vertical
         color="lightgray"
         ></v-divider>
         <v-btn @click="goTo('/login')"
+            v-if="!loggedIn"
             target="_blank"
             text
         >  
         <span class="mr-2" style="color: orange; margin: 1%; font-weight: 600;">&nbsp;Gİrİş&nbsp;</span>
         </v-btn>
         <v-divider
+        v-if="!loggedIn"
         vertical
         color="lightgray"
         ></v-divider>
         <v-btn @click="goTo('/register')"
+            v-if="!loggedIn"
             target="_blank"
             text
         >        
         <span style="margin: 1%; color: rgb(52, 168, 202); font-weight: 600;">&nbsp;Kaydol&nbsp;&nbsp;</span>
         </v-btn>
+        
+        <span v-if="loggedIn" class="mr-2" style="color: orange; margin: 0.5%; font-weight: 600;">&nbsp; {{ user.username }} &nbsp;</span>
+
+        <v-divider
+        v-if="loggedIn"
+        vertical
+        color="lightgray"
+        ></v-divider> 
+
+        <v-btn @click="logout"
+            v-if="loggedIn"
+            target="_blank"
+            text
+        > 
+        <span  class="mr-2" style="color: rgb(52, 168, 202); font-weight: 600; margin:1%; margin-left: 6%;">LOG OUT</span>
+        </v-btn>
+
         <v-divider
         vertical
         color="lightgray"
         ></v-divider> 
+
         <v-btn
             href="https://github.com/furkan-atak/ekmek-cli"
             target="_blank"

@@ -11,7 +11,7 @@
 export default {
 	data() {    
         return {
-            imagePreview: "https://github.com/amitavroy/inferno/blob/bab37f977a42a337bdefe207940593e00ff5bdf4/public/adminlte/upload_image.png?raw=true"
+            imagePreview: "https://github.com/furkan-atak/ekmek-cli/blob/main/src/assets/upload_image.png?raw=true"
         }
     },
     methods: {
@@ -25,7 +25,6 @@ export default {
                 reader.onload = (e) => {
                     this.imagePreview = e.target.result;
                 }
-                console.log(files)
                 reader.readAsDataURL(files[0]);
             }
         }
@@ -40,7 +39,7 @@ export default {
     max-height: 184px;
     width: auto;
     height: auto;
-    
+    cursor: pointer;
 }
 
 </style>

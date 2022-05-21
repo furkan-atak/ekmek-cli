@@ -34,8 +34,7 @@ export default class Login extends BaseView{
     axios
       .post('http://localhost:1337/auth/local', {
         identifier: this.mail,
-        password: this.userPassword,
-        headers: { Authorization:"" }
+        password: this.userPassword
       })
       .then(response => {
         // Handle success.

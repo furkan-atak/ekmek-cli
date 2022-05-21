@@ -7,6 +7,7 @@
     <br>
     <v-row>
         <v-col>
+            Resim Yükle
             <file-field></file-field>
         </v-col>
     </v-row>
@@ -92,7 +93,7 @@
     </v-row>
     <v-row style="height: 210px;">
         <v-col>
-            <v-span> Hakkında </v-span>
+            <span> Hakkında </span>
             <v-textarea
             style="padding: 0%;"
             outlined

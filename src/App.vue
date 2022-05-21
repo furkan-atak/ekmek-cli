@@ -24,6 +24,7 @@ export default Vue.extend({
     CoreNavBar: () => import("@/components/core/NavBar.vue"),
     CoreFooter: () => import("@/components/core/Footer.vue"),
     LoadingSpinner: () => import("@/components/core/Spinner.vue")
+    
   },
   methods: {
     goTo() {

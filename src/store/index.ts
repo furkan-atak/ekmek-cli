@@ -5,8 +5,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    showLoading: false,
-    user: null
+    showLoading: false
   },
   getters: {
     GET_LOADING(state) {
