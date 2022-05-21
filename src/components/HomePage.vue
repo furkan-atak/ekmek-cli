@@ -1,5 +1,5 @@
 <template>
-  <div style="margin-top: 4.5cm;">
+  <div style="margin-top: 0.8cm;">
     <v-carousel>   
         <v-carousel-item
           v-for="(item,i) in itemk"
