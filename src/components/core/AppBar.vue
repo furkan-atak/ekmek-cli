@@ -5,7 +5,7 @@
         dark
         height="80px"
         >
-        <div class="d-flex align-center">
+        <div style="margin-left: 1.3%;" class="d-flex align-center">
             <v-img
             @click="goTo('/')"
             style="cursor: pointer;"
