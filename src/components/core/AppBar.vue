@@ -3,6 +3,7 @@
         app
         color="#F5F7FAFA"
         dark
+        height="80px"
         >
         <div class="d-flex align-center">
             <v-img
@@ -89,11 +90,70 @@
         <v-btn
             href="https://github.com/furkan-atak/ekmek-cli"
             target="_blank"
+            v-if="!loggedIn"
             text
         > 
             <span class="mr-2" style="color: orange">Hakkımızda</span>
             <v-icon style="color: orange;">mdi-open-in-new</v-icon>
         </v-btn>
+
+        <v-menu
+            bottom
+            min-width="200px"
+            rounded
+            style="z-index: 60;"
+            offset-y
+        >
+            <template v-slot:activator="{ on }">
+            <v-btn
+                style="margin: 1%; margin-right: 0.2%;"
+                icon
+                x-large
+                v-on="on"
+            >
+                <v-avatar
+                color="brown"
+                size="55"
+                
+                >
+                <img src="https://vuesax.com/avatars/avatar-4.png">
+                <span v-if="!loggedIn" class="white--text text-h5">FA</span>
+                </v-avatar>
+            </v-btn>
+            </template>
+            <v-card>
+            <v-list-item-content class="justify-center">
+                <div class="mx-auto text-center">
+                <v-avatar
+                    color="brown"
+                >
+                    <img >
+                    <span class="white--text text-h5">{{ user.initials }}</span>
+                </v-avatar>
+                <h3>{{ user.fullName }}</h3>
+                <p class="text-caption mt-1">
+                    {{ user.email }}
+                </p>
+                <v-divider class="my-3"></v-divider>
+                <v-btn
+                    depressed
+                    rounded
+                    text
+                >
+                    Edit Account
+                </v-btn>
+                <v-divider class="my-3"></v-divider>
+                <v-btn
+                    depressed
+                    rounded
+                    text
+                >
+                    Disconnect
+                </v-btn>
+                </div>
+            </v-list-item-content>
+            </v-card>
+        </v-menu>
     </v-app-bar>
 </template>    
 

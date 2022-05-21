@@ -1,6 +1,6 @@
 <template>
     <div>
-      <vs-navbar style="background-color: lightgray; margin-top: 1.5cm;" fixed center-collapsed v-model="active">
+      <vs-navbar style="z-index: 50; background-color: lightgray; margin-top: 2cm;" fixed center-collapsed v-model="active">
         <vs-navbar-group>
           <p @click="goTo('prog-tech/web')" style="height: 10px; margin-top: 2px;">Yazılım & Teknoloji</p>
           <template #items>
