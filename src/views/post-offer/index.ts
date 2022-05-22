@@ -57,13 +57,15 @@ export default class PostOffer extends BaseView{
     }
 
     postOffer() {
+      console.log(this.subCategory)
+      console.log(this.category)
         axios
       .post('http://localhost:1337/offers', {
         freelancer: this.freelancer,
         offerHeader: this.offerHeader,
         fee: this.fee,
         currency: this.theCurrency.val,
-        category: this.category,
+        category: this.subCategory,
         offerDetails: this.offerDescription,
         duration: this.theEstimatedDuration,
         published_at: new Date,
