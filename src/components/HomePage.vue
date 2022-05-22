@@ -1,13 +1,12 @@
 <template>
   <div style="margin-top: 0.8cm;">
-    <v-carousel hide-delimiters>   
+    <v-carousel hide-delimiters :show-arrows="false">   
         <v-carousel-item
           src="https://i.pinimg.com/originals/26/ea/1a/26ea1ae84baf2c11d38b96ef2b420422.gif"
         >
           <v-row style="margin-top: 2%;">
-            <h1 style="margin-left: 5%; margin-top: 20%; color: #F5F7FA; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-weight: 500;">
-             Ekmek  </h1>
-             
+            <span style="margin-left: 5%; margin-top: 15.5%; color: #F5F7FA; font-style: italic; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-size: 74px;">
+             ekmek  </span>
         </v-row>
         <v-row>
          <span style="margin-left: 5.1%; color: white; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
