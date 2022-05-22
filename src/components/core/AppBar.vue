@@ -42,10 +42,13 @@
             
             Keşfet <v-icon style="margin: 1%;">mdi-magnify</v-icon>
         </vs-button>
+
         <v-divider
+        :style="loggedIn ? 'margin-right: 0.6%;' : ''"
         vertical
         color="lightgray"
         ></v-divider>
+
         <v-btn @click="goTo('/login')"
             v-if="!loggedIn"
             target="_blank"
@@ -53,11 +56,13 @@
         >  
         <span class="mr-2" style="color: orange; margin: 1%; font-weight: 600;">&nbsp;Gİrİş&nbsp;</span>
         </v-btn>
+        
         <v-divider
         v-if="!loggedIn"
         vertical
         color="lightgray"
         ></v-divider>
+
         <v-btn @click="goTo('/register')"
             v-if="!loggedIn"
             target="_blank"
@@ -66,25 +71,14 @@
         <span style="margin: 1%; color: rgb(52, 168, 202); font-weight: 600;">&nbsp;Kaydol&nbsp;&nbsp;</span>
         </v-btn>
         
-        <span v-if="loggedIn" class="mr-2" style="color: orange; margin: 0.5%; font-weight: 600;">&nbsp; {{ user.username }} &nbsp;</span>
-
-        <v-divider
-        v-if="loggedIn"
-        vertical
-        color="lightgray"
-        ></v-divider> 
-
-        <v-btn @click="logout"
-            v-if="loggedIn"
-            target="_blank"
-            text
-        > 
-        <span  class="mr-2" style="color: rgb(52, 168, 202); font-weight: 600; margin:1%; margin-left: 6%;">LOG OUT</span>
-        </v-btn>
+        <span v-if="loggedIn" class="mr-2" style="color: orange; margin: 0.7%; font-weight: 600;">
+            <span style="color: #004b55;"> Hoş geldin </span>
+        &nbsp; {{ user.username }} ! &nbsp;</span>
 
         <v-divider
         vertical
         color="lightgray"
+        v-if="!loggedIn"
         ></v-divider> 
 
         <v-btn
@@ -103,6 +97,7 @@
             rounded
             style="z-index: 60;"
             offset-y
+            v-if="loggedIn"
         >
             <template v-slot:activator="{ on }">
             <v-btn
@@ -112,43 +107,51 @@
                 v-on="on"
             >
                 <v-avatar
-                color="brown"
-                size="55"
+                color="#23395d"
+                size="50"
                 
                 >
-                <img src="https://vuesax.com/avatars/avatar-4.png">
-                <span v-if="!loggedIn" class="white--text text-h5">FA</span>
+                <img v-if="user.imageUrl" :src="user.imageUrl"> 
+                <span v-if="!user.imageUrl" class="white--text text-h5">{{ nameSurname }}</span>
                 </v-avatar>
             </v-btn>
             </template>
             <v-card>
-            <v-list-item-content class="justify-center">
-                <div class="mx-auto text-center">
+            <v-list-item-content>
+                <div>
+                <div  class="mx-auto text-center">    
                 <v-avatar
-                    color="brown"
+                    color="#23395d"
+                    gradient
+                    warn
                 >
-                    <img >
-                    <span class="white--text text-h5">{{ user.initials }}</span>
+                    <img v-if="user.imageUrl" :src="user.imageUrl"> 
+                    <span  v-if="!user.imageUrl" class="white--text text-h5">{{ nameSurname }}</span>
                 </v-avatar>
-                <h3>{{ user.fullName }}</h3>
+                <h3>{{ user.username }}</h3>
                 <p class="text-caption mt-1">
                     {{ user.email }}
                 </p>
+                </div>
                 <v-divider class="my-3"></v-divider>
                 <v-btn
+                    width="100%"
                     depressed
                     rounded
                     text
+                    style="justify-content: right; justify-items: right;"
                 >
-                    Edit Account
+                   <v-icon style="margin: 12%;">mdi-account-edit</v-icon> Edit Account
                 </v-btn>
                 <v-divider class="my-3"></v-divider>
                 <v-btn
+                    width="100%"
                     depressed
                     rounded
                     text
+                    @click="logout"
                 >
-                    Disconnect
+                  <v-icon style="margin-right: 13%;">mdi-exit-to-app</v-icon>  <span style="margin-right: 23%;"> Logout </span>  
                 </v-btn>
                 </div>
             </v-list-item-content>
@@ -168,6 +171,7 @@
 
     loggedIn = false;
     user:any = null;
+    nameSurname = '';
     
 
     mounted() {
@@ -175,10 +179,14 @@
         if(localStorage.getItem('token') != null) {
             this.loggedIn = true;
             this.user = this.getUser();
+            this.nameSurname = this.user.username;
+            this.nameSurname = this.nameSurname.charAt(0) + this.nameSurname.split(' ')[1].charAt(0);
         }else {
             window.addEventListener('loggedIn', (event:any) => {
                 this.loggedIn = event.detail.storage;
                 this.user = JSON.parse(event.detail.info);
+                this.nameSurname = this.user.username;
+                this.nameSurname = this.nameSurname.charAt(0) + this.nameSurname.split(' ')[1].charAt(0);
             });
         }
     }

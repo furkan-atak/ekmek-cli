@@ -1,5 +1,17 @@
 <template>
-    <div class="center examplex">
+    <div>
+      <v-row>
+      <div style="width: 100%; height: 200px; margin-top: 2.5%; background-color: rgb(24, 32, 43);">
+        <v-row style="margin-top: 2%;">
+            <h1 style="margin-left: 10%; margin-top: 3%; color: #F5F7FA; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-weight: 500;">
+             Teknoloji & Programlama  </h1>
+        </v-row>
+        <v-row>
+          <span style="margin-left: 10.3%; color: #ABB2C4; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+           Teknoloji ve programlama teklifleri ve hizmetleri mi arıyorsunuz? Ekmek halleder. </span>
+        </v-row>
+      </div>
+      </v-row>
       <br><br>
       <br><br>
       <v-row>
@@ -9,7 +21,6 @@
            <v-container class="pa-12 text-center">
             <v-row
               class="fill-height"
-              align="center"
               justify="center"
             >
               <template v-for="(item, i) in items">

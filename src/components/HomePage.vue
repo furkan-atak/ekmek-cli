@@ -1,13 +1,20 @@
 <template>
   <div style="margin-top: 0.8cm;">
-    <v-carousel>   
+    <v-carousel hide-delimiters>   
         <v-carousel-item
-          v-for="(item,i) in itemk"
-          :key="i"
-          :src="item.src"
-          reverse-transition="fade-transition"
-          transition="fade-transition"
-        ></v-carousel-item>    
+          src="https://i.pinimg.com/originals/26/ea/1a/26ea1ae84baf2c11d38b96ef2b420422.gif"
+        >
+          <v-row style="margin-top: 2%;">
+            <h1 style="margin-left: 5%; margin-top: 20%; color: #F5F7FA; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-weight: 500;">
+             Ekmek  </h1>
+             
+        </v-row>
+        <v-row>
+         <span style="margin-left: 5.1%; color: white; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+              Alanınla alakalı teklif ver teklif al. İşin görülsün. Ekmeğini kazan. </span>
+        </v-row>
+        
+        </v-carousel-item>    
     </v-carousel>
   <br>
   <br>

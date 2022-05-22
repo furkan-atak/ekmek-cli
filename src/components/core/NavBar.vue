@@ -1,8 +1,8 @@
 <template>
     <div>
-      <vs-navbar style="z-index: 50; background-color: lightgray; margin-top: 2cm;" fixed center-collapsed v-model="active">
+      <vs-navbar style="z-index: 50; background-color: #ABB2C4; margin-top: 2cm;" fixed center-collapsed v-model="active">
         <vs-navbar-group>
-          <p @click="goTo('prog-tech/web')" style="height: 10px; margin-top: 2px;">Yazılım & Teknoloji</p>
+          <p @click="goTo('prog-tech/web')" style="height: 10px; margin-top: 2px; color: #18202B;">Yazılım & Teknoloji</p>
           <template #items>
             <vs-navbar-item @click="goTo('prog-tech/web')" :active="active == 'web'" id="web">
               Web Programlama
@@ -35,7 +35,7 @@
         </vs-navbar-group>
 
         <vs-navbar-group>
-          <p style="height: 10px; margin-top: 2px;">Çeviri & Yazı</p>
+          <p style="height: 10px; margin-top: 2px; color: #18202B;">Çeviri & Yazı</p>
           <template #items>
             <vs-navbar-item @click="goTo('translate-writing/translate')" :active="active == 'ceviri'" id="ceviri">
               Çeviri
@@ -62,7 +62,7 @@
           
         </vs-navbar-group>
         <vs-navbar-group>
-         <p style="height: 10px; margin-top: 2px;">Grafik & Tasarım</p>
+         <p style="height: 10px; margin-top: 2px; color: #18202B;">Grafik & Tasarım</p>
 
           <template #items>
            <vs-navbar-item @click="goTo('prog-tech/programming')" :active="active == 'logo'" id="logo">
@@ -90,7 +90,7 @@
           
         </vs-navbar-group>
         <vs-navbar-group>
-          <p style="height: 10px; margin-top: 2px;">İş & Yönetim</p>
+          <p style="height: 10px; margin-top: 2px; color: #18202B;">İş & Yönetim</p>
 
           <template #items>
             <vs-navbar-item @click="goTo('prog-tech/programming')" :active="active == 'eticaret'" id="eticaret">
@@ -116,7 +116,7 @@
         </vs-navbar-group>
 
         <vs-navbar-group>
-          <p style="height: 10px; margin-top: 2px;">Ses & Müzik</p>
+          <p style="height: 10px; margin-top: 2px; color: #18202B;">Ses & Müzik</p>
 
           <template #items>
             <vs-navbar-item @click="goTo('prog-tech/programming')" :active="active == 'seslendirme'" id="seslendirme">
