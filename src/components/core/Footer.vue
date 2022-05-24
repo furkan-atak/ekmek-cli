@@ -16,6 +16,7 @@
         <v-btn
           v-for="icon in icons"
           :key="icon"
+          @click="goTo('https://github.com/furkan-atak/ekmek-cli')"
           class="mx-4 black--text"
           icon
         >
@@ -26,9 +27,12 @@
       </v-card-text>
 
       <v-card-text class="white--text pt-0">
-        Bu site isimleri Furkan ATAK ve Yunus Emre ATİK olan 2 Üniversiteli yazılımcı genç tarafından tasarlanmış ve kodlanmıştır. 
-        Proje dahilinde "Strapi / Node.js / Vue.js / MongoDB / Heroku" teknolojileri kullanılmıştır.
-        Projenin tüm kodları açık kaynak koddur ve HAKKIMIZDA kısmından kodlara ulaşılabilinir.
+       
+Aklınızdaki projeyi açıklamak için hızlı ve kolay formumuzu kullanın. Ne kadar fazla ayrıntı verebilirseniz, o kadar alakalı serbest çalışanları cezbedeceksiniz.
+
+Sitemiz, projeniz için en iyi serbest çalışanlarla eşleştirmek ve onlarla iletişim kurmanızı sağlar. Her serbest çalışan daha sonra kendi özel teklifiyle yanıt verir.
+
+Teklifleri gözden geçirin, serbest çalışanınızı seçin ve projeye başlayın.
         
       </v-card-text>
 
@@ -48,6 +52,9 @@
     export default class NavBar extends BaseView{
     constructor() {
         super();
+    }
+    goTo(path:any) {
+      window.open(path);
     }
     icons= [
         'mdi-facebook',

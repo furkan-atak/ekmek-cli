@@ -46,6 +46,11 @@ const routes: Array<RouteConfig> = [
     component: () => import('../views/freelancer/create/index.vue')
   },
   {
+    path: '/freelancer/list',
+    name: 'createFreelancer',
+    component: () => import('../views/freelancer/list/index.vue')
+  },
+  {
     path: '/prog-tech/datascience',
     name: 'login',
     component: () => import(/* webpackChunkName: "about" */ '../views/prog-tech/data-science/index.vue')

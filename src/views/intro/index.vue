@@ -95,6 +95,7 @@
         <v-btn
         style="margin: 2%; margin-left: 23%;"  
         depressed
+        @click="goTo('/freelancer/list')"
         color="warning"
         >
         FREELANCER BUL
