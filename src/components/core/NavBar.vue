@@ -2,7 +2,7 @@
     <div>
       <vs-navbar style="z-index: 50; background-color: #ABB2C4; margin-top: 2cm;" fixed center-collapsed v-model="active">
         <vs-navbar-group>
-          <p @click="goTo('prog-tech/web')" style="height: 10px; margin-top: 2px; color: #18202B;">Yazılım & Teknoloji</p>
+          <p @click="goTo('prog-tech/mobile')" style="height: 10px; margin-top: 2px; color: #18202B;">Yazılım & Teknoloji</p>
           <template #items>
             <vs-navbar-item @click="goTo('prog-tech/web')" :active="active == 'web'" id="web">
               Web Programlama

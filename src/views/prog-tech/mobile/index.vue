@@ -15,7 +15,7 @@
             </template>
             <template #text>
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Web Programlama alanında teklifleri ve freelancerları bul.
               </p>
             </template>
             <template #interactions>
@@ -39,7 +39,7 @@
             </template>
             <template #text>
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Mobil Yazılım alanında teklifleri ve freelancerları bul.
               </p>
             </template>
             <template #interactions>
@@ -49,7 +49,7 @@
               <vs-button class="btn-chat" shadow primary>
                 <i class='bx bx-chat' ></i>
                 <span class="span">
-                  54
+                  67
                 </span>
               </vs-button>
             </template>
@@ -63,7 +63,7 @@
             </template>
             <template #text>
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Oyun Geeliştirme alanında teklifleri ve freelancerları bul.
               </p>
             </template>
             <template #interactions>
@@ -73,7 +73,7 @@
               <vs-button class="btn-chat" shadow primary>
                 <i class='bx bx-chat' ></i>
                 <span class="span">
-                  54
+                  32
                 </span>
               </vs-button>
             </template>
@@ -87,7 +87,7 @@
             </template>
             <template #text>
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Masaüstü Uygulamaları alanında teklifleri ve freelancerları bul.
               </p>
             </template>
             <template #interactions>
@@ -97,7 +97,7 @@
               <vs-button class="btn-chat" shadow primary>
                 <i class='bx bx-chat' ></i>
                 <span class="span">
-                  54
+                  78
                 </span>
               </vs-button>
             </template>
@@ -111,7 +111,7 @@
             </template>
             <template #text>
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                DevOps alanında teklifleri ve freelancerları bul.
               </p>
             </template>
             <template #interactions>
@@ -121,7 +121,79 @@
               <vs-button class="btn-chat" shadow primary>
                 <i class='bx bx-chat' ></i>
                 <span class="span">
-                  54
+                  23
+                </span>
+              </vs-button>
+            </template>
+          </vs-card>
+          <vs-card style="margin:10px;">
+            <template #title>
+              <h3>Veri Bilimi</h3>
+            </template>
+            <template #img>
+              <img src="../../../assets/veribilimi.png" alt="">
+            </template>
+            <template #text>
+              <p>
+                Veri Bilimi alanında teklifleri ve freelancerları bul.
+              </p>
+            </template>
+            <template #interactions>
+              <vs-button danger icon>
+                <i class='bx bx-heart'></i>
+              </vs-button>
+              <vs-button class="btn-chat" shadow primary>
+                <i class='bx bx-chat' ></i>
+                <span class="span">
+                  51
+                </span>
+              </vs-button>
+            </template>
+          </vs-card>
+          <vs-card style="margin:10px;">
+            <template #title>
+              <h3>Donanım Destek</h3>
+            </template>
+            <template #img>
+              <img src="../../../assets/donanim.jpg" alt="">
+            </template>
+            <template #text>
+              <p>
+                Donanım Destek alanında teklifleri ve freelancerları bul.
+              </p>
+            </template>
+            <template #interactions>
+              <vs-button danger icon>
+                <i class='bx bx-heart'></i>
+              </vs-button>
+              <vs-button class="btn-chat" shadow primary>
+                <i class='bx bx-chat' ></i>
+                <span class="span">
+                  29
+                </span>
+              </vs-button>
+            </template>
+          </vs-card>
+          <vs-card style="margin:10px;">
+            <template #title>
+              <h3>Veri Tabanı</h3>
+            </template>
+            <template #img>
+              <img src="../../../assets/veritabani.jpg" alt="">
+            </template>
+            <template #text>
+              <p>
+                Veri Tabanı alanında teklifleri ve freelancerları bul.
+              </p>
+            </template>
+            <template #interactions>
+              <vs-button danger icon>
+                <i class='bx bx-heart'></i>
+              </vs-button>
+              <vs-button class="btn-chat" shadow primary>
+                <i class='bx bx-chat' ></i>
+                <span class="span">
+                  62
                 </span>
               </vs-button>
             </template>
@@ -135,7 +207,7 @@
             </template>
             <template #text>
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Diğer Yazılım Teknolojileri alanında teklifleri ve freelancerları bul.
               </p>
             </template>
             <template #interactions>
@@ -145,7 +217,7 @@
               <vs-button class="btn-chat" shadow primary>
                 <i class='bx bx-chat' ></i>
                 <span class="span">
-                  54
+                  48
                 </span>
               </vs-button>
             </template>

@@ -55,7 +55,11 @@
                     <v-row
                       class="mx-0"
                     >
-                      <v-rating
+                      
+
+                      
+                    </v-row>
+                    <v-rating
                         :value=" item.starPoint "
                         color="amber"
                         dense
@@ -63,14 +67,11 @@
                         readonly
                         size="14"
                       ></v-rating>
-
                       <div class="grey--text ms-4">
                         {{ item.starPoint }} (413)
                       </div>
-                    </v-row>
-
                     <div class="my-3 text-subtitle-1">
-                      Price: {{ item.fee }}$
+                      Ücret : {{ item.fee }}₺ 
                     </div>
                   </v-card-text>
 

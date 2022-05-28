@@ -36,7 +36,7 @@ items = [
       {
         title: 'Metin Yazarlığı',
         text: `İhtiyaca göre metin yaz`,
-        img: 'https://www.datocms-assets.com/26717/1602927452-seo-uzmani-seo-metin-yazarligi.jpg',
+        img: 'https://github.com/furkan-atak/ekmek-cli/blob/main/src/assets/metinyazarligi.jpg?raw=true',
         path: 'translate-writing/copywriting'
       },
       {
@@ -48,7 +48,7 @@ items = [
       {
         title: 'Senaryo',
         text: 'Özgün senaryolar oluştur',
-        img: 'https://dckozmos.com/wp-content/uploads/2019/09/Senaryo-Yazarl%C4%B1g%CC%86%C4%B1-.png',
+        img: 'https://github.com/furkan-atak/ekmek-cli/blob/main/src/assets/senaryoYazarligi.jpg?raw=true',
         path: 'translate-writing/scenario'
       },
       {

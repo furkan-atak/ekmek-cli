@@ -45,7 +45,7 @@
 
                   <v-img
                     height="250"
-                    :src="item.image_url"
+                    :src="item.imgUrl"
                   ></v-img>
 
                   <v-card-title> {{ item.offerHeader }} </v-card-title>
@@ -70,7 +70,7 @@
                     </v-row> -->
 
                     <div class="my-3 text-subtitle-1">
-                      Fiyat: {{ item.fee }} {{ currencies.find(t => t.val === item.currency) }}
+                      Fiyat: {{ item.fee }} {{ currencyTemplate(item) }}
                     </div>
                   </v-card-text>
 
@@ -128,7 +128,8 @@ export default class OfferGeneral extends BaseView{
 
     offers:any = []; 
     category:any;
-    
+    theCurrency = '';
+
     loading = false;
     selection = "";
     reserve = "";
@@ -137,6 +138,10 @@ export default class OfferGeneral extends BaseView{
 
     created() {
         this.loadData();
+    }
+
+    currencyTemplate(item:any) {
+        return (this.currencies.find(t=> t.val === item.currency)?.text); 
     }
 
     async loadData() {

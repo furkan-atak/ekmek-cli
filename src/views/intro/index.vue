@@ -36,13 +36,15 @@
             Teklifleri Gör
           </div>
         </v-card-title>
+        <p>
             Sabit fiyat tekliflerimizle projenizi 1 saat gibi 
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kısa bir sürede tamamlayın!
-
+        </p>
         <br>
         <v-btn
         style="margin: 2%; margin-left: 22%;"  
         depressed
+        @click="goTo('/prog-tech/web')"
         color="warning"
         >
         TEKLİFLERİ GÖR
@@ -138,9 +140,9 @@
             Proje Yayınla
           </div>
         </v-card-title>
-        <p style="margin: 3%;">
-            Yapmak istediğin projeyi sun, anında ilgili &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;freelancer'larımız teklif versin!
+        <p>
+            Yapmak istediğin projeyi sun, anında ilgili
+            freelancer'larımız teklif versin!
         </p>
         <br>
         <v-btn
@@ -189,7 +191,9 @@
             {{ header }}
           </div>
         </v-card-title>
+        <p>
            {{ subHeader }}
+        </p>
         <br>
         <v-btn
         style="margin: 2%; margin-left: 27%;"
