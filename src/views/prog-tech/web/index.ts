@@ -15,7 +15,11 @@ export default class Web extends BaseView{
     this.showLoading(true);
     axios.get('http://localhost:1337/categories?name=Web Programlama').then(resp => {
      this.categId =  resp.data[0].id;
-    }).then(() => this.loadData = true).then(() => this.showLoading(false));
+    }).then(() => this.loadData = true)
+    .catch(error => {
+      alert(error);
+      this.showLoading(false);
+    });
 
   }
 

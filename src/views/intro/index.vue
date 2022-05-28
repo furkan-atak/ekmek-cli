@@ -44,7 +44,7 @@
         <v-btn
         style="margin: 2%; margin-left: 22%;"  
         depressed
-        @click="goTo('/prog-tech/web')"
+        @click="goTo('/offer/list')"
         color="warning"
         >
         TEKLİFLERİ GÖR

@@ -25,7 +25,7 @@ export default class Intro extends BaseView{
             this.navigate(path);
         }
         else if(this.user && this.user.role.name === 'Freelancer'){
-            this.navigate('/post-offer');
+            this.navigate('/offer/post-offer');
         }else {
             this.navigate('/freelancer/create');
         }

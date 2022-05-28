@@ -149,9 +149,7 @@ export default class FreelancerGeneral extends BaseView{
         console.log(localStorage.getItem('token'));
         axios.get(`http://localhost:1337/freelancers`).then(response => {
             this.freelancers = response.data;
-            console.log(this.freelancers)
             this.category = this.freelancers[0].category;
-            console.log(this.category.name)
         }).then(() => this.showAll = true).catch(error => {
         // Handle error.
         alert("Server'ın çalıştığından veya giriş yaptığınızdan emin olun! \n");

@@ -4,11 +4,11 @@
       <div style="width: 100%; height: 200px; margin-top: 2.5%; background-color: rgb(24, 32, 43);">
         <v-row style="margin-top: 2%;">
             <h1 style="margin-left: 10%; margin-top: 3%; color: #F5F7FA; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-weight: 500;">
-             {{ category.name }}  </h1>
+             {{ category ? category.name : 'Get High Quality Freelance Services & Offers' }}  </h1>
         </v-row>
         <v-row>
           <span style="margin-left: 10.3%; color: #ABB2C4; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
-            {{  category.subHeader }} </span>
+            {{  category ? category.subHeader : 'Looking for offers and services? PeoplePerHour has you covered.' }} </span>
         </v-row>
       </div>
       </v-row>
@@ -127,7 +127,7 @@ import Component from 'vue-class-component';
 export default class OfferGeneral extends BaseView{
 
     offers:any = []; 
-    category:any;
+    category:any = null;
     theCurrency = '';
 
     loading = false;
@@ -145,22 +145,20 @@ export default class OfferGeneral extends BaseView{
     }
 
     async loadData() {
-        console.log('categoryId', this.$props.categoryId)
-        this.showLoading(true);
-        // setTimeout(() => {
         
-        // }, 1500);
-        console.log(localStorage.getItem('token'));
-        axios.get(`http://localhost:1337/offers?category=${this.$props.categoryId}`).then(response => {
-            this.offers = response.data;
-            console.log(this.offers)
-            this.category = this.offers[0].category;
-            console.log(this.category.name)
-        }).then(() => this.showAll = true).catch(error => {
-        // Handle error.
-        alert("Server'ın çalıştığından veya giriş yaptığınızdan emin olun! \n");
-        //console.log('An error occurred:', error.response);
-        }).finally(() => this.showLoading(false));
+        const endPoint = this.$props.categoryId ? `http://localhost:1337/offers?category=${this.$props.categoryId}` : `http://localhost:1337/offers`;  
+        this.showLoading(true);
+        axios.get(endPoint).then(response => {
+                    this.offers = response.data;
+                    this.category = this.$props.categoryId ? this.offers[0].category : null;
+                }).then(() => this.showAll = true).catch(error => {
+                // Handle error.
+                alert("Server'ın çalıştığından veya giriş yaptığınızdan emin olun! \n");
+                //console.log('An error occurred:', error.response);
+                }).finally(() => { this.showLoading(false) });
+
+        
+        
   }
 
 }

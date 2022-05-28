@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { Component } from 'vue-property-decorator';
-import BaseView, { User } from '../baseView';
+import BaseView, { User } from '../../baseView';
 
 @Component
 export default class PostOffer extends BaseView{ 
