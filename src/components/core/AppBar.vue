@@ -49,6 +49,24 @@
         color="lightgray"
         ></v-divider>
 
+        <vs-button style="background-color: #203354; margin: 2%;font-size: large; width: 7%;" 
+            @click="goTo('/project/list')"
+            gradient
+            primary
+            square
+            bold
+            icon-after
+            >
+            
+            Projeler <v-icon style="margin: 1%;">mdi-layers-search</v-icon>
+        </vs-button>
+
+        <v-divider
+        :style="loggedIn ? 'margin-right: 0.6%;' : ''"
+        vertical
+        color="lightgray"
+        ></v-divider>
+
         <v-btn @click="goTo('/login')"
             v-if="!loggedIn"
             target="_blank"
