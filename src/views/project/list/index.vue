@@ -15,7 +15,7 @@
                                 <v-card-title style="min-height: none; height: 2%;">{{ item.header }}</v-card-title>
                                 <v-card-text style="min-width: none; width: 10%; min-height: 0%; height: 5%; margin-left: 84.5%;  padding: 0%; font-size: 40px; font-weight: 900; color: #3D66D7;">
                                 {{ currencyTemplate(item.Currency) + item.Budget }}</v-card-text>
-                                <v-card-text style="min-width: none; width: 10%; min-height: 0%; height: 5%; margin-left: 85%; padding-top: 1.3%; padding: 0%;">{{ budgetTypeTemplate(item.BudgetType) }}</v-card-text>
+                                <v-card-text style="min-width: none; width: 10%; min-height: 0%; height: 5%; margin-left: 85%; margin-top: 1.2%; padding: 0%;">{{ budgetTypeTemplate(item.BudgetType) }}</v-card-text>
                                 
                                 <p style="height: 0%; padding-top: 0%; padding-bottom: 0%; padding-left: 2%;"> {{ item.description }} </p>
                                 <v-card-text style="min-width: none; width: 70%; min-height: none; height: 15%; font-size: medium; padding-top: 3%;"> 
@@ -29,7 +29,7 @@
                                 </v-card-text>
                                 
                                 <v-btn
-                                style="left: 80%; width: 15%; bottom: 20%;"
+                                style="left: 80%; width: 15%; bottom: 23%;"
                                 outlined
                                 color="indigo"
                                 >
