@@ -18,7 +18,7 @@
                                 <v-card-text style="min-width: none; width: 10%; min-height: 0%; height: 5%; margin-left: 85%; margin-top: 1.2%; padding: 0%;">{{ budgetTypeTemplate(item.BudgetType) }}</v-card-text>
                                 
                                 <p style="height: 0%; padding-top: 0%; padding-bottom: 0%; padding-left: 2%;"> {{ item.description }} </p>
-                                <v-card-text style="min-width: none; width: 70%; min-height: none; height: 15%; font-size: medium; padding-top: 3%;"> 
+                                <v-card-text style="min-width: none; width: 70%; min-height: none; height: 5%; font-size: medium; padding-top: 2.3%;"> 
                                 <v-icon style="padding-bottom: 0.5%;">mdi-clock-time-three-outline</v-icon>
                                 {{ getTimePast(item.createdAt) }}
                                 <v-icon style="padding-bottom: 0.5%;">mdi-map-marker-outline</v-icon>Uzaktan &nbsp;&nbsp;
@@ -29,7 +29,7 @@
                                 </v-card-text>
                                 
                                 <v-btn
-                                style="left: 80%; width: 15%; bottom: 23%;"
+                                style="left: 80%; width: 15%; bottom: 20%;"
                                 outlined
                                 color="indigo"
                                 >
