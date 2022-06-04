@@ -30,7 +30,7 @@ items = [
       {
         title: 'Web Programlama',
         text: `Site tasarla ve kodla`,
-        img: 'https://github.com/furkan-atak/ekmek-cli/blob/main/src/assets/mobil_app.png?raw=true',
+        img: 'https://github.com/furkan-atak/ekmek-cli/blob/main/src/assets/webprogramlama.jpg?raw=true',
         path: 'prog-tech/web'
       },
       {
@@ -42,7 +42,7 @@ items = [
       {
         title: 'Mobil Yazılım',
         text: 'Uygulamanı çıkar',
-        img: 'https://github.com/furkan-atak/ekmek-cli/blob/main/src/assets/mobile.png?raw=true',
+        img: 'https://github.com/furkan-atak/ekmek-cli/blob/main/src/assets/3dtasarim.jpg?raw=true',
         path: 'prog-tech/mobile'
       },
       {

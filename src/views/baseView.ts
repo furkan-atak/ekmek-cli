@@ -16,6 +16,8 @@ export default abstract class BaseView extends Vue{
         return null;
     }
     
+    bugdetTypes = [{val: 1, text: 'Sabit Ücret'}, {val:2, text: 'Saatlik Ücret'}];
+
     estimatedDurations = [
         {val: 0, text: 'Seç'},
         {val: 1, text: '1 gün veya daha az'},

@@ -119,22 +119,22 @@
           <p style="height: 10px; margin-top: 2px; color: #18202B;">Ses & Müzik</p>
 
           <template #items>
-            <vs-navbar-item @click="goTo('prog-tech/programming')" :active="active == 'seslendirme'" id="seslendirme">
+            <vs-navbar-item style="padding-bottom: 8%;" @click="goTo('prog-tech/programming')" :active="active == 'seslendirme'" id="seslendirme">
               Seslendirme
             </vs-navbar-item>
-            <vs-navbar-item @click="goTo('prog-tech/programming')" :active="active == 'mix'" id="mix">
+            <vs-navbar-item  style="padding-bottom: 8%;" @click="goTo('prog-tech/programming')" :active="active == 'mix'" id="mix">
               Mix Mastering
             </vs-navbar-item>
-            <vs-navbar-item @click="goTo('prog-tech/programming')" :active="active == 'beste'" id="beste">
+            <vs-navbar-item  style="padding-bottom: 8%;" @click="goTo('prog-tech/programming')" :active="active == 'beste'" id="beste">
               Beste Yazarlığı
             </vs-navbar-item>
-            <vs-navbar-item @click="goTo('prog-tech/programming')" :active="active == 'vokal'" id="vokal">
+            <vs-navbar-item  style="padding-bottom: 8%;" @click="goTo('prog-tech/programming')" :active="active == 'vokal'" id="vokal">
               Vokal Koçluğu
             </vs-navbar-item>
-            <vs-navbar-item @click="goTo('prog-tech/programming')" :active="active == 'muzik'" id="muzik">
+            <vs-navbar-item  style="padding-bottom: 8%;" @click="goTo('prog-tech/programming')" :active="active == 'muzik'" id="muzik">
               Müzik Yapma
             </vs-navbar-item>
-            <vs-navbar-item @click="goTo('prog-tech/programming')" :active="active == 'digerses'" id="digerses">
+            <vs-navbar-item  style="padding-bottom: 8%;" @click="goTo('prog-tech/programming')" :active="active == 'digerses'" id="digerses">
               Diğer Ses Müzik
             </vs-navbar-item>
           </template>

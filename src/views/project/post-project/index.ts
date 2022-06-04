@@ -17,7 +17,7 @@ export default class PostProject extends BaseView{
     subCategories = [];
     subCategory = null;
 
-    bugdetTypes = [{val: 1, text: 'Sabit Ücret'}, {val:2, text: 'Saatlik Ücret'}];
+    
     theBudgetType = 0;
     
     theCurrency = 1;
@@ -62,8 +62,8 @@ export default class PostProject extends BaseView{
         description: this.projectDescription,
         category: this.subCategory,
         group: this.category,
-        BudgetType: this.bugdetTypes.find(t => t.val === this.theBudgetType)?.text,
-        Currency: this.currencies.find(t => t.val === this.theCurrency)?.text,
+        BudgetType: this.theBudgetType,
+        Currency:  this.theCurrency,
         Budget: this.budget,
         EstimatedDuration: this.estimatedDurations.find(t => t.val === this.theEstimatedDuration)?.text,
         user: null,
