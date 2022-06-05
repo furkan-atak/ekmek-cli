@@ -7,6 +7,11 @@ export default abstract class BaseView extends Vue{
         super();
     }
 
+    getParameter(param:any) {
+
+        //asd
+    }
+
     getUser() {
 
         const user = localStorage.getItem('user');

@@ -3,17 +3,19 @@ import axios from "axios";
 import Component from "vue-class-component";
 
 @Component
-export default class ListProject extends BaseView{ 
+export default class ProjectDetail extends BaseView{ 
 
-    projects:any = [];
+    projectId:any = '';
+    project:any = null;
     today:Date = new Date();
-
     created() {
         this.today = new Date();
-       this.showLoading(true);
-       axios.get('http://localhost:1337/projects').then(response => {
-            this.projects = response.data;
+        this.projectId = this.$route.query['id'];
+        this.showLoading(true);
+       axios.get(`http://localhost:1337/projects?id=${this.projectId}`).then(response => {
+            this.project = response.data[0];
        }).finally(() => { this.showLoading(false) });
+      
     }
 
     getTimePast(time: any){
@@ -24,16 +26,6 @@ export default class ListProject extends BaseView{
         return timeString;
     }
 
-    budgetTypeTemplate(item: any) {
-        return this.bugdetTypes.find(t => t.val === item)?.text;
-    }
 
-    currencyTemplate(item: any) {
-        return this.currencies.find(t => t.val === item)?.symbol;
-    }
-
-    goTo(itemId: any) {
-        this.navigate(`/project/detail?id=${itemId}`);
-    }
 
 }

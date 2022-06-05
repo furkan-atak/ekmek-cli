@@ -23,7 +23,7 @@
                                 {{ getTimePast(item.createdAt) }}
                                 <v-icon style="padding-bottom: 0.5%;">mdi-map-marker-outline</v-icon>Uzaktan &nbsp;&nbsp;
                                 <v-icon style="padding-bottom: 0.5%; padding-left: 0%;">mdi-tag</v-icon>
-                                Teklifler {{ i }}&nbsp;&nbsp;
+                                Teklifler {{ item.proposals.length }}&nbsp;&nbsp;
                                 <v-icon style="padding-bottom: 0.5%; padding-left: 0%;">mdi-heart</v-icon>
                                 Favoriler {{ i }}
                                 </v-card-text>
@@ -31,6 +31,7 @@
                                 <v-btn
                                 style="left: 80%; width: 15%; bottom: 20%;"
                                 outlined
+                                @click="goTo(item.id)"
                                 color="indigo"
                                 >
                                 <v-icon>mdi-offer</v-icon> Teklİf Ver 

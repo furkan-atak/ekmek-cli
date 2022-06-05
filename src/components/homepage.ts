@@ -30,19 +30,19 @@ items = [
       {
         title: 'Web Programlama',
         text: `Site tasarla ve kodla`,
-        img: 'https://github.com/furkan-atak/ekmek-cli/blob/main/src/assets/webprogramlama.jpg?raw=true',
+        img: 'https://github.com/furkan-atak/ekmek-cli/blob/main/src/assets/deneme.jpeg?raw=true',
         path: 'prog-tech/web'
       },
       {
         title: 'Metin Yazarlığı',
         text: `İhtiyaca göre metin yaz`,
-        img: 'https://github.com/furkan-atak/ekmek-cli/blob/main/src/assets/metinyazarligi.jpg?raw=true',
+        img: 'https://github.com/furkan-atak/ekmek-cli/blob/main/src/assets/deneme1.jpeg?raw=true',
         path: 'translate-writing/copywriting'
       },
       {
         title: 'Mobil Yazılım',
         text: 'Uygulamanı çıkar',
-        img: 'https://github.com/furkan-atak/ekmek-cli/blob/main/src/assets/3dtasarim.jpg?raw=true',
+        img: 'https://github.com/furkan-atak/ekmek-cli/blob/main/src/assets/deneme3.jpg?raw=true',
         path: 'prog-tech/mobile'
       },
       {
