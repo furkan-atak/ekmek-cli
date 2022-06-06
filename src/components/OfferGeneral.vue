@@ -4,11 +4,11 @@
       <div style="width: 100%; height: 200px; margin-top: 2.5%; background-color: rgb(24, 32, 43);">
         <v-row style="margin-top: 2%;">
             <h1 style="margin-left: 10%; margin-top: 3%; color: #F5F7FA; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-weight: 500;">
-             {{ category ? category.name : 'Get High Quality Freelance Services & Offers' }}  </h1>
+             {{ category ? category.name : 'Yüksek Kaliteli Freelancer Hizmeti ve Teklifleri Alın' }}  </h1>
         </v-row>
         <v-row>
           <span style="margin-left: 10.3%; color: #ABB2C4; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
-            {{  category ? category.subHeader : 'Looking for offers and services? PeoplePerHour has you covered.' }} </span>
+            {{  category ? category.subHeader : 'Teklifler ve hizmetler mi arıyorsunuz? Ekmek sizinle.' }} </span>
         </v-row>
       </div>
       </v-row>

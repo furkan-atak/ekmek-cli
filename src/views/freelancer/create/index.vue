@@ -1,7 +1,7 @@
 <template>
   <v-container class="containerHalf">
    <div style="margin-left: 6%; margin-right: 6%;">
-   <h2 style="font-family: 'Courier New', Courier, monospace; font-size: 40px; color: #2a2a2a;" >Hoşgeldin {{ user.username }}</h2>
+   <h1>Freelancer Ol</h1>
    <p style="color: #515151;">Küresel serbest çalışan topluluğumuza katılmak için profilinizi tamamlayın ve hizmetlerinizi büyüyen işletme ağımıza satmaya başlayın. </p>
    
     <br>
@@ -72,19 +72,31 @@
                         filter
                         outlined
                         >
-                        Elevator
+                        C#
                         </v-chip>
                         <v-chip
                         filter
                         outlined
                         >
-                        Washer / Dryer
+                        Vue.js
                         </v-chip>
                         <v-chip
                         filter
                         outlined
                         >
-                        Fireplace
+                        Strapi
+                        </v-chip>
+                        <v-chip
+                        filter
+                        outlined
+                        >
+                        C++
+                        </v-chip>
+                        <v-chip
+                        filter
+                        outlined
+                        >
+                        Python
                         </v-chip>
                     </v-chip-group>
                     </v-card-text>

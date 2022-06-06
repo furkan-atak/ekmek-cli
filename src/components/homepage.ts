@@ -30,31 +30,31 @@ items = [
       {
         title: 'Web Programlama',
         text: `Site tasarla ve kodla`,
-        img: 'https://github.com/furkan-atak/ekmek-cli/blob/main/src/assets/deneme.jpeg?raw=true',
+        img: 'https://github.com/furkan-atak/ekmek-cli/blob/main/src/assets/webprogramlama.jpg?raw=true',
         path: 'prog-tech/web'
       },
       {
         title: 'Metin Yazarlığı',
         text: `İhtiyaca göre metin yaz`,
-        img: 'https://github.com/furkan-atak/ekmek-cli/blob/main/src/assets/deneme1.jpeg?raw=true',
+        img: 'https://github.com/furkan-atak/ekmek-cli/blob/main/src/assets/metinyazarligi.jpg?raw=true',
         path: 'translate-writing/copywriting'
       },
       {
         title: 'Mobil Yazılım',
         text: 'Uygulamanı çıkar',
-        img: 'https://github.com/furkan-atak/ekmek-cli/blob/main/src/assets/deneme3.jpg?raw=true',
+        img: 'https://github.com/furkan-atak/ekmek-cli/blob/main/src/assets/mobilyazilim.jpg?raw=true',
         path: 'prog-tech/mobile'
       },
       {
         title: 'Senaryo',
         text: 'Özgün senaryolar oluştur',
-        img: 'https://github.com/furkan-atak/ekmek-cli/blob/main/src/assets/senaryoYazarligi.jpg?raw=true',
+        img: 'https://github.com/furkan-atak/ekmek-cli/blob/main/src/assets/senaryo.jpg?raw=true',
         path: 'translate-writing/scenario'
       },
       {
         title: 'Veri Bilimi',
         text: 'Verileri anlamlandır',
-        img: 'https://github.com/furkan-atak/ekmek-cli/blob/main/src/assets/veribilimi.png?raw=true',
+        img: 'https://github.com/furkan-atak/ekmek-cli/blob/main/src/assets/veribilimi.jpg?raw=true',
         path: 'prog-tech/datascience'
       }
       

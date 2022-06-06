@@ -5,7 +5,7 @@
         <v-col class="col-5"></v-col>
         <v-col>
         <br>
-        <h1 style="padding-left: 11%;"> LOGIN </h1>
+        <h1 style="padding-left: 10%;"> GİRİŞ YAP </h1>
         <br>
         <vs-input class="" primary v-model="userName" label-placeholder="Kullanıcı Adı">
           <template #icon>

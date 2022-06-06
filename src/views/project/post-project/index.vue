@@ -1,6 +1,9 @@
 <template>
   <v-container class="containerHalf">
-   <div style="margin-left: 6%; margin-right: 6%;">
+   <div style="margin-left: 6%; margin-right: 6%;">   
+   <h2> Proje Yayınla </h2>
+   <span style="margin: 3%;"> Proje: Belirli bir zaman diliminde sabit bir fiyat karşılığında yaptırabileceğiniz bir hizmet. </span>
+   <br></br>
     <v-row>
         <v-col cols="12" md="6">  
             <span>Kategoriler</span>
