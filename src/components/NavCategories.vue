@@ -1,5 +1,19 @@
 <template>
-    <div class="center examplex">
+    <div  v-if="done" class="center examplex">
+        <v-row>
+            <div style="width: 100%; height: 200px; margin-top: 2.5%; background-color: rgb(24, 32, 43);">
+                <v-row style="margin-top: 2%;">
+                    <h1 style="margin-left: 10%; margin-top: 3%; color: #F5F7FA; 
+                    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                    font-weight: 500;">
+                    {{ group ? group.name : 'Yüksek Kaliteli Freelancer Hizmeti ve Teklifleri Alın' }}  </h1>
+                </v-row>
+                <v-row>
+                <span style="margin-left: 10.3%; color: #ABB2C4; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                    {{  group ? group.subHeader : 'Teklifler ve hizmetler mi arıyorsunuz? Ekmek sizinle.' }} </span>
+                </v-row>
+            </div>
+      </v-row>
         <br><br>
         <br><br>
         <v-row>
@@ -38,6 +52,7 @@
             </v-row>
           </v-col>
         </v-row>
+        <div style="margin: 3%;"></div>
     </div>
 </template>
 
@@ -50,29 +65,32 @@ import Component from 'vue-class-component';
 export default class NavCategories extends BaseView{
 
     categories:any = [];
-
     active = "";
     data = 12;
     loading = false;
-    selection = ""; 
+    selection = "";
     reserve = "";
+    groupIndex:any;
+    group:any;
+    done = false;
+    
   created() {
-     this.showLoading(true);
-
-        axios
-            .get('http://localhost:1337/categories').then(response => {
+      this.done = false;
+     this.groupIndex =  this.$route.query['index'];
+     this.showLoading(true);    
+     axios.get(`http://localhost:1337/groups?index=${this.groupIndex}`).then(r => {
+         this.group = r.data[0];
+     }).then(() => {
+          axios
+            .get(`http://localhost:1337/categories?group=${this.group.id}`).then(response => {
             this.categories = response.data;
-            console.log(this.categories);
-        }).catch(error => {
+        }).then(() => { this.done = true; this.showLoading(false); }).catch(error => {
             alert(error);
-        }).finally(() => this.showLoading(false));
+        })
+     }).catch(err => {
+         alert(err);
+     })
        
-  }
-  mounted() { 
-    //sth
-  }
-  logAt(sth:string) {
-      console.log(sth);
   }
 
 }
