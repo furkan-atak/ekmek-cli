@@ -145,12 +145,12 @@ export default class OfferGeneral extends BaseView{
     }
 
     async loadData() {
-        
-        const endPoint = this.$props.categoryId ? `http://localhost:1337/offers?category=${this.$props.categoryId}` : `http://localhost:1337/offers`;  
+        const catId = this.$route.query['id']
+        const endPoint =  catId ? `http://localhost:1337/offers?category=${catId}` : `http://localhost:1337/offers`;  
         this.showLoading(true);
         axios.get(endPoint).then(response => {
                     this.offers = response.data;
-                    this.category = this.$props.categoryId ? this.offers[0].category : null;
+                    this.category = catId ? this.offers[0].category : null;
                 }).then(() => this.showAll = true).catch(error => {
                 // Handle error.
                 alert("Server'ın çalıştığından veya giriş yaptığınızdan emin olun! \n");

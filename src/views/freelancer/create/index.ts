@@ -53,9 +53,9 @@ export default class CreateFreelancer extends BaseView {
         axios.get('http://localhost:1337/users-permissions/roles').then(r => {
             const data:[] = r.data.roles;
             this.freelancerId = data ? (<any>data.find((t:any) => t.name === 'Freelancer')).id : '';
-        });
+        }).finally(() => { this.showLoading(false) });
 
-        this.showLoading(false);
+        
     }
 
     search(){

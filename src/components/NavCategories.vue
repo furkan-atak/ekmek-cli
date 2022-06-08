@@ -93,7 +93,7 @@ export default class NavCategories extends BaseView{
             this.categories = response.data;
         }).then(() => { this.done = true; this.showLoading(false); }).catch(error => {
             alert(error);
-        })
+        });
      }).catch(err => {
          alert(err);
      });     
