@@ -17,7 +17,18 @@
         <br><br>
         <br><br>
         <v-row>
-          <v-col cols="3"></v-col>
+          <v-col cols="3"> 
+            <div style="position: sticky; top: 150px;">
+                <p style="margin-left: 15%;  font-size: 20px; padding-bottom: 2%;"> {{ group.name }} </p>
+                <template v-for="(cat, i) in group.categories">
+                <v-row :key="i">
+                    <v-hover v-slot="{ hover }">
+                    <p   @mouseover="mouseOn" :style=" hover ? 'text-decoration:underline; margin-left: 22%; margin-bottom: 3%;' : 'margin-left: 22%; margin-bottom: 3%;'"> {{ cat.name }} </p>
+                    </v-hover>
+                </v-row>
+                </template>
+            </div>
+          </v-col>
             <v-col>
              <v-row> 
                 <template v-for="(category, i) in categories">
@@ -65,15 +76,11 @@ import Component from 'vue-class-component';
 export default class NavCategories extends BaseView{
 
     categories:any = [];
-    active = "";
-    data = 12;
-    loading = false;
-    selection = "";
-    reserve = "";
     groupIndex:any;
     group:any;
     done = false;
-    
+    isOver = false;
+
   created() {
       this.done = false;
      this.groupIndex =  this.$route.query['index'];
@@ -89,9 +96,14 @@ export default class NavCategories extends BaseView{
         })
      }).catch(err => {
          alert(err);
-     })
-       
+     });     
   }
+
+  mouseOn() {
+      console.log('over', this.isOver)
+      this.isOver = this.isOver ? false : true;
+  }
+
 
 }
   
