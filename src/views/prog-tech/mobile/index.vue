@@ -5,7 +5,7 @@
       <v-row>
         <v-col cols="3"></v-col>
         <v-col>
-          <v-row >            
+          <v-row>            
           <vs-card style="margin:10px;">
             <template #title>
               <h3>Web Programlama</h3>

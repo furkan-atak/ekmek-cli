@@ -66,6 +66,11 @@ const routes: Array<RouteConfig> = [
     component: () => import('../views/freelancer/list/index.vue')
   },
   {
+    path: '/categories',
+    name: 'navProgTech',
+    component: () => import('../components/NavCategories.vue')
+  },
+  {
     path: '/prog-tech/datascience',
     name: 'datascience',
     component: () => import(/* webpackChunkName: "about" */ '../views/prog-tech/data-science/index.vue')
