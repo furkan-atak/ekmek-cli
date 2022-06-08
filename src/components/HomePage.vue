@@ -4,7 +4,7 @@
         <v-carousel-item
           src="https://i.pinimg.com/originals/26/ea/1a/26ea1ae84baf2c11d38b96ef2b420422.gif"
         >
-          <v-row style="margin-top: 2%;">
+        <v-row style="margin-top: 2%;">
             <span style="margin-left: 5%; margin-top: 15.5%; color: #F5F7FA; font-style: italic; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-size: 74px;">
              ekmek  </span>
         </v-row>
@@ -15,12 +15,13 @@
         
         </v-carousel-item>    
     </v-carousel>
-  <br>
-  <br>
-  <v-row>          
-    <h1 style="padding-left: 5%;"> En Popüler Kategoriler </h1>  
-  </v-row>       
-    <v-container style="margin-right: 18%; width: 100%;">
+    <br>
+    <br>
+    <br>
+    <v-row>          
+      <h1 style="padding-left: 14%;"> En Popüler Kategoriler </h1>  
+    </v-row>       
+    <v-container style="margin-right: 21%; width: 100%;">
       <v-row style="width: 1300px;">
         <template v-for="(item, i) in items">
           <v-col
@@ -70,10 +71,47 @@
             </v-hover>
           </v-col>
         </template>
+        <vs-button style="background-color: #7b96ff; margin-left: 7%;font-size: medium; width: 14%; height: 30px ;" 
+            @click="goTo('/offer/list')"
+            bold
+            square
+            icon-after
+            >
+            Tüm Kategoriler &nbsp;   <v-icon style="margin: 1%;" color="white">mdi-arrow-right-bold</v-icon>
+          </vs-button>
       </v-row>
     </v-container>    
-   <div style="margin: 2%;"></div>
+    <v-container style="margin-right: 18%; width: 100%;">
+      <v-row style="width: 1000px;  cursor: pointer; margin-left: 0%; margin-top: 2%;">
+        <v-col cols="6" md="6" >
+          <h1>
+            <br>
+            Yeteneklerin doğrultusunda iş almak hiç 
+            bu kadar kolay olmamıştı
+          </h1> 
+          <br>         
+          <h5><v-icon style="margin: 1%;">mdi-account-check</v-icon>Dakikalar içinde para kazanmaya başla</h5>
+          <h5><v-icon style="margin: 1%;">mdi-account-check</v-icon>7/24 Ekmek müşteri hizmetleri imkanı</h5>
+          <h5><v-icon style="margin: 1%;">mdi-account-check</v-icon>Ücretsiz üyeliğin keyfini sür</h5>
+          <h5><v-icon style="margin: 1%;">mdi-account-check</v-icon>Ve daha fazlası için...</h5>
+          <br>
+          <vs-button style="background-color: #00ccbe; margin: 0%;font-size: large; width: 90%;" 
+            @click="goTo('/freelancer/create')"
+            
+            gradient
+            bold
+            icon-after
+            >
+            HEMEN FREELANCER OL &nbsp;   <v-icon style="margin: 1%;">mdi-account-check</v-icon>
+          </vs-button>
+        </v-col>  
+        <v-col cols="6" md="1">
+          <img style="margin-left: 55%;  max-width: 800px;" src="../assets/freelancerolmalisin.jpg" />  
+        </v-col>         
+      </v-row>
+    </v-container>
   </div>
+
 </template>
 
 <script lang="ts" src="./homepage.ts"></script>
