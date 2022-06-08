@@ -24,14 +24,6 @@ export default class ListProject extends BaseView{
         return timeString;
     }
 
-    budgetTypeTemplate(item: any) {
-        return this.bugdetTypes.find(t => t.val === item)?.text;
-    }
-
-    currencyTemplate(item: any) {
-        return this.currencies.find(t => t.val === item)?.symbol;
-    }
-
     goTo(itemId: any) {
         this.navigate(`/project/detail?id=${itemId}`);
     }

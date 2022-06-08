@@ -18,27 +18,27 @@ const routes: Array<RouteConfig> = [
   {
     path: '/login',
     name: 'login',
-    component: () => import(/* webpackChunkName: "about" */ '../views/login/index.vue')
+    component: () => import(/* webpackChunkName: "login" */ '../views/login/index.vue')
   },
   {
     path: '/register',
     name: 'register',
-    component: () => import(/* webpackChunkName: "about" */ '../views/sign-up/index.vue')
+    component: () => import(/* webpackChunkName: "register" */ '../views/sign-up/index.vue')
   },
   {
     path: '/intro',
     name: 'intro',
-    component: () => import(/* webpackChunkName: "about" */ '../views/intro/index.vue')
+    component: () => import(/* webpackChunkName: "intro" */ '../views/intro/index.vue')
   },
   {
     path: '/post-project',
     name: 'post',
-    component: () => import(/* webpackChunkName: "about" */ '../views/project/post-project/index.vue')
+    component: () => import(/* webpackChunkName: "post-project" */ '../views/project/post-project/index.vue')
   },
   {
     path: '/project/detail',
-    name: 'post',
-    component: () => import(/* webpackChunkName: "about" */ '../views/project/detail/index.vue')
+    name: 'project-detail',
+    component: () => import(/* webpackChunkName: "project-detail" */ '../views/project/detail/index.vue')
   },
   {
     path: '/project/list',
@@ -52,7 +52,7 @@ const routes: Array<RouteConfig> = [
   },
   {
     path: '/offer/list',
-    name: 'postOffer',
+    name: 'offerList',
     component: () => import(/* webpackChunkName: "about" */ '../components/OfferGeneral.vue')
   },
   {
@@ -62,87 +62,87 @@ const routes: Array<RouteConfig> = [
   },
   {
     path: '/freelancer/list',
-    name: 'createFreelancer',
+    name: 'freelancerList',
     component: () => import('../views/freelancer/list/index.vue')
   },
   {
     path: '/prog-tech/datascience',
-    name: 'login',
+    name: 'datascience',
     component: () => import(/* webpackChunkName: "about" */ '../views/prog-tech/data-science/index.vue')
   },
   {
     path: '/prog-tech/database',
-    name: 'login',
+    name: 'database',
     component: () => import(/* webpackChunkName: "about" */ '../views/prog-tech/database/index.vue')
   },
   {
     path: '/prog-tech/desktop',
-    name: 'login',
+    name: 'desktop',
     component: () => import(/* webpackChunkName: "about" */ '../views/prog-tech/desktop/index.vue')
   },
   {
     path: '/prog-tech/devops',
-    name: 'login',
+    name: 'devops',
     component: () => import(/* webpackChunkName: "about" */ '../views/prog-tech/devops/index.vue')
   },
   {
     path: '/prog-tech/game',
-    name: 'login',
+    name: 'game',
     component: () => import(/* webpackChunkName: "about" */ '../views/prog-tech/game/index.vue')
   },
   {
     path: '/prog-tech/hardware',
-    name: 'login',
+    name: 'hardware',
     component: () => import(/* webpackChunkName: "about" */ '../views/prog-tech/hardware/index.vue')
   },
   {
     path: '/prog-tech/mobile',
-    name: 'login',
+    name: 'mobile',
     component: () => import(/* webpackChunkName: "about" */ '../views/prog-tech/mobile/index.vue')
   },
   {
     path: '/prog-tech/other-progtech',
-    name: 'login',
+    name: 'progtech',
     component: () => import(/* webpackChunkName: "about" */ '../views/prog-tech/other-progtech/index.vue')
   },
   {
     path: '/prog-tech/web',
-    name: 'login',
+    name: 'web',
     component: () => import(/* webpackChunkName: "about" */ '../views/prog-tech/web/index.vue')
   },
   {
     path: '/translate-writing/copywriting',
-    name: 'login',
+    name: 'copywriting',
     component: () => import(/* webpackChunkName: "about" */ '../views/translate-writing/copywriting/index.vue')
   },
   {
     path: '/translate-writing/cv',
-    name: 'login',
+    name: 'cv',
     component: () => import(/* webpackChunkName: "about" */ '../views/translate-writing/cv/index.vue')
   },
   {
     path: '/translate-writing/other-translatewriting',
-    name: 'login',
+    name: 'translatewriting',
     component: () => import(/* webpackChunkName: "about" */ '../views/translate-writing/other-translatewriting/index.vue')
   },
   {
     path: '/translate-writing/scenario',
-    name: 'login',
+    name: 'scenario',
     component: () => import(/* webpackChunkName: "about" */ '../views/translate-writing/scenario/index.vue')
   },
   {
     path: '/translate-writing/text-editing',
-    name: 'login',
+    name: 'editing',
     component: () => import(/* webpackChunkName: "about" */ '../views/translate-writing/text-editing/index.vue')
   },
   {
     path: '/translate-writing/translate',
-    name: 'login',
+    name: 'translate',
     component: () => import(/* webpackChunkName: "about" */ '../views/translate-writing/translate/index.vue')
   },
   {
     path: '/translate-writing/website-content',
-    name: 'login',
+    name: 'content',
     component: () => import(/* webpackChunkName: "about" */ '../views/translate-writing/website-content/index.vue')
   }
 ]

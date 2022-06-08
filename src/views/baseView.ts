@@ -7,11 +7,6 @@ export default abstract class BaseView extends Vue{
         super();
     }
 
-    getParameter(param:any) {
-
-        //asd
-    }
-
     getUser() {
 
         const user = localStorage.getItem('user');
@@ -49,6 +44,14 @@ export default abstract class BaseView extends Vue{
 
     showLoading(bool: boolean) {
        this.$store.commit("SET_LOADING", bool);
+    }
+
+    budgetTypeTemplate(item: any) {
+        return this.bugdetTypes.find(t => t.val === item)?.text;
+    }
+
+    currencyTemplate(item: any) {
+        return this.currencies.find(t => t.val === item)?.symbol;
     }
 
 }
