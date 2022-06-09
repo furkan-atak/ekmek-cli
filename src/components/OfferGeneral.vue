@@ -1,5 +1,5 @@
 <template>
-    <div v-if="showAll">
+    <div v-if="showAll" style="width: 100%; height: %100; background-color: #F8F9FC;">
       <v-row>
       <div style="width: 100%; height: 200px; margin-top: 2.5%; background-color: rgb(24, 32, 43);">
         <v-row style="margin-top: 2%;">
@@ -12,10 +12,30 @@
         </v-row>
       </div>
       </v-row>
-      <br><br>
-      <br><br>
       <v-row>
-        <v-col cols="3"></v-col>
+        <v-col cols="3">
+          <div style="width: 90%; height: 50%; background-color: white; margin: 10%; margin-top: 20%; margin-bottom: 23%;
+           box-shadow: 10px 10px 15px 10px lightblue; position: sticky; top: 150px;">
+            <p style="margin-left: 3%; padding-top: 5%; font-size: larger; font-weight: 500; color: #18202B;"> Filtreler </p>
+            <template v-for="(duration, i) in estimatedDurations">
+                <v-row v-if="i > 0" :key="i" height="0">
+                  <div style="max-width: none; width: 80%; height: 30px; margin-left: 1.2%;
+                  display: flex;">
+                    <v-checkbox
+                      style="margin-left: 5%; display: inline-block; padding-top: 0px; margin-top: 0%; border-radius: 100%;"
+                      v-model="duration.selected"
+                      color="orange"
+                      hide-details
+                    ></v-checkbox> 
+                    <v-hover v-slot="{ hover }">
+                     <span @click="duration.selected = duration.selected ? false:true" :style=" hover ? 'text-decoration:underline; margin-left: 0%; cursor:pointer; max-height: none; height:100%' :
+                      'margin-left: 0%; max-height: none; height:100%; cursor:pointer;'"> {{ duration.text }} </span>
+                    </v-hover>
+                  </div>
+                </v-row>
+                </template>
+          </div>
+        </v-col>
         <v-col>
           <v-row>
            <v-container class="pa-12 text-center">
@@ -159,6 +179,12 @@ export default class OfferGeneral extends BaseView{
 
         
         
+  }
+
+  select(val:any){
+    this.estimatedDurations.forEach(t => {
+      t.val !== val ? t.selected = false :  t.selected = true;
+    })
   }
 
 }

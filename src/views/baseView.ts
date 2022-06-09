@@ -19,16 +19,15 @@ export default abstract class BaseView extends Vue{
     bugdetTypes = [{val: 1, text: 'Sabit Ücret'}, {val:2, text: 'Saatlik Ücret'}];
 
     estimatedDurations = [
-        {val: 0, text: 'Seç'},
-        {val: 1, text: '1 gün veya daha az'},
-        {val: 2, text: '1 haftadan az'},
-        {val: 3, text: '1-2 hafta'},
-        {val: 4, text: '3-4 hafta'},
-        {val: 5, text: '1-6 ay'},
-        {val: 6, text: '6 aydan fazla'},
-        {val: 7, text: 'Devam eden'},
-        {val: 8, text: 'Emin Değilim'},
-        {val: 9, text: 'Diğer'}
+        {val: 0, text: 'Seç', selected:false},
+        {val: 1, text: '1 gün veya daha az', selected:false},
+        {val: 2, text: '1 haftadan az', selected:false},
+        {val: 3, text: '1-2 hafta', selected:false},
+        {val: 4, text: '3-4 hafta', selected:false},
+        {val: 5, text: '1-6 ay', selected:false},
+        {val: 6, text: '6 aydan fazla', selected:false},
+        {val: 7, text: 'Devam eden', selected:false},
+        {val: 8, text: 'Emin Değilim', selected:false}
     ];
 
     currencies = [

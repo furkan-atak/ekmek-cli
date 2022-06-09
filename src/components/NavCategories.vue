@@ -23,7 +23,7 @@
                 <template v-for="(cat, i) in group.categories">
                 <v-row :key="i">
                     <v-hover v-slot="{ hover }">
-                    <p   @mouseover="mouseOn" :style=" hover ? 'text-decoration:underline; margin-left: 22%; margin-bottom: 3%;' : 'margin-left: 22%; margin-bottom: 3%;'"> {{ cat.name }} </p>
+                    <p :style=" hover ? 'text-decoration:underline; margin-left: 22%; margin-bottom: 3%;' : 'margin-left: 22%; margin-bottom: 3%;'"> {{ cat.name }} </p>
                     </v-hover>
                 </v-row>
                 </template>
@@ -97,11 +97,6 @@ export default class NavCategories extends BaseView{
      }).catch(err => {
          alert(err);
      });     
-  }
-
-  mouseOn() {
-      console.log('over', this.isOver)
-      this.isOver = this.isOver ? false : true;
   }
 
 
