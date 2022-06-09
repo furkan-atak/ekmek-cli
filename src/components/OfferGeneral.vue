@@ -14,9 +14,10 @@
       </v-row>
       <v-row>
         <v-col cols="3">
-          <div style="width: 90%; height: 50%; background-color: white; margin: 10%; margin-top: 20%; margin-bottom: 23%;
+          <div style="width: 90%; height: 85%; background-color: white; margin: 10%; margin-top: 20%; margin-bottom: 23%;
            box-shadow: 10px 10px 15px 10px lightblue; position: sticky; top: 150px;">
-            <p style="margin-left: 3%; padding-top: 5%; font-size: larger; font-weight: 500; color: #18202B;"> Filtreler </p>
+            <p style="margin-left: 3%; padding-top: 5%; font-size: 24px; font-weight: 600; color: #18202B;"> Filtreler </p>
+            <p style="margin-left: 3%; padding-top: 3%; font-size: 18px; font-weight: 500;"> Teslimat Süresi </p>
             <template v-for="(duration, i) in estimatedDurations">
                 <v-row v-if="i > 0" :key="i" height="0">
                   <div style="max-width: none; width: 80%; height: 30px; margin-left: 1.2%;
@@ -34,7 +35,64 @@
                   </div>
                 </v-row>
                 </template>
-          </div>
+                 <v-divider style="margin-top: 10%; margin-left: 4%; width: 90%; background-color: #ABB2C4;"></v-divider>
+                 <p style="margin-left: 3%; padding-top: 3%; font-size: 18px; font-weight: 500;"> Yetenek Ara </p>
+                 <v-row style="margin-left: 1%;">   
+                    <v-col cols="6" style="margin: 0%; padding: 0px;">
+                    <vs-input style="margin-left: 6%; display: inline-block !important;" icon-after v-model="skillKey" placeholder="örn. java"></vs-input>
+                    </v-col>
+                    <v-col cols="6" style="margin: 0%; padding: 0px;">
+                    <vs-button
+                      style="max-width: none; width: 35%; max-height: none; height: 90%;"
+                      icon
+                      color="#FF7300"
+                      
+                      :active="active == 3" @click="active = 3"
+                    >
+                      <i class='bx bxs-search-alt-2' ></i>
+                    </vs-button>
+                  </v-col>
+                  </v-row>
+                 <v-divider style="margin-top: 10%; margin-left: 4%; width: 90%; background-color: #ABB2C4;"></v-divider>
+                 
+                 <p style="margin-left: 3%; padding-top: 3%; font-size: 18px; font-weight: 500;"> Yetenek Ara </p>
+                 <v-row style="margin-top: 3%; margin-left: 3%;">
+                   <v-col cols="4" style="padding-right: 0px; padding-left: 2%;">
+                   <template>
+                    <v-text-field type="number" outlined placeholder="min">
+                    </v-text-field>
+                  </template>
+                  </v-col>
+                  
+                  <v-col cols="5" style="padding-left: 1%; padding-right: 0px;">
+                    <template>
+                    <v-text-field type="number" outlined placeholder="max">
+                      <v-icon
+                        slot="prepend"
+                        color="black"
+                      >
+                       mdi-minus
+                      </v-icon>
+                    </v-text-field>
+                  </template>
+                  </v-col>
+                   </v-row>
+                   <v-divider style="margin-top: 2%; margin-left: 4%; width: 90%; background-color: #ABB2C4;"></v-divider>
+                 <v-row style="margin-left: 0%; margin-top: 3%;">
+                   <v-col cols="10">
+                   <v-slider
+                      hint="Im a hint"
+                      v-model="priceFilter"
+                      thumb-color="red"
+                      thumb-label="always"
+                      color="orange darken-3"
+                      label="Ortalama Fiyat"
+                      max="1000"
+                      min="0"
+                    ></v-slider>
+                    </v-col>
+                 </v-row>
+            </div>
         </v-col>
         <v-col>
           <v-row>
@@ -150,10 +208,14 @@ export default class OfferGeneral extends BaseView{
     category:any = null;
     theCurrency = '';
 
+    active = 0;
+    priceFilter = 350;
+
     loading = false;
     selection = "";
     reserve = "";
 
+    skillKey = '';
     showAll = false;
 
     created() {
@@ -190,3 +252,32 @@ export default class OfferGeneral extends BaseView{
 }
   
 </script>
+
+
+<style>
+
+.vs-input__icon--after {
+  right: 60%;
+  margin-left: 0%;
+}
+
+.vs-input{
+  width: 100%;
+  margin-right: 0px;
+  padding-right: 0px;
+  height: 46px; 
+}
+
+.vs-input-content{
+  margin-right: 0px;
+  padding-right: 0px;
+  width: 100%;
+}
+
+.vs-input-parent {
+  width: 100%;
+  margin-right: 0px;
+  padding-right: 0px;
+}
+
+</style>

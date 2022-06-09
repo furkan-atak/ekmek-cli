@@ -38,7 +38,11 @@
     created() {
       this.showLoading(true);
      axios
-          .get('http://localhost:1337/groups').then(response => {
+          .get('http://localhost:1337/groups', {
+            headers: {
+              Authorization: ''
+            }
+          }).then(response => {
             this.groups = response.data;
         }).then(() => { this.done = true; this.showLoading(false); }).catch(error => {
             alert(error);
