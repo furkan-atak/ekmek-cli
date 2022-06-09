@@ -13,7 +13,7 @@
                                 shaped
                             >     
                                 <v-card-title style="min-height: none; height: 2%;">{{ item.header }}</v-card-title>
-                                <v-card-text style="min-width: none; width: 10%; min-height: 0%; height: 5%; margin-left: 84.5%;  padding: 0%; font-size: 40px; font-weight: 900; color: #3D66D7;">
+                                <v-card-text style="min-height: 0%; height: 7%; margin-left: 84%;  padding: 0%; font-size: 40px; font-weight: 900; color: #3D66D7;">
                                 {{ currencyTemplate(item.Currency) + item.Budget }}</v-card-text>
                                 <v-card-text style="min-width: none; width: 10%; min-height: 0%; height: 5%; margin-left: 85%; margin-top: 1.2%; padding: 0%;">{{ budgetTypeTemplate(item.BudgetType) }}</v-card-text>
                                 

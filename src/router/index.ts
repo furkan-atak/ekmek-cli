@@ -71,6 +71,11 @@ const routes: Array<RouteConfig> = [
     component: () => import('../views/freelancer/list/index.vue')
   },
   {
+    path: '/freelancer/profile',
+    name: 'freelancerProfile',
+    component: () => import('../views/freelancer/profile/index.vue')
+  },
+  {
     path: '/categories',
     name: 'navProgTech',
     component: () => import('../components/NavCategories.vue')
