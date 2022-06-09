@@ -12,7 +12,7 @@
                     <v-icon style="padding: 1%; padding-right: 0%; size: 10%;">mdi-clock-time-three-outline</v-icon>
                     {{ getTimePast(project.createdAt) }}
                     <v-icon style="padding-bottom: 0.5%;">mdi-map-marker-outline</v-icon>Uzaktan &nbsp;&nbsp;
-                    <v-icon style="padding-bottom: 0.5%; padding-left: 0%;">mdi-tag</v-icon>calendar-clock
+                    <v-icon style="padding-bottom: 0.5%; padding-left: 0%;">mdi-tag</v-icon>
                     Teklifler: {{ project.proposals.length }}&nbsp;&nbsp;
                 </span>
                 <h3 style="color: gray; font-size: 26px; font-weight: 300;

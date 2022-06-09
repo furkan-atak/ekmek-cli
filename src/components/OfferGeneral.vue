@@ -14,7 +14,7 @@
       </v-row>
       <v-row>
         <v-col cols="3">
-          <div style="width: 90%; height: 85%; background-color: white; margin: 10%; margin-top: 20%; margin-bottom: 23%;
+          <div style="width: 90%; height: 80%; background-color: white; margin: 10%; margin-top: 20%; margin-bottom: 23%;
            box-shadow: 10px 10px 15px 10px lightblue; position: sticky; top: 150px;">
             <p style="margin-left: 3%; padding-top: 5%; font-size: 24px; font-weight: 600; color: #18202B;"> Filtreler </p>
             <p style="margin-left: 3%; padding-top: 3%; font-size: 18px; font-weight: 500;"> Teslimat Süresi </p>
@@ -112,6 +112,7 @@
                   :loading="loading"
                   class="mx-auto my-12"
                   max-width="374"
+                  @click="navigate(`/offer/detail?id=${item.id}`)"
                 >
                   <template slot="progress">
                     <v-progress-linear
