@@ -24,7 +24,20 @@ export default class HomePage extends BaseView{
     }
   ];
 
-  
+freelancerol1 ="Yeteneklerin doğrultusunda iş almak hiç bu kadar kolay olmamıştı";
+freelancerol2 ="Dakikalar içinde para kazanmaya başla";
+freelancerol3 ="7/24 Ekmek müşteri hizmetleri imkanı";
+freelancerol4 ="Ücretsiz üyeliğin keyfini sür";
+freelancerol5 ="Ve daha fazlası için...";
+freelancerol6 ="HEMEN FREELANCER OL";
+
+projeeyayinla1 ="Aklında olan fikrYeteneklerin doğrultusunda iş almak hiç bu kadar kolay olmamıştı";
+projeeyayinla2 ="Dakikalar içinde para kazanmaya başla";
+projeeyayinla3 ="7/24 Ekmek müşteri hizmetleri imkanı";
+projeeyayinla4 ="Ücretsiz üyeliğin keyfini sür";
+projeeyayinla5 ="Ve daha fazlası için...";
+projeeyayinla6 ="HEMEN FREELANCER OL";
+
 icons = ['mdi-rewind', 'mdi-play', 'mdi-fast-forward'];
 items = [
       {
