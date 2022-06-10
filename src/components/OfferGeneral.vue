@@ -1,6 +1,6 @@
 <template>
     <div v-if="showAll" style="width: 100%; height: %100; background-color: #F8F9FC;">
-      <v-row v-if="$props.categoryId === undefined">
+      <v-row v-if="freelancer === null">
       <div style="width: 100%; height: 200px; margin-top: 2.5%; background-color: rgb(24, 32, 43);">
         <v-row style="margin-top: 2%;">
             <h1 style="margin-left: 10%; margin-top: 3%; color: #F5F7FA; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-weight: 500;">
@@ -13,7 +13,7 @@
       </div>
       </v-row>
       <v-row>
-        <v-col v-if="$props.categoryId === undefined" cols="3">
+        <v-col v-if="freelancer === null" cols="3">
           <div style="width: 90%; height: 80%; background-color: white; margin: 10%; margin-top: 20%; margin-bottom: 23%;
            box-shadow: 10px 10px 15px 10px lightblue; position: sticky; top: 150px;">
             <p style="margin-left: 3%; padding-top: 5%; font-size: 24px; font-weight: 600; color: #18202B;"> Filtreler </p>
@@ -96,7 +96,7 @@
         </v-col>
         <v-col>
           <v-row>
-           <v-container :style="$props.categoryId ? 'padding-top: 0px !important;':''" class="pa-12 text-center">
+           <v-container :style="freelancer ? 'padding-top: 0px !important;':''" class="pa-12 text-center">
             <v-row
               class="fill-height"
               justify="center"
@@ -208,7 +208,8 @@ export default class OfferGeneral extends BaseView{
     offers:any = []; 
     category:any = null;
     theCurrency = '';
-
+    freelancer:any; 
+    freelancerId:any = null;
     active = 0;
     priceFilter = 350;
 
@@ -228,19 +229,27 @@ export default class OfferGeneral extends BaseView{
     }
 
     async loadData() {
-        const catId = this.$route.query['id']
-        const endPoint =  catId ? `http://localhost:1337/offers?category=${catId}` : `http://localhost:1337/offers`;  
-        this.showLoading(true);
-        axios.get(endPoint).then(response => {
-                    this.offers = response.data;
-                    this.category = catId ? this.offers[0].category : null;
-                }).then(() => this.showAll = true).catch(error => {
-                // Handle error.
-                alert("Server'ın çalıştığından veya giriş yaptığınızdan emin olun! \n");
-                //console.log('An error occurred:', error.response);
-                }).finally(() => { this.showLoading(false) });
-
-        
+        const catId = this.$route.query['id'];
+        this.freelancerId = this.$route.query['freelancerId'];
+        if(catId){
+          const endPoint =  catId ? `http://localhost:1337/offers?category=${catId}` : `http://localhost:1337/offers`;  
+          this.showLoading(true);
+          axios.get(endPoint).then(response => {
+                      this.offers = response.data;
+                      this.category = catId ? this.offers[0].category : null;
+                  }).then(() => this.showAll = true).catch(error => {
+                  // Handle error.
+                  alert("Server'ın çalıştığından veya giriş yaptığınızdan emin olun! \n");
+                  //console.log('An error occurred:', error.response);
+                  }).finally(() => { this.showLoading(false) });
+        }else if(this.freelancerId) {
+           axios.get(`http://localhost:1337/freelancers?id=${this.freelancerId}`).then(response => {
+              this.freelancer = response.data[0];
+              this.offers = this.freelancer.offers;
+           }).then(() => this.showAll = true).catch(err => {
+             alert(err);
+           });
+        }
         
   }
 

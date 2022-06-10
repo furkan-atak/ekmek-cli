@@ -10,7 +10,10 @@ import BaseView from '../../baseView';
     }
 })
 export default class FreelancerProfile extends BaseView{
-  
+    constructor() {
+        super();
+    }
     tab = -1;
+    
     
 }

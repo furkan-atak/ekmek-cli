@@ -106,12 +106,13 @@
 <style scoped>
 .containerHalf {
     position: relative;
-    right: 10%;
+    right: 0%;
+    left: 2%;
     top: 10%;
-    height: 70%;
+    height: 80%;
     width: 65%;
     margin-left: 15%;
-    margin-bottom: 15%;
+    margin-bottom: 5%;
     background-color: #F5F7FAFA;
     
 }

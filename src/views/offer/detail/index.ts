@@ -19,8 +19,7 @@ export default class OfferDetail extends BaseView{
        axios.get(`http://localhost:1337/offers?id=${this.offerId}`).then(response => {
             this.offer = response.data[0];
             this.freelancer = this.offer.freelancer;
-            this.nameSurname = this.freelancer.name;
-            this.nameSurname = this.nameSurname.charAt(0) + this.nameSurname.split(' ')[1].charAt(0);
+            this.nameSurname = this.freelancer.name + this.freelancer.surname;
        }).finally(() => { this.showLoading(false) });
       
     }

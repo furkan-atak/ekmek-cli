@@ -14,14 +14,14 @@
                     padding: 1.5%; padding-left: 1%;
                     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"> Bu Teklifle Ne Elde Edersiniz? </h3>
                 <span style="padding: 1%; color: #707276;"> 
-                    {{ 'project.description' }}
+                    {{ offer.offerDetails }}
                 </span>
                 <h3 style="color: gray; font-size: 26px; font-weight: 300;
                     padding-top: 3%; padding-left: 1%;
                     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"> Teklifin Detaylı Açıklaması </h3>
                 <div style="width: 95%;">
                 <p style="padding: 1%; padding-top: 2%; color: #707276;"> 
-                   {{ 'project.detail' }}
+                   {{ offer.offerDescription }}
                 </p>
                 </div>
         </div>
@@ -47,13 +47,12 @@
                     style="margin-left: 17%; padding-top: 1%;"
                     color="#23395d"
                     size="55"
-                    >
-                    <img  src="https://vuesax.com/avatars/avatar-4.png"> 
-                    <!--- <img v-if="project.owner.imageUrl" :src="project.owner.imageUrl"> 
-                    <span v-if="!project.owner.imageUrl" class="white--text text-h5">{{ nameSurname }}</span>> -->
+                    > 
+                    <img v-if="freelancer.image_url" :src="freelancer.image_url"> 
+                    <span v-if="!freelancer.image_url" class="white--text text-h5">{{ nameSurname }}</span>
                 </v-avatar>
-                <span style="margin: 4%; min-height: none; font-size: 20px; font-weight: 600; color: #707276;"> {{ freelancer.name }} </span>
-                <span style="margin-left: 12%; color: darkgrey;"> Teklif Sahibi </span>
+                <span style="margin: 4%; min-height: none; font-size: 20px; font-weight: 600; color: #707276;"> {{ freelancer.name + ' ' + freelancer.surname }} </span>
+                <span style="margin-left: 13%; color: darkgrey;"> Teklif Sahibi </span>
                 <br>
                 <div style="margin-left: 10%; margin-top: 10%;">
                     <v-icon style="padding-bottom: 0.5%;">mdi-calendar-clock</v-icon>

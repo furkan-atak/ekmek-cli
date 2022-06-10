@@ -109,6 +109,7 @@
                   md="4"
                 >            
                 <v-card
+                  @click="navigate(`/freelancer/profile?freelancerId=${item.id}`)"
                   :loading="loading"
                   class="mx-auto my-12"
                   max-width="374"
@@ -222,12 +223,7 @@ export default class FreelancerGeneral extends BaseView{
     }
 
     async loadData() {
-        console.log('categoryId', this.$props.categoryId)
         this.showLoading(true);
-        // setTimeout(() => {
-        
-        // }, 1500);
-        console.log(localStorage.getItem('token'));
         axios.get(`http://localhost:1337/freelancers`).then(response => {
             this.freelancers = response.data;
             this.category = this.freelancers[0].category;

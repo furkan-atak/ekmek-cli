@@ -159,7 +159,7 @@
                     text
                     style="justify-content: right; justify-items: right;"
                 >
-                   <v-icon style="margin: 12%;">mdi-account-edit</v-icon> Edit Account
+                   <v-icon style="margin: 12%;">mdi-account-edit</v-icon> <span style="margin-right: 23%;"> Account </span>  
                 </v-btn>
                 <v-divider class="my-3"></v-divider>
                 <v-btn

@@ -23,7 +23,8 @@
                 <template v-for="(cat, i) in group.categories">
                 <v-row :key="i">
                     <v-hover v-slot="{ hover }">
-                    <p :style=" hover ? 'text-decoration:underline; margin-left: 22%; margin-bottom: 3%;' : 'margin-left: 22%; margin-bottom: 3%;'"> {{ cat.name }} </p>
+                    <p @click="navigate(`/offer/list?id=${cat.id}`)" :style=" hover ? 'text-decoration:underline; margin-left: 22%; margin-bottom: 3%; cursor: pointer;' 
+                    : 'margin-left: 22%; margin-bottom: 3%; cursor: pointer;'"> {{ cat.name }} </p>
                     </v-hover>
                 </v-row>
                 </template>
@@ -33,7 +34,7 @@
              <v-row :style="group ? '': 'margin-left: 2%;'"> 
                 <template v-for="(category, i) in categories">
                     <v-col cols="3" :md="group ? '4' : '3'" :key="i">     
-                          <vs-card  type="4">
+                          <vs-card @click="navigate(`/offer/list?id=${category.id}`)" type="4">
                                 <template #title>
                                 <h3>{{ category.name }}</h3>
                                 </template>

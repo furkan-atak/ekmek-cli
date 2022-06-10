@@ -4,6 +4,7 @@
    <h2> Proje Yayınla </h2>
    <span style="margin: 3%;"> Proje: Belirli bir zaman diliminde sabit bir fiyat karşılığında yaptırabileceğiniz bir hizmet. </span>
    <br><br>
+   <v-divider color="black" style="min-height: none; min-width: none; height: 48px; margin-bottom: 3%;"></v-divider>
     <v-row>
         <v-col cols="12" md="6">  
             <span>Kategoriler</span>
@@ -136,8 +137,8 @@
 .containerHalf {
     position: relative;
     right: 10%;
-    top: 20%;
-    height: 70%;
+    top: 10%;
+    height: 75%;
     width: 60%;
     margin-left: 15%;
     margin-bottom: 15%;
