@@ -56,6 +56,7 @@ export default class PostProject extends BaseView{
     }
 
     postProject() {
+      this.showLoading(true);
         axios
       .post('http://localhost:1337/projects', {
         header: this.projectHeader,
@@ -78,7 +79,7 @@ export default class PostProject extends BaseView{
           alert(r.data);
       }).catch(error => {
         alert('post error' + error);
-      });
+      }).then(t => { this.showLoading(false) });
 
     }
 

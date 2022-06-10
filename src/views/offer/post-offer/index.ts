@@ -71,7 +71,7 @@ export default class PostOffer extends BaseView{
         published_at: new Date,
         created_by: this.user
       }).then(r => {
-          alert(r.data);
+          alert('Teklif Oluşturuldu.');
       }).catch(error => {
         alert('post error' + error);
       });

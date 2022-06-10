@@ -8,6 +8,7 @@ export default class Login extends BaseView{
   
   active = "";
   activee = 0;
+  alertOn = false;
   loading = false;
   selection = ""; 
   reserve = "";
@@ -39,7 +40,7 @@ export default class Login extends BaseView{
       .then(response => {
         // Handle success.
         this.activee = 1;
-        alert('Login Success !!! \n' + 'User Profile: ' + response.data.user + '\n User Token: ' + response.data.jwt);
+        this.alertOn = true;
         localStorage.setItem('token', response.data.jwt);
         localStorage.setItem('user', JSON.stringify(response.data.user));
         window.dispatchEvent(new CustomEvent('loggedIn', {
