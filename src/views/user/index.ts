@@ -19,7 +19,7 @@ export default class UserProfile extends BaseView{
     created() {
         this.user = this.getUser();
         this.showLoading(true);
-        return axios.get(`http://localhost:1337/freelancers?userId=${this.user.id}`).then(resp => {
+        axios.get(`http://localhost:1337/freelancers?userId=${this.user.id}`).then(resp => {
             this.freelancerId = resp.data[0].id;
         }).catch(err => {
             alert(err);
