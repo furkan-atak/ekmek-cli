@@ -22,31 +22,31 @@ export default class HomePage extends BaseView{
       title: 'Web Programlama',
       text: `Site tasarla ve kodla`,
       img: 'https://github.com/furkan-atak/ekmek-cli/blob/main/src/assets/webprogramlama.jpg?raw=true',
-      path: 'prog-tech/web'
+      path: '/offer/list?id=6274e7d7250d531654da9d56'
     },
     {
       title: 'Metin Yazarlığı',
       text: `İhtiyaca göre metin yaz`,
       img: 'https://github.com/furkan-atak/ekmek-cli/blob/main/src/assets/metinyazarligi.jpg?raw=true',
-      path: 'translate-writing/copywriting'
+      path: '/offer/list?id=6274ed47a9892e2e2c3f2e52'
     },
     {
       title: 'Mobil Yazılım',
       text: 'Uygulamanı çıkar',
       img: 'https://github.com/furkan-atak/ekmek-cli/blob/main/src/assets/mobilyazilim.jpg?raw=true',
-      path: 'prog-tech/mobile'
+      path: '/offer/list?id=6274e7f1250d531654da9d57'
     },
     {
       title: 'Senaryo',
       text: 'Özgün senaryolar oluştur',
       img: 'https://github.com/furkan-atak/ekmek-cli/blob/main/src/assets/senaryo.jpg?raw=true',
-      path: 'translate-writing/scenario'
+      path: '/offer/list?id=6274ed78a9892e2e2c3f2e55'
     },
     {
       title: 'Veri Bilimi',
       text: 'Verileri anlamlandır',
       img: 'https://github.com/furkan-atak/ekmek-cli/blob/main/src/assets/veribilimi.jpg?raw=true',
-      path: 'prog-tech/datascience'
+      path: '/offer/list?id=6274ece3a9892e2e2c3f2e4d'
     }  
   ];
 

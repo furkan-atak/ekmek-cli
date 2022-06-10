@@ -1,11 +1,11 @@
   <template>
     <div style="margin: 6%;">
-      <div style="margin-left: 4cm; height: 10cm; width: 82%; background-color: white; border-width: 0.01cm; border-color: black; border-style: solid;">
+      <div style="margin-left: 8%; height: 10cm; width: 82%; background-color: white; border-width: 0.01cm; border-color: black; border-style: solid;">
       <v-row>
         <v-col class="col-5"></v-col>
         <v-col>
         <br>
-        <h1 style="padding-left: 11%;"> SIGN UP </h1>
+        <h1 style="padding-left: 9%;"> KAYIT OL </h1>
         <br>
         <vs-input primary v-model="userName" label-placeholder="Adınız">
           <template #icon>
@@ -43,7 +43,7 @@
             @click="signUp"
             style="margin-left: 4%; margin-top: 10%; width: 30%; height: 50px; font-size: large;"
           >
-            Login
+            Kayıt Ol
           </vs-button>
         </div>
       </v-col>

@@ -7,7 +7,7 @@
         >
         <div style="margin-left: 1.3%;" class="d-flex align-center">
             <v-img
-            @click="goTo('/home')"
+            @click="goTo('/')"
             style="cursor: pointer;"
             alt="Vuetify Logo"
             class="shrink mr-1"
@@ -17,7 +17,7 @@
             width="50"
             />
             <v-img
-            @click="goTo('/home')"
+            @click="goTo('/')"
             style="cursor: pointer;"
             alt="Vuetify Logo"
             class="shrink mr-1"
@@ -214,9 +214,9 @@
     logout() {
         localStorage.removeItem('token');
         localStorage.removeItem('user');
-        this.navigate('/home');
+        this.navigate('/');
         location.reload();
-        this.goTo('/home');
+        this.goTo('/');
     }
 
     /* eslint-disable */
