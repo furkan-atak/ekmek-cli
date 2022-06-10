@@ -59,7 +59,7 @@ export default class Login extends BaseView{
         // console.log('User profile', response.data.user);
         // console.log('User token', response.data.jwt);
 
-      }).then(() => {this.showLoading(false);}).then(() =>  { this.navigate('/'); })
+      }).then(() => {this.showLoading(false);}).then(() =>  { this.navigate('/home'); })
       .catch(error => {
         // Handle error.
         this.showLoading(false)
