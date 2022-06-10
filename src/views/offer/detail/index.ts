@@ -38,7 +38,7 @@ export default class OfferDetail extends BaseView{
         axios.put(`http://localhost:1337/users/${this.getUser().id}`, {
             purchases: arr
         }).then(resp => {
-            alert(resp);
+            alert('Teklif Satın Alındı.');
             this.getUpdatedUser();
         }).catch(err => {
             alert(err)

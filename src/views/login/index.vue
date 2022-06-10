@@ -1,5 +1,9 @@
   <template>
     <div style="margin: 6%;">
+    <v-alert
+      v-if="alertOn"
+      type="success"
+    >I'm a success alert.</v-alert>
       <div style="margin-left: 4cm; height: 10cm; width: 82%; background-color: white; border-width: 0.01cm; border-color: black; border-style: solid;">
       <v-row>
         <v-col class="col-5"></v-col>

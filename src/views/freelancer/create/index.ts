@@ -84,7 +84,7 @@ export default class CreateFreelancer extends BaseView {
                 category: this.category,
                 userId: this.user.id,
                 }).then(r => {
-                    alert('you are a freelancer now ! ' + r.data);
+                    alert('you are a freelancer now ! ');
                 }).catch(error => {
                 alert('post error' + error);
                 });

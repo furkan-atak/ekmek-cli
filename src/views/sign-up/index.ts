@@ -37,7 +37,7 @@ export default class SignUp extends BaseView{
       .then(response => {
         // Handle success.
         this.activee = 1;
-        alert('Login Success !!! \n' + 'User Profile: ' + response.data.user + '\n User Token: ' + response.data.jwt);
+        alert('Kayıt Başarılı');
         
         // User
         //   name: test4
