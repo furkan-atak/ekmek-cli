@@ -12,6 +12,7 @@ export default class OfferDetail extends BaseView{
     freelancer:any;
     offer:any = null;
     today:Date = new Date();
+    purchases:any = [];
     created() {
         this.today = new Date();
         this.offerId = this.$route.query['id'];
@@ -28,6 +29,21 @@ export default class OfferDetail extends BaseView{
         this.changeStyle = this.changeStyle ? false:true;   
     }
 
+
+    buy() {
+        const arr = this.getUser().purchases;
+        arr.push(this.offer); 
+        console.log(arr)
+        this.showLoading(true),
+        axios.put(`http://localhost:1337/users/${this.getUser().id}`, {
+            purchases: arr
+        }).then(resp => {
+            alert(resp);
+            this.getUpdatedUser();
+        }).catch(err => {
+            alert(err)
+        }).then(() => this.showLoading(false));
+    }
 
     durationTemplate(val:any){
         return this.estimatedDurations.find(t => t.val === val)?.text;

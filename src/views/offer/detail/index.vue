@@ -34,6 +34,7 @@
                     style="margin-left: 16%; max-width: none; width: 70%; height: 15%; font-size: x-large;"
                     :border="changeStyle"
                     :active="false"
+                    @click="buy"
                     @mouseover="changed"
                     @mouseleave="changed"
                     color="#FF7300"

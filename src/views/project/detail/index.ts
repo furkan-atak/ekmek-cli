@@ -23,6 +23,14 @@ export default class ProjectDetail extends BaseView{
       
     }
 
+    sendOffer(){
+        if(this.getUser() && this.getUser().role['name'] === 'Freelancer') {
+            //
+        }else {
+            this.navigate('/freelancer/create');
+        }
+    }
+
     changed(){
         console.log('focused');
         this.changeStyle = this.changeStyle ? false:true;   

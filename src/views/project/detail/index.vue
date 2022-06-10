@@ -39,6 +39,7 @@
                         style="margin-left: 16%; max-width: none; width: 70%; height: 15%; font-size: x-large;"
                         :border="changeStyle"
                         :active="false"
+                        @click="sendOffer"
                         @mouseover="changed"
                         @mouseleave="changed"
                         color="#4774B7"

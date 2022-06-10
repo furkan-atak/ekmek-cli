@@ -1,3 +1,4 @@
+import axios from "axios";
 import { Vue } from "vue-property-decorator";
 
 
@@ -5,6 +6,17 @@ export default abstract class BaseView extends Vue{
     
     constructor() {
         super();
+    }
+
+    getUpdatedUser(){
+        return axios
+            .get(`http://localhost:1337/users/${this.getUser().id}`)
+            .then(resp => { 
+                localStorage.removeItem('user');
+                localStorage.setItem('user', JSON.stringify(resp.data));
+            }).catch(error => {
+                console.log('role error', error);
+            });
     }
 
     getUser() {

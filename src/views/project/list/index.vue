@@ -29,6 +29,7 @@
                                 </v-card-text>
                                 
                                 <v-btn
+                                v-if="!$props.fromUser"
                                 style="left: 80%; width: 15%; bottom: 20%;"
                                 outlined
                                 @click="goTo(item.id)"
