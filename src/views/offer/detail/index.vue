@@ -52,8 +52,8 @@
                     <img v-if="freelancer.image_url" :src="freelancer.image_url"> 
                     <span v-if="!freelancer.image_url" class="white--text text-h5">{{ nameSurname }}</span>
                 </v-avatar>
-                <span style="margin: 4%; min-height: none; font-size: 20px; font-weight: 600; color: #707276;"> {{ freelancer.name + ' ' + freelancer.surname }} </span>
-                <span style="margin-left: 13%; color: darkgrey;"> Teklif Sahibi </span>
+                <span style="margin: 4%; min-height: none; font-size: 22px; font-weight: 600; color: #707276;"> {{ freelancer.name + ' ' + freelancer.surname }} </span>
+                <span style="margin-left: 15%; color: darkgrey;"> Teklif Sahibi </span>
                 <br>
                 <div style="margin-left: 10%; margin-top: 10%;">
                     <v-icon style="padding-bottom: 0.5%;">mdi-calendar-clock</v-icon>
