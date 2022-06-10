@@ -22,13 +22,13 @@
                                 >
                                 <!--<img v-if="user.imageUrl" :src="user.imageUrl"> 
                                 <span v-if="!user.imageUrl" class="white--text text-h5">{{ nameSurname }}</span>-->
-                                <img :src="freelancer.image_url"> 
+                                <img :src="user.imageUrl"> 
                                 </v-avatar>
                         <div style="width: 80%; height: 100%; margin-left: 25%; margin-top: -13%; margin-bottom: 2%; background-color: white;">
                             <br><br>
                             <br><br>
                             <v-row style="margin-left: 5%;">
-                                <h1 style="color: #32353B;"> {{ freelancer.name + ' ' + freelancer.surname }}</h1>
+                                <h1 style="color: #32353B;"> {{ user.username }}</h1>
                             </v-row>
                         </div>
                     </v-col>
@@ -36,13 +36,13 @@
                         <template>
                             <v-card>
                             <v-tabs v-model="tab" dark background-color="red lighten-2">
-                                <v-tab>Teklİfler</v-tab>
+                                <v-tab>Satın Alınanlar</v-tab>
                                 <v-tab>Projeler</v-tab>
                             </v-tabs>
                             </v-card>
                             <v-card>
                                 <div style="width:100%; max-height: 600px; margin-top: 0%;">
-                                    <offer-general style="max-height: 600px; overflow-x: auto;" v-if="tab === 0" categoryId='6274e7d7250d531654da9d56'/>
+                                    <offer-general :offerIds="user.purchases" style="max-height: 600px; overflow-x: auto;" v-if="tab === 0"/>
                                     <project-list style="max-height: 600px; overflow-x: auto;"  v-if="tab === 1"/>
                                 </div>
                             </v-card>

@@ -7,13 +7,24 @@ export default class ListProject extends BaseView{
 
     projects:any = [];
     today:Date = new Date();
-
+    freelancerId:any = '';
+    freelancer:any = null;
     created() {
+        this.freelancerId = this.$route.query['freelancerId'];
         this.today = new Date();
-       this.showLoading(true);
-       axios.get('http://localhost:1337/projects').then(response => {
-            this.projects = response.data;
-       }).finally(() => { this.showLoading(false) });
+        if(this.freelancerId) {
+            this.showLoading(true);
+            axios.get(`http://localhost:1337/freelancers?id=${this.freelancerId}`).then(response => {
+                    this.freelancer = response.data[0];
+                    this.projects = this.freelancer.sendedProposals;
+            }).finally(() => { this.showLoading(false) });
+        }else {
+            this.showLoading(true);
+            axios.get('http://localhost:1337/projects').then(response => {
+                    this.projects = response.data;
+            }).finally(() => { this.showLoading(false) });
+        }
+       
     }
 
     getTimePast(time: any){

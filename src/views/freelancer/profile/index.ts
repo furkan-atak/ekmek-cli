@@ -14,6 +14,16 @@ export default class FreelancerProfile extends BaseView{
         super();
     }
     tab = -1;
-    
+    freelancerId:any = '';
+    freelancer:any = null;
+    created() {
+        this.freelancerId = this.$route.query['freelancerId'];
+        if(this.freelancerId) {
+            this.showLoading(true);
+            axios.get(`http://localhost:1337/freelancers?id=${this.freelancerId}`).then(response => {
+                    this.freelancer = response.data[0];
+            }).finally(() => { this.showLoading(false) });
+        }
+    }
     
 }

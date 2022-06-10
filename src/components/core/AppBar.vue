@@ -154,6 +154,7 @@
                 <v-divider class="my-3"></v-divider>
                 <v-btn
                     width="100%"
+                    @click="navigate('/user-profile')"
                     depressed
                     rounded
                     text
