@@ -156,7 +156,7 @@
 
                   <v-divider class="mx-4"></v-divider>
 
-                  <v-card-title>Skills</v-card-title>
+                  <v-card-title>Yetenekler</v-card-title>
 
                   <v-card-text>
                     <v-chip-group
@@ -173,16 +173,6 @@
                       <v-chip>SQL</v-chip>
                     </v-chip-group>
                   </v-card-text>
-
-                  <v-card-actions>
-                    <v-btn
-                      color="deep-purple lighten-2"
-                      text
-                      @click="reserve"
-                    >
-                      Reserve
-                    </v-btn>
-                  </v-card-actions>
                 </v-card>
           </v-col>
         </template>
