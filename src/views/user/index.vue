@@ -40,6 +40,19 @@
                             <v-row style="margin-left: 5%;">
                                 Email:<p style="color: #32353B; font-weight: bold;">  {{ user.email }}</p>
                             </v-row>
+                            <v-row v-if="user.role['name'] === 'Freelancer'">
+                                <vs-button
+                                    style="margin-left: 16%; max-width: none; width: 70%; height: 15%; font-size: x-large;"
+
+                                    :active="false"
+                                    @click="navigate(`freelancer/profile?freelancerId=${freelancerId}`)"
+                                    color="#4774B7"
+                                    square
+                                    >
+                                    <i class="bx bxs-user-pin"></i>
+                                    Freelancer Aktivitesi
+                                </vs-button>
+                            </v-row>
                         </div>
                     </v-col>
                     <v-col cols="7" style="height: 800px; padding-bottom: 10%; margin-left: 2%; margin-top: 5.5%;">
