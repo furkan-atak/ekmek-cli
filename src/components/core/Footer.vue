@@ -39,7 +39,7 @@ Teklifleri gözden geçirin, serbest çalışanınızı seçin ve projeye başla
       <v-divider></v-divider>
 
       <v-card-text class="black--text">
-        {{ new Date().getFullYear() }} — <strong>Ekmek</strong>
+        Copyright © {{ new Date().getFullYear() }} - <strong>Ekmek</strong>
       </v-card-text>
     </v-card>
   </v-footer>
@@ -59,8 +59,8 @@ Teklifleri gözden geçirin, serbest çalışanınızı seçin ve projeye başla
     icons= [
         'mdi-facebook',
         'mdi-twitter',
-        'mdi-linkedin',
         'mdi-instagram',
+        'mdi-linkedin',
       ];
 }
 </script>

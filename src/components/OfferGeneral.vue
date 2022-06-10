@@ -155,7 +155,7 @@
 
                   <v-divider class="mx-4"></v-divider>
 
-                  <v-card-title>Offer Related Skills</v-card-title>
+                  <v-card-title>Teklifin İçerdiği Yetenekler</v-card-title>
 
                   <v-card-text>
                     <v-chip-group
@@ -172,16 +172,6 @@
                       <v-chip>SQL</v-chip>
                     </v-chip-group>
                   </v-card-text>
-
-                  <v-card-actions>
-                    <v-btn
-                      color="deep-purple lighten-2"
-                      text
-                      @click="reserve"
-                    >
-                      Reserve
-                    </v-btn>
-                  </v-card-actions>
                 </v-card>
           </v-col>
         </template>

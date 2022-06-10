@@ -160,7 +160,7 @@
                     text
                     style="justify-content: right; justify-items: right;"
                 >
-                   <v-icon style="margin: 12%;">mdi-account-edit</v-icon> <span style="margin-right: 23%;"> Account </span>  
+                   <v-icon style="margin: 12%;">mdi-account-edit</v-icon> <span style="margin-right: 23%;"> Hesap &nbsp;&nbsp; </span>  
                 </v-btn>
                 <v-divider class="my-3"></v-divider>
                 <v-btn
@@ -170,7 +170,7 @@
                     text
                     @click="logout"
                 >
-                  <v-icon style="margin-right: 13%;">mdi-exit-to-app</v-icon>  <span style="margin-right: 23%;"> Logout </span>  
+                  <v-icon style="margin-right: 13%;">mdi-exit-to-app</v-icon>  <span style="margin-right: 23%;"> Çıkış </span>  
                 </v-btn>
                 </div>
             </v-list-item-content>
