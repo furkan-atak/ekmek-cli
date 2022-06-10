@@ -25,11 +25,12 @@
                     <v-checkbox
                       style="margin-left: 5%; display: inline-block; padding-top: 0px; margin-top: 0%; border-radius: 100%;"
                       v-model="duration.selected"
+                      @click="filter"
                       color="orange"
                       hide-details
                     ></v-checkbox> 
                     <v-hover v-slot="{ hover }">
-                     <span @click="duration.selected = duration.selected ? false:true" :style=" hover ? 'text-decoration:underline; margin-left: 0%; cursor:pointer; max-height: none; height:100%' :
+                     <span @click="filter(duration)" :style=" hover ? 'text-decoration:underline; margin-left: 0%; cursor:pointer; max-height: none; height:100%' :
                       'margin-left: 0%; max-height: none; height:100%; cursor:pointer;'"> {{ duration.text }} </span>
                     </v-hover>
                   </div>
@@ -101,7 +102,7 @@
               class="fill-height"
               justify="center"
             >
-              <template v-for="(item, i) in offers">
+              <template v-for="(item, i) in offersFiltered">
                 <v-col
                   style="padding-left: 0%; padding-right: 0.5%;"
                   :key="i"
@@ -196,6 +197,7 @@ import Component from 'vue-class-component';
 export default class OfferGeneral extends BaseView{
 
     offers:any = []; 
+    offersFiltered:any = [];
     category:any = null;
     theCurrency = '';
     freelancer:any; 
@@ -240,6 +242,7 @@ export default class OfferGeneral extends BaseView{
           this.showLoading(true);
           axios.get(endPoint).then(response => {
                       this.offers = response.data;
+                      this.offersFiltered = this.offers;
                       this.category = catId ? this.offers[0].category : null;
                   }).then(() => this.showAll = true).catch(error => {
                   // Handle error.
@@ -254,6 +257,20 @@ export default class OfferGeneral extends BaseView{
     this.estimatedDurations.forEach(t => {
       t.val !== val ? t.selected = false :  t.selected = true;
     })
+  }
+
+  filter(duration?:any) {
+    if(duration !== undefined) {
+      duration.selected = duration.selected ? false:true;
+    }
+    const durationIds = this.estimatedDurations.filter(t => t.selected === true);
+    const ids = durationIds.map(t => t.val); 
+    if(ids.length > 0) {
+      this.offersFiltered = this.offers.filter((t:any) => ids.includes(t.duration));
+    }else {
+      this.offersFiltered = this.offers;
+    }
+    
   }
 
 }
