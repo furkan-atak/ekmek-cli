@@ -19,7 +19,7 @@
     <br>
     <br>
     <v-row>          
-      <h1 style="padding-left: 14%;"> En Popüler Kategoriler </h1>  
+      <h1 style="padding-left: 7%;"> En Popüler Kategoriler </h1>  
     </v-row>       
     <v-container style="margin-right: 21%; width: 100%;">
       <v-row style="width: 1300px;">
@@ -72,7 +72,7 @@
           </v-col>
         </template>
         <vs-button style="background-color: #7b96ff; margin-left: 7%;font-size: medium; width: 14%; height: 30px ;" 
-            @click="goTo('/offer/list')"
+            @click="goTo('/categories')"
             bold
             square
             icon-after
@@ -90,19 +90,15 @@
             bu kadar kolay olmamıştı
           </h1> 
           <br>         
-          <h5><v-icon style="margin: 1%;">mdi-account-check</v-icon>Dakikalar içinde para kazanmaya başla</h5>
-          <h5><v-icon style="margin: 1%;">mdi-account-check</v-icon>7/24 Ekmek müşteri hizmetleri imkanı</h5>
-          <h5><v-icon style="margin: 1%;">mdi-account-check</v-icon>Ücretsiz üyeliğin keyfini sür</h5>
-          <h5><v-icon style="margin: 1%;">mdi-account-check</v-icon>Ve daha fazlası için...</h5>
+          <h5 v-for="(text,i) in texts" :key="i"><v-icon style="margin: 1%;">mdi-account-check</v-icon> {{ text }}</h5>
           <br>
           <vs-button style="background-color: #00ccbe; margin: 0%;font-size: large; width: 90%;" 
-            @click="goTo('/freelancer/create')"
-            
+            @click="goTo(path)"
             gradient
             bold
             icon-after
             >
-            HEMEN FREELANCER OL &nbsp;   <v-icon style="margin: 1%;">mdi-account-check</v-icon>
+            {{ butonText }} &nbsp;   <v-icon dark style="margin: 1%;">{{ iconTxt }}</v-icon>
           </vs-button>
         </v-col>  
         <v-col cols="6" md="1">

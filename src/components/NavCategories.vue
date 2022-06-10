@@ -17,7 +17,7 @@
         <br><br>
         <br><br>
         <v-row>
-          <v-col cols="3"> 
+          <v-col v-if="group" cols="3"> 
             <div style="position: sticky; top: 150px;">
                 <p style="margin-left: 15%;  font-size: 20px; padding-bottom: 2%;"> {{ group.name }} </p>
                 <template v-for="(cat, i) in group.categories">
@@ -30,10 +30,10 @@
             </div>
           </v-col>
             <v-col>
-             <v-row> 
+             <v-row :style="group ? '': 'margin-left: 2%;'"> 
                 <template v-for="(category, i) in categories">
-                    <v-col cols="12" md="4" :key="i">     
-                          <vs-card type="4">
+                    <v-col cols="3" :md="group ? '4' : '3'" :key="i">     
+                          <vs-card  type="4">
                                 <template #title>
                                 <h3>{{ category.name }}</h3>
                                 </template>
@@ -84,19 +84,30 @@ export default class NavCategories extends BaseView{
   created() {
       this.done = false;
      this.groupIndex =  this.$route.query['index'];
-     this.showLoading(true);    
-     axios.get(`http://localhost:1337/groups?index=${this.groupIndex}`).then(r => {
-         this.group = r.data[0];
-     }).then(() => {
-          axios
-            .get(`http://localhost:1337/categories?group=${this.group.id}`).then(response => {
+     if(this.groupIndex){
+        this.showLoading(true);    
+        axios.get(`http://localhost:1337/groups?index=${this.groupIndex}`).then(r => {
+            this.group = r.data[0];
+        }).then(() => {
+            axios
+                .get(`http://localhost:1337/categories?group=${this.group.id}`).then(response => {
+                this.categories = response.data;
+            }).then(() => { this.done = true; this.showLoading(false); }).catch(error => {
+                alert(error);
+            });
+        }).catch(err => {
+            alert(err);
+        }); 
+     }else {
+         this.showLoading(true);
+         axios
+            .get(`http://localhost:1337/categories`).then(response => {
             this.categories = response.data;
         }).then(() => { this.done = true; this.showLoading(false); }).catch(error => {
             alert(error);
         });
-     }).catch(err => {
-         alert(err);
-     });     
+     }
+         
   }
 
 
