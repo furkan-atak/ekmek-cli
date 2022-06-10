@@ -235,7 +235,17 @@ export default class OfferGeneral extends BaseView{
         this.freelancer = null;
         this.freelancerId = this.$route.query['freelancerId'];
         this.offerIdss = this.$props.offerIds;
-        if(catId){
+        if(this.freelancerId) {
+           axios.get(`http://localhost:1337/freelancers?id=${this.freelancerId}`).then(response => {
+              this.freelancer = response.data[0];
+              this.offers = this.freelancer.offers;
+           }).then(() => this.showAll = true).catch(err => {
+             alert(err);
+           });
+        }else if(this.offerIdss) {
+          this.offers = this.offerIdss;
+          this.showAll = true;
+        }else{
           const endPoint =  catId ? `http://localhost:1337/offers?category=${catId}` : `http://localhost:1337/offers`;  
           this.showLoading(true);
           axios.get(endPoint).then(response => {
@@ -246,16 +256,6 @@ export default class OfferGeneral extends BaseView{
                   alert("Server'ın çalıştığından veya giriş yaptığınızdan emin olun! \n");
                   //console.log('An error occurred:', error.response);
                   }).finally(() => { this.showLoading(false) });
-        }else if(this.freelancerId) {
-           axios.get(`http://localhost:1337/freelancers?id=${this.freelancerId}`).then(response => {
-              this.freelancer = response.data[0];
-              this.offers = this.freelancer.offers;
-           }).then(() => this.showAll = true).catch(err => {
-             alert(err);
-           });
-        }else if(this.offerIdss) {
-          this.offers = this.offerIdss;
-          this.showAll = true;
         }
         
   }

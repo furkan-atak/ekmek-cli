@@ -11,6 +11,7 @@ export default class ProjectDetail extends BaseView{
     projectId:any = '';
     project:any = null;
     today:Date = new Date();
+    freelancer:any = '';
     created() {
         this.today = new Date();
         this.projectId = this.$route.query['id'];
@@ -20,12 +21,31 @@ export default class ProjectDetail extends BaseView{
             this.nameSurname = this.project.owner.username;
             this.nameSurname = this.nameSurname.charAt(0) + this.nameSurname.split(' ')[1].charAt(0);
        }).finally(() => { this.showLoading(false) });
-      
+       this.getUser() && this.getFreelancerId();
     }
 
+    getFreelancerId() {
+        this.showLoading(true);
+        return axios.get(`http://localhost:1337/freelancers?userId=${this.getUser().id}`).then(resp => {
+            this.freelancer = resp.data[0];
+        }).catch(err => {
+            alert(err);
+        }).then(() => this.showLoading(false));   
+    }
+        
+
     sendOffer(){
+        const arr = this.freelancer.sendedProposals;
+        arr.push(this.project);
+        console.log(arr);
         if(this.getUser() && this.getUser().role['name'] === 'Freelancer') {
-            //
+            axios.put(`http://localhost:1337/freelancers/${this.freelancer.id}`, {
+                sendedProposals: arr
+            }).then(() => {
+                alert('Ok');
+            }).catch(err => {
+                alert(err);
+            });
         }else {
             this.navigate('/freelancer/create');
         }
