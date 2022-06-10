@@ -147,7 +147,7 @@
                         size="14"
                       ></v-rating>
                       <div class="grey--text ms-4">
-                        {{ item.starPoint }} (413)
+                        {{ item.starPoint }}
                       </div>
                     <div class="my-3 text-subtitle-1">
                       Ücret : {{ item.fee }}₺ 

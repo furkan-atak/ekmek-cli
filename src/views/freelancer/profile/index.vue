@@ -30,6 +30,31 @@
                             <v-row style="margin-left: 5%;">
                                 <h1 style="color: #32353B;"> {{ freelancer.name + ' ' + freelancer.surname }}</h1>
                             </v-row>
+                            <br><br>
+                            <v-row style="margin-left: 5%;">
+                                <h4 style="color: gray;"> {{ freelancer.explanation }}</h4>
+                            </v-row>
+                            <br><br>
+                            <v-row style="margin-left: 5%;">
+                                <p style="color: #32353B;"> Teklifler: {{ freelancer.offers.length }}</p>
+                            </v-row>
+                            <div style="margin-left: 8%;">
+                            <v-row>
+                                <span style="padding-right: 15px;">Puan:</span>
+                                <v-rating
+                                    style="display:inline-block;"
+                                    :value=" freelancer.starPoint "
+                                    color="amber"
+                                    dense
+                                    half-increments
+                                    readonly
+                                    size="14"
+                                ></v-rating>
+                                <div class="grey--text ms-4">
+                                    {{ freelancer.starPoint }}
+                                </div>
+                                </v-row>
+                            </div>
                         </div>
                     </v-col>
                     <v-col cols="7" style="height: 800px; padding-bottom: 10%; margin-left: 2%; margin-top: 5.5%;">
