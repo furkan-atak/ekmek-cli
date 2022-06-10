@@ -2,7 +2,11 @@ import BaseView from "@/views/baseView";
 import axios from "axios";
 import Component from "vue-class-component";
 
-@Component
+@Component({
+    props: {
+        fromUser: Boolean
+    }
+})
 export default class ListProject extends BaseView{ 
 
     projects:any = [];
@@ -12,7 +16,13 @@ export default class ListProject extends BaseView{
     created() {
         this.freelancerId = this.$route.query['freelancerId'];
         this.today = new Date();
-        if(this.freelancerId) {
+        if(this.$props.fromUser) {
+            this.showLoading(true);
+            axios.get(`http://localhost:1337/projects?createdBy=${this.getUser().id}`).then(response => {
+                    this.projects = response.data;
+            }).finally(() => { this.showLoading(false) });
+        }
+        else if(this.freelancerId) {
             this.showLoading(true);
             axios.get(`http://localhost:1337/freelancers?id=${this.freelancerId}`).then(response => {
                     this.freelancer = response.data[0];

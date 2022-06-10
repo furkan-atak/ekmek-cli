@@ -30,6 +30,16 @@
                             <v-row style="margin-left: 5%;">
                                 <h1 style="color: #32353B;"> {{ user.username }}</h1>
                             </v-row>
+                            <v-row style="margin-left: 5%;">
+                                <p style="color: #32353B;"> {{ user.role['name'] }}</p>
+                            </v-row>
+                            <br><br>
+                            <v-row style="margin-left: 5%;">
+                                Satın Alınanlar:<p style="color: #32353B; font-weight: bold;">  {{ user.purchases.length }}</p>
+                            </v-row>
+                            <v-row style="margin-left: 5%;">
+                                Email:<p style="color: #32353B; font-weight: bold;">  {{ user.email }}</p>
+                            </v-row>
                         </div>
                     </v-col>
                     <v-col cols="7" style="height: 800px; padding-bottom: 10%; margin-left: 2%; margin-top: 5.5%;">
@@ -43,7 +53,7 @@
                             <v-card>
                                 <div style="width:100%; max-height: 600px; margin-top: 0%;">
                                     <offer-general :offerIds="user.purchases" style="max-height: 600px; overflow-x: auto;" v-if="tab === 0"/>
-                                    <project-list style="max-height: 600px; overflow-x: auto;"  v-if="tab === 1"/>
+                                    <project-list :fromUser="true" style="max-height: 600px; overflow-x: auto;"  v-if="tab === 1"/>
                                 </div>
                             </v-card>
                         </template>

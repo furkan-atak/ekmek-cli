@@ -71,8 +71,9 @@ export default class PostProject extends BaseView{
         proposals: [],
         detail: 'detail goes here',
         published_at: new Date(),
-        created_by: null,
-        updated_by: null
+        createdBy: this.getUser().id,
+        created_by: this.getUser().id,
+        updated_by: this.getUser().id
       }).then(r => {
           alert(r.data);
       }).catch(error => {
